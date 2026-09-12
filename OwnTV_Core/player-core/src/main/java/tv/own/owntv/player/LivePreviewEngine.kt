@@ -165,6 +165,8 @@ class LivePreviewEngine(
     override val audioCount: StateFlow<Int> = _audioCount.asStateFlow()
     private val _subCount = MutableStateFlow(0)
     override val subCount: StateFlow<Int> = _subCount.asStateFlow()
+    private val _videoCount = MutableStateFlow(0)
+    override val videoCount: StateFlow<Int> = _videoCount.asStateFlow()
     // Subtitle cues + an "on" flag. The Compose surface mounts a SubtitleView ONLY while [subtitleOn] (else
     // any overlaid view knocks the SurfaceView off the hardware-overlay path and stutters 4K — same as VOD).
     private val _cues = MutableStateFlow<List<androidx.media3.common.text.Cue>>(emptyList())
@@ -275,6 +277,8 @@ class LivePreviewEngine(
         val p = player ?: return
         runCatching {
             p.trackSelectionParameters = p.trackSelectionParameters.buildUpon()
+                .clearViewportSizeConstraints()
+                .clearVideoSizeConstraints()
                 .setPreferredAudioLanguage(prefAudioLang.takeIf { it.isNotBlank() })
                 .setPreferredTextLanguage(prefSubLang.takeIf { it.isNotBlank() })
                 .build()
@@ -1229,6 +1233,9 @@ class LivePreviewEngine(
         mainHandler.removeCallbacks(audioOnlyConfirmation)
         _audioCount.value = 0
         _subCount.value = 0
+        _videoCount.value = 0
+        tune.videoTrackList = emptyList()
+        tune.videoSelections = emptyList()
         _subtitleOn.value = false; _cues.value = emptyList(); _audioUnsupported.value = false
         _noVideoDetected.value = false
         _audioOnlyMedia.value = false // re-decided from this stream's own track list
@@ -1342,6 +1349,7 @@ class LivePreviewEngine(
         val p = player ?: return
         val height = maxVideoHeight
         p.trackSelectionParameters = p.trackSelectionParameters.buildUpon()
+            .clearViewportSizeConstraints()
             .apply {
                 if (height == null) clearVideoSizeConstraints() else setMaxVideoSize(Int.MAX_VALUE, height)
             }
@@ -1431,6 +1439,7 @@ class LivePreviewEngine(
         frameCounter.set(0); tune.lastFrameCount = 0; tune.everRendered = false; tune.lastProgressPos = -1L; tune.frozenChecks = 0
         tune.audioTrackList = emptyList(); tune.audioSelections = emptyList(); _audioCount.value = 0
         tune.textTrackList = emptyList(); tune.textSelections = emptyList(); _subCount.value = 0
+        tune.videoTrackList = emptyList(); tune.videoSelections = emptyList(); _videoCount.value = 0
         _subtitleOn.value = false; _cues.value = emptyList(); _audioUnsupported.value = false
         _noVideoDetected.value = false; tune.noVideoTriggered = false; tune.readySinceMs = 0L
         _audioOnlyMedia.value = false // re-decided from this stream's own track list
@@ -2138,9 +2147,26 @@ class LivePreviewEngine(
 
     override fun audioTracks(): List<TrackOption> = tune.audioTrackList
     override fun textTracks(): List<TrackOption> = tune.textTrackList
+    override fun videoTracks(): List<TrackOption> = tune.videoTrackList
 
-    /** Build the audio + subtitle track lists from the active stream so the HUD menus can switch language /
-     *  subtitles (multi-track live channels, or a VOD file imported via M3U). Mirrors [ExoSubtitleEngine]. */
+    override fun selectVideoTrack(id: Int) {
+        val p = player ?: return
+        if (id < 0) {
+            p.trackSelectionParameters = p.trackSelectionParameters.buildUpon()
+                .clearOverridesOfType(C.TRACK_TYPE_VIDEO)
+                .build()
+            tune.videoTrackList = tune.videoTrackList.map { it.copy(selected = it.mpvId == -1) }
+            return
+        }
+        val sel = tune.videoSelections.firstOrNull { it.id == id } ?: return
+        p.trackSelectionParameters = p.trackSelectionParameters.buildUpon()
+            .setOverrideForType(androidx.media3.common.TrackSelectionOverride(sel.group, listOf(sel.trackIndex)))
+            .build()
+        tune.videoTrackList = tune.videoTrackList.map { it.copy(selected = it.mpvId == id) }
+    }
+
+    /** Build the audio + subtitle + video track lists from the active stream so the HUD menus can switch language /
+     *  subtitles / video quality (multi-track live channels, or a VOD file imported via M3U). Mirrors [ExoSubtitleEngine]. */
     private fun rebuildTracks(tracks: androidx.media3.common.Tracks) {
         // A preferred subtitle language makes Media3 select a matching text track on its own. The cue
         // overlay is mounted only while [subtitleOn], so without this the track would be decoded and never
@@ -2154,8 +2180,32 @@ class LivePreviewEngine(
         }
         val audio = ArrayList<TrackOption>(); val aSel = ArrayList<AudioSel>(); var aId = 0
         val text = ArrayList<TrackOption>(); val tSel = ArrayList<TextSel>(); var tId = 0
+        val video = ArrayList<TrackOption>(); val vSel = ArrayList<VideoSel>(); var vId = 0
         for (group in tracks.groups) {
             when (group.type) {
+                androidx.media3.common.C.TRACK_TYPE_VIDEO -> for (i in 0 until group.length) {
+                    val f = group.getTrackFormat(i)
+                    val res = if (f.width > 0 && f.height > 0) "${f.width}x${f.height}" else ""
+                    val fps = if (f.frameRate > 0) "${Math.round(f.frameRate)}fps" else ""
+                    val br = if (f.bitrate > 0) "${f.bitrate / 1_000_000}Mbps" else ""
+                    val label = listOfNotNull(
+                        res.takeIf { it.isNotEmpty() },
+                        fps.takeIf { it.isNotEmpty() },
+                        br.takeIf { it.isNotEmpty() },
+                        f.label?.takeIf { it.isNotBlank() },
+                    ).joinToString(" • ").ifEmpty { "Video ${vId + 1}" }
+                    video.add(
+                        TrackOption(
+                            label = label,
+                            mpvId = vId,
+                            selected = group.isTrackSelected(i),
+                            codec = f.sampleMimeType,
+                            typeIndex = vId,
+                            labelKind = TrackLabelKind.VIDEO,
+                        ),
+                    )
+                    vSel.add(VideoSel(vId, group.mediaTrackGroup, i)); vId++
+                }
                 androidx.media3.common.C.TRACK_TYPE_AUDIO -> for (i in 0 until group.length) {
                     val f = group.getTrackFormat(i)
                     val lang = f.language?.takeIf { it.isNotBlank() && it != "und" }
@@ -2198,6 +2248,22 @@ class LivePreviewEngine(
         applyMute()
         tune.audioTrackList = audio; tune.audioSelections = aSel; _audioCount.value = audio.size
         tune.textTrackList = text; tune.textSelections = tSel; _subCount.value = text.size
+        val finalVideo = if (video.size > 1) {
+            val hasVideoOverride = player?.trackSelectionParameters?.overrides?.values?.any { o ->
+                vSel.any { it.group == o.mediaTrackGroup }
+            } == true
+            listOf(
+                TrackOption(
+                    label = "Auto (Best)",
+                    mpvId = -1,
+                    selected = !hasVideoOverride,
+                    labelKind = TrackLabelKind.VIDEO,
+                ),
+            ) + video.map { if (!hasVideoOverride) it.copy(selected = false) else it }
+        } else {
+            video
+        }
+        tune.videoTrackList = finalVideo; tune.videoSelections = vSel; _videoCount.value = finalVideo.size
         if (tv.own.owntv.core.CoreBuildInfo.debug) {
             LiveDiagnosticsLog.event(
                 "tracks: audio=${audio.size} text=${text.size}" +
@@ -2574,7 +2640,14 @@ class LivePreviewEngine(
             forceStereo = !AudioOutputPolicy.allowsMultichannel(surroundMode),
             softwareFirst = !hwDecodingEnabled,
         )
+        val trackSelector = androidx.media3.exoplayer.trackselection.DefaultTrackSelector(context).apply {
+            parameters = buildUponParameters()
+                .clearViewportSizeConstraints()
+                .clearVideoSizeConstraints()
+                .build()
+        }
         return ExoPlayer.Builder(context)
+            .setTrackSelector(trackSelector)
             .setRenderersFactory(renderers)
             .setMediaSourceFactory(DefaultMediaSourceFactory(httpDataSourceFor(currentUa)))
             .setLoadControl(loadControl)
@@ -2796,6 +2869,7 @@ class LivePreviewEngine(
 /** One selectable audio / text track, as the Media3 track group plus the index inside it. */
 internal data class AudioSel(val id: Int, val group: androidx.media3.common.TrackGroup, val trackIndex: Int)
 internal data class TextSel(val id: Int, val group: androidx.media3.common.TrackGroup, val trackIndex: Int)
+internal data class VideoSel(val id: Int, val group: androidx.media3.common.TrackGroup, val trackIndex: Int)
 
 internal data class TuneState(
     /** Set just before our own stop()/release() touches the player, so the STATE_IDLE that follows is
@@ -2850,6 +2924,8 @@ internal data class TuneState(
     var audioSelections: List<AudioSel> = emptyList(),
     var textTrackList: List<TrackOption> = emptyList(),
     var textSelections: List<TextSel> = emptyList(),
+    var videoTrackList: List<TrackOption> = emptyList(),
+    var videoSelections: List<VideoSel> = emptyList(),
     var noVideoTriggered: Boolean = false,
     var readySinceMs: Long = 0L,
     var hasAudioTrack: Boolean = false,

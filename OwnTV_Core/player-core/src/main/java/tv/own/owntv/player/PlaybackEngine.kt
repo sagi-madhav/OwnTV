@@ -34,6 +34,7 @@ interface PlaybackEngine {
     val zoomMode: StateFlow<ZoomMode>
     val audioCount: StateFlow<Int>
     val subCount: StateFlow<Int>
+    val videoCount: StateFlow<Int> get() = ZERO_INT
     val currentMeta: StateFlow<MediaMeta>
     val isLiveContent: Boolean
 
@@ -89,6 +90,8 @@ interface PlaybackEngine {
     fun addExternalSubtitle(path: String, title: String, lang: String?) {}
     fun audioTracks(): List<TrackOption>
     fun textTracks(): List<TrackOption>
+    fun videoTracks(): List<TrackOption> = emptyList()
+    fun selectVideoTrack(id: Int) {}
 
     /** Live technical readout (label → value) for the stream-info overlay — codec, resolution, fps, HDR,
      *  bitrate, decoder, audio, buffer, source. A snapshot; the overlay re-reads it periodically.
@@ -163,6 +166,7 @@ class MpvPlaybackEngine(private val p: OwnTVPlayer) : PlaybackEngine {
     override val zoomMode get() = p.zoomMode
     override val audioCount get() = p.audioCount
     override val subCount get() = p.subCount
+    override val videoCount get() = p.videoCount
     override val currentMeta get() = p.currentMeta
     override val isLiveContent get() = p.isLiveContent
     override val audioOnly get() = p.audioOnly
@@ -194,6 +198,8 @@ class MpvPlaybackEngine(private val p: OwnTVPlayer) : PlaybackEngine {
     override fun addExternalSubtitle(path: String, title: String, lang: String?) = p.addExternalSubtitle(path, title, lang)
     override fun audioTracks() = p.audioTracks()
     override fun textTracks() = p.textTracks()
+    override fun videoTracks() = p.videoTracks()
+    override fun selectVideoTrack(id: Int) = p.selectVideoTrack(id)
     override suspend fun streamInfo() = p.streamInfo()
     override fun setBitrateTrackingEnabled(enabled: Boolean) = p.setBitrateTrackingEnabled(enabled)
     override fun refreshStreamChips() = p.refreshStreamChips()

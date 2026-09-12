@@ -115,7 +115,7 @@ private const val PLAYER_SHORTCUT_LONG_PRESS_MS = 600L
 private const val TRACK_POLL_MS = 300L
 private const val TRACK_POLL_TRIES = 20
 
-internal enum class HudDialog { NONE, AUDIO, SUBS, SPEED, ZOOM, VOLUME, SUB_TIMING, JUMP_BACK }
+internal enum class HudDialog { NONE, AUDIO, SUBS, SPEED, ZOOM, VOLUME, SUB_TIMING, JUMP_BACK, VIDEO }
 
 /** What the top-left channel OSD shows for direct tune: the digits being typed, the channel a number
  *  resolved to, or a failure message. All three render as the same card as the channel OSD. */
@@ -210,6 +210,7 @@ fun PlayerHud(
     val videoRes by player.videoRes.collectAsStateWithLifecycle()
     val streamChips by player.streamChips.collectAsStateWithLifecycle()
     val engineChip by player.engineChip.collectAsStateWithLifecycle()
+    val videoCount by player.videoCount.collectAsStateWithLifecycle()
     val audioCount by player.audioCount.collectAsStateWithLifecycle()
     val audioDelayMs by player.audioDelayMs.collectAsStateWithLifecycle()
     val audioDelayRemembered by player.audioDelayRemembered.collectAsStateWithLifecycle()
@@ -610,6 +611,7 @@ fun PlayerHud(
                     player = player, isLive = isLive, position = position, duration = duration,
                     volume = volume, audioCount = audioCount, subCount = subCount, zoomMode = zoomMode,
                     speedLabel = formatSpeed(speed),
+                    videoCount = videoCount,
                     onScrubLive = onScrubLive, timeshiftOffsetSec = timeshiftOffset, onGoToLive = onGoToLive,
                     liveProgrammes = liveProgrammes,
                     onOpenJumpBack = if (onJumpBack != null) { { dialog = HudDialog.JUMP_BACK } } else null,
@@ -738,6 +740,22 @@ fun PlayerHud(
         // The re-poll is BOUNDED: a stream that genuinely has no such track (most radio channels have
         // no subtitles) would otherwise wake the CPU every 300 ms for as long as the menu stays open.
         // Tracks that arrive later than TRACK_POLL_TRIES × 300 ms have never been observed.
+        HudDialog.VIDEO -> {
+            var videoTracks by remember { mutableStateOf(player.videoTracks()) }
+            LaunchedEffect(Unit) {
+                repeat(TRACK_POLL_TRIES) {
+                    if (videoTracks.isNotEmpty()) return@LaunchedEffect
+                    delay(TRACK_POLL_MS)
+                    videoTracks = player.videoTracks()
+                }
+            }
+            TrackDialog(
+                stringResource(R.string.player_video_track), videoTracks,
+                onSelect = { player.selectVideoTrack(it.mpvId); dialog = HudDialog.NONE },
+                onOff = null,
+                onDismiss = { dialog = HudDialog.NONE },
+            )
+        }
         HudDialog.AUDIO -> {
             var audioTracks by remember { mutableStateOf(player.audioTracks()) }
             LaunchedEffect(Unit) {

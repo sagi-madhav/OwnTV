@@ -42,7 +42,7 @@ import java.util.concurrent.atomic.AtomicInteger
  * owns playback its tracks reuse this field as an opaque ordinal). [image] flags an image-based subtitle
  * (PGS/VOBSUB/DVB) — selecting one on a VOD hands playback to ExoPlayer to render it. [typeIndex] is the
  * track's 0-based position among tracks of its own type, used to line a picked sub up with ExoPlayer's. */
-enum class TrackLabelKind { AUDIO, SUBTITLE }
+enum class TrackLabelKind { AUDIO, SUBTITLE, VIDEO }
 
 enum class ExternalSubtitleSource { LOCAL, OPENSUBTITLES }
 
@@ -1304,6 +1304,8 @@ class OwnTVPlayer(
     val audioCount: StateFlow<Int> = _audioCount.asStateFlow()
     private val _subCount = MutableStateFlow(0)
     val subCount: StateFlow<Int> = _subCount.asStateFlow()
+    private val _videoCount = MutableStateFlow(0)
+    val videoCount: StateFlow<Int> = _videoCount.asStateFlow()
     private val _zoomMode = MutableStateFlow(ZoomMode.FIT)
     val zoomMode: StateFlow<ZoomMode> = _zoomMode.asStateFlow()
     private val _speed = MutableStateFlow(1.0)
@@ -3613,9 +3615,20 @@ class OwnTVPlayer(
     // never issues synchronous mpv reads from the UI thread (those block during network stalls → ANR).
     private val _audioTrackList = MutableStateFlow<List<TrackOption>>(emptyList())
     private val _subTrackList = MutableStateFlow<List<TrackOption>>(emptyList())
+    private val _videoTrackList = MutableStateFlow<List<TrackOption>>(emptyList())
 
     fun audioTracks(): List<TrackOption> = _audioTrackList.value
     fun textTracks(): List<TrackOption> = _subTrackList.value
+    fun videoTracks(): List<TrackOption> = if (exoActive) exoEngine?.videoTracks().orEmpty() else _videoTrackList.value
+
+    fun selectVideoTrack(mpvId: Int) {
+        if (exoActive) {
+            exoEngine?.selectVideoTrack(mpvId)
+        } else if (initialized) {
+            mpvAsync { setPropertyInt("vid", mpvId) }
+        }
+        _videoTrackList.value = _videoTrackList.value.map { it.copy(selected = it.mpvId == mpvId) }
+    }
 
     fun setBitrateTrackingEnabled(enabled: Boolean) {
         // Gated by the escape-hatch toggle: with it off, no throughput measuring ever starts.
@@ -3762,16 +3775,36 @@ class OwnTVPlayer(
             // Image-based subtitle (PGS/VOBSUB/DVB): mpv's direct path can't draw it — on VOD, selecting
             // it hands playback to ExoPlayer. typeIndex lines the pick up with ExoPlayer's track order.
             val image = type == "sub" && codec?.lowercase() in BITMAP_SUB_CODECS
+            val label = if (type == "video") {
+                val w = m.getPropertyInt("track-list/$i/demux-w") ?: 0
+                val h = m.getPropertyInt("track-list/$i/demux-h") ?: 0
+                val fps = m.getPropertyDouble("track-list/$i/demux-fps") ?: 0.0
+                val resLabel = if (w > 0 && h > 0) "${w}x${h}" else ""
+                val fpsLabel = if (fps > 0.0) "${Math.round(fps)}fps" else ""
+                listOfNotNull(
+                    resLabel.takeIf { it.isNotEmpty() },
+                    fpsLabel.takeIf { it.isNotEmpty() },
+                    codec?.uppercase()?.takeIf { it.isNotEmpty() },
+                    title?.takeIf { it.isNotBlank() },
+                ).joinToString(" • ").ifEmpty { "Video ${typeIndex + 1}" }
+            } else {
+                title.orEmpty()
+            }
+            val labelKind = when (type) {
+                "sub" -> TrackLabelKind.SUBTITLE
+                "video" -> TrackLabelKind.VIDEO
+                else -> TrackLabelKind.AUDIO
+            }
             out.add(
                 TrackOption(
-                    label = title.orEmpty(),
+                    label = label,
                     mpvId = id,
                     selected = selected,
                     image = image,
                     codec = codec,
                     lang = lang,
                     typeIndex = typeIndex,
-                    labelKind = if (type == "sub") TrackLabelKind.SUBTITLE else TrackLabelKind.AUDIO,
+                    labelKind = labelKind,
                 ),
             )
             typeIndex++
@@ -4100,8 +4133,10 @@ class OwnTVPlayer(
                 }
                 _audioTrackList.value = queryTracks("audio")
                 _subTrackList.value = queryTracks("sub")
+                _videoTrackList.value = queryTracks("video")
                 _audioCount.value = _audioTrackList.value.size
                 _subCount.value = _subTrackList.value.size
+                _videoCount.value = _videoTrackList.value.size
                 // Re-list previously downloaded subtitles for a VOD item (subtitle plan §9). Fires after
                 // the fresh track list is built so restoreExternalSubtitles appends onto it.
                 if (!isLiveContent) onVodFileLoaded?.invoke()

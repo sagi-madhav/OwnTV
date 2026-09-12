@@ -30,6 +30,17 @@ private class MpvSurfaceView(context: Context, private val player: OwnTVPlayer) 
         holder.addCallback(this)
     }
 
+    /** Set the native surface buffer size to match the source video dimensions. On 4K TV panels running at
+     *  1080p UI density (e.g. Fire TV Stick 4K), setFixedSize() ensures the video decoder writes into a native
+     *  3840x2160 hardware overlay plane rather than downscaling to 1080p. */
+    fun setVideoSize(size: Pair<Int, Int>?) {
+        if (size != null && size.first > 0 && size.second > 0) {
+            holder.setFixedSize(size.first, size.second)
+        } else {
+            holder.setSizeFromLayout()
+        }
+    }
+
     /** Ask the display to switch to a refresh rate matching the video (TVs that support it drop the
      *  3:2-pulldown judder of 24fps content on a fixed 60Hz panel). Re-applied on each fps change and
      *  on surface (re)create. No-op below Android 11, or where the panel can't switch (harmless). */
@@ -100,7 +111,7 @@ fun MpvVideoSurface(player: OwnTVPlayer, modifier: Modifier = Modifier, autoFram
 
     // Auto frame rate, mechanism 2: window-level display-mode switch. Complements the per-surface
     // setFrameRate() hint below, which is a no-op before Android 11 (e.g. Fire OS 7 boxes).
-    AutoFrameRateEffect(fps, autoFrameRate)
+    AutoFrameRateEffect(fps, videoSize, autoFrameRate)
 
     BoxWithConstraints(modifier.background(Color.Black).clipToBounds(), contentAlignment = Alignment.Center) {
         val viewModifier = Modifier.videoZoom(zoom, aspect, videoSize, maxWidth, maxHeight)
@@ -115,7 +126,10 @@ fun MpvVideoSurface(player: OwnTVPlayer, modifier: Modifier = Modifier, autoFram
                 // The surface-level hint is part of AFR too. Previously this stayed active when the
                 // setting was Off, so Android 11+ TVs could still perform the exact HDMI handshake the
                 // user had disabled AFR to avoid.
-                update = { it.applyVideoFrameRate(if (autoFrameRate) fps ?: 0f else 0f) },
+                update = {
+                    it.setVideoSize(videoSize)
+                    it.applyVideoFrameRate(if (autoFrameRate) fps ?: 0f else 0f)
+                },
             )
         }
         // Image-subtitle (PGS/VOBSUB/DVB) overlay for the ExoPlayer handoff. Mounted ONLY while ExoPlayer
@@ -159,13 +173,13 @@ fun ExoPreviewSurface(
     // Only the full-screen live player passes autoFrameRate = true — the in-pane preview must never
     // reconfigure the display while the user is just scrolling the channel list.
     val fps by engine.videoFps.collectAsStateWithLifecycle()
+    val videoSize by engine.videoSize.collectAsStateWithLifecycle()
     // Media3 has its own Surface.setFrameRate path, independent of FrameRateController. Keep it off in
     // previews/mini-player and make the full-screen path obey the same AFR setting.
     LaunchedEffect(engine, autoFrameRate) { engine.setAutoFrameRateEnabled(autoFrameRate) }
-    AutoFrameRateEffect(fps, autoFrameRate)
+    AutoFrameRateEffect(fps, videoSize, autoFrameRate)
     BoxWithConstraints(modifier.background(Color.Black).clipToBounds(), contentAlignment = Alignment.Center) {
         val aspect by engine.videoAspect.collectAsStateWithLifecycle()
-        val videoSize by engine.videoSize.collectAsStateWithLifecycle()
         val zoom by engine.zoomMode.collectAsStateWithLifecycle()
         // Keyed on the engine's surface generation: when it releases a 4K decoder it bumps the counter,
         // which drops this SurfaceView and builds a new one. Some hardware decoders only ever accept one
@@ -179,12 +193,22 @@ fun ExoPreviewSurface(
                     SurfaceView(ctx).apply {
                         holder.addCallback(object : SurfaceHolder.Callback {
                             override fun surfaceCreated(holder: SurfaceHolder) = engine.setSurface(holder.surface)
-                            override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {}
+                            override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
+                                engine.setSurface(holder.surface)
+                            }
                             override fun surfaceDestroyed(holder: SurfaceHolder) = engine.detachSurface(holder.surface)
                         })
                     }
                 },
-                update = { it.keepScreenOn = keepAwake },
+                update = {
+                    it.keepScreenOn = keepAwake
+                    val size = videoSize
+                    if (size != null && size.first > 0 && size.second > 0) {
+                        it.holder.setFixedSize(size.first, size.second)
+                    } else {
+                        it.holder.setSizeFromLayout()
+                    }
+                },
             )
         }
         // Subtitle overlay — mounted ONLY while subs are on, so 4K live keeps its direct hardware-overlay path.

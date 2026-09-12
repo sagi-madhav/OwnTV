@@ -48,6 +48,8 @@
     <string name="player_skip_back">Skip back</string>
     <!-- Translators: Spoken label for the phone player's skip-forwards button, which jumps forward by the user's own seek step. Keep this very short (16 characters maximum). -->
     <string name="player_skip_forward">Skip forward</string>
+    <!-- Translators: Label under the video quality button on the player control bar, shown when it has focus. -->
+    <string name="player_tool_video">Quality</string>
     <!-- Translators: Label under the audio-track button on the player control bar, shown when it has focus. Keep this very short (14 characters maximum) — it sits inside the button on the remote-driven player bar. -->
     <string name="player_tool_audio">Audio</string>
     <!-- Translators: Label under the subtitles button on the player control bar, shown when it has focus. Keep this very short (14 characters maximum) — it sits inside the button on the remote-driven player bar. -->
@@ -85,6 +87,8 @@
     <string name="player_provider_retry_after">HTTP <xliff:g id="code">%1$d</xliff:g>: <xliff:g id="reason">%2$s</xliff:g> Retrying in <xliff:g id="seconds">%3$d</xliff:g>s.</string>
     <!-- Translators: Substituted as the reason in player_provider_retry_after when the provider gave no message of its own. -->
     <string name="player_provider_busy">The provider is busy.</string>
+    <!-- Translators: Dialog title for the video quality track selection dialog in the player HUD. -->
+    <string name="player_video_track">Video Quality</string>
     <!-- Translators: Dialog title for the audio track selection dialog in the player HUD. -->
     <string name="player_audio_track">Audio Track</string>
     <!-- Translators: Dialog title for the subtitle track selection dialog in the player HUD. -->
@@ -251,6 +255,10 @@
     <string name="player_audio_track_number">Audio <xliff:g id="number">%1$d</xliff:g></string>
     <!-- Translators: Fallback label for a subtitle track when it has no name or language. "number" is the track index. -->
     <string name="player_subtitle_track_number">Subtitle <xliff:g id="number">%1$d</xliff:g></string>
+    <!-- Translators: Fallback label for a video track when it has no name. "number" is the track index. -->
+    <string name="player_video_track_number">Video <xliff:g id="number">%1$d</xliff:g></string>
+    <!-- Translators: Label for automatic best video quality selection. -->
+    <string name="player_video_track_auto">Auto (Best)</string>
     <!-- Translators: Visible middle-dot separator between inline metadata segments in the player HUD, stream info overlay, launcher metadata, and subtitle track labels. -->
     <string name="player_metadata_separator"> \u00b7 </string>
     <!-- Translators: Title of the technical stream info overlay shown in the player. -->

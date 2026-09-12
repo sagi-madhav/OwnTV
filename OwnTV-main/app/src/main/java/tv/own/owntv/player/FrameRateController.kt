@@ -106,14 +106,15 @@ object FrameRateController {
      * blanking the picture repeatedly on a stream that never changed frame rate at all. [snapFps] removes
      * most of that drift; this collapses whatever is left into one switch.
      */
-    fun apply(activity: Activity, fps: Float) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M || fps <= 0f) return
+    fun apply(activity: Activity, fps: Float, videoSize: Pair<Int, Int>? = null) {
+        val is4kVideo = videoSize != null && (videoSize.first >= 3840 || videoSize.second >= 2160)
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M || (fps <= 0f && !is4kVideo)) return
         cancelPendingApply()
         runCatching {
             // The pending reset is cancelled only once a mode is actually going to be requested. Cancelling
             // up front killed the restore-to-default even when nothing matched this item's frame rate — so
             // leaving a 24p film for something the panel has no mode for kept the display at 24Hz.
-            val target = pickMode(activity, fps) ?: return
+            val target = pickMode(activity, fps, videoSize) ?: return
             cancelPendingReset()
             if (target.modeId == activity.window.attributes.preferredDisplayModeId) return
             val waitMs = MODE_CHANGE_COOLDOWN_MS - (android.os.SystemClock.uptimeMillis() - lastChangeAtMs)
@@ -121,7 +122,7 @@ object FrameRateController {
                 Log.i(TAG, "AFR: ${fps}fps -> mode ${target.modeId} deferred ${waitMs}ms (cooldown)")
                 // Re-resolve on the way out rather than capturing `target`: by then the fps may have moved
                 // again, and the newest reading is the one worth acting on.
-                val task = Runnable { pendingApply = null; apply(activity, fps) }
+                val task = Runnable { pendingApply = null; apply(activity, fps, videoSize) }
                 pendingApply = task
                 handler.postDelayed(task, waitMs)
                 return
@@ -147,10 +148,10 @@ object FrameRateController {
      *  2. The lowest refresh-rate multiple (a true 24Hz beats 72Hz).
      *  3. The closest rate within that multiple.
      */
-    private fun pickMode(activity: Activity, fps: Float): Display.Mode? {
+    private fun pickMode(activity: Activity, fps: Float, videoSize: Pair<Int, Int>? = null): Display.Mode? {
         val display: Display = displayOf(activity) ?: return null
         val current = display.mode ?: return null
-        val wanted = snapFps(fps)
+        val wanted = if (fps > 0f) snapFps(fps) else null
         val systemPreference = systemMatchPreference(activity)
         if (systemPreference == MATCH_NEVER) return null
         val seamless = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
@@ -159,14 +160,33 @@ object FrameRateController {
             emptyList()
         }
         fun isSeamless(mode: Display.Mode) = seamless.any { abs(it - mode.refreshRate) <= TOLERANCE_HZ }
-        return display.supportedModes
-            ?.filter { it.physicalWidth == current.physicalWidth && it.physicalHeight == current.physicalHeight }
-            ?.filter { systemPreference != MATCH_SEAMLESS_ONLY || isSeamless(it) }
-            ?.mapNotNull { mode -> multipleOf(mode.refreshRate, wanted)?.let { mode to it } }
-            ?.minByOrNull { (mode, mult) ->
+
+        val is4kVideo = videoSize != null && (videoSize.first >= 3840 || videoSize.second >= 2160)
+        val allModes = display.supportedModes ?: return null
+        val has4kMode = allModes.any { it.physicalWidth >= 3840 && it.physicalHeight >= 2160 }
+
+        val targetModes = if (is4kVideo && has4kMode) {
+            allModes.filter { it.physicalWidth >= 3840 && it.physicalHeight >= 2160 }
+        } else {
+            allModes.filter { it.physicalWidth == current.physicalWidth && it.physicalHeight == current.physicalHeight }
+        }
+
+        if (wanted == null) {
+            return if (is4kVideo && has4kMode) {
+                targetModes.maxByOrNull { it.refreshRate }
+            } else null
+        }
+
+        return targetModes
+            .filter { systemPreference != MATCH_SEAMLESS_ONLY || isSeamless(it) }
+            .mapNotNull { mode -> multipleOf(mode.refreshRate, wanted)?.let { mode to it } }
+            .minByOrNull { (mode, mult) ->
                 (if (isSeamless(mode)) 0f else 1_000_000f) + mult * 1000f + abs(mode.refreshRate - mult * wanted)
             }
             ?.first
+            ?: if (is4kVideo && has4kMode) {
+                targetModes.maxByOrNull { it.refreshRate }
+            } else null
     }
 
     /**
@@ -300,17 +320,20 @@ object FrameRateController {
  * surfaces only — a mini/preview window must not reconfigure the whole display.
  */
 @Composable
-fun AutoFrameRateEffect(fps: Float?, enabled: Boolean) {
+fun AutoFrameRateEffect(fps: Float?, videoSize: Pair<Int, Int>? = null, enabled: Boolean) {
     val activity = LocalContext.current.findActivity()
-    // Apply on every fps change, but keep the release in its OWN effect keyed only on the activity —
-    // keying the disposal on fps too would reset the display to default and re-request on each fps
-    // update, i.e. an extra HDMI mode flip per change.
-    LaunchedEffect(activity, enabled, fps) {
+    // Apply on every fps or videoSize change, but keep the release in its OWN effect keyed only on the activity —
+    // keying the disposal on fps/size too would reset the display to default and re-request on each update,
+    // i.e. an extra HDMI mode flip per change.
+    LaunchedEffect(activity, enabled, fps, videoSize) {
         if (activity == null) return@LaunchedEffect
-        if (enabled) FrameRateController.apply(activity, fps ?: 0f) else FrameRateController.reset(activity)
+        if (enabled) FrameRateController.apply(activity, fps ?: 0f, videoSize) else FrameRateController.reset(activity)
     }
     DisposableEffect(activity) {
         onDispose { if (activity != null) FrameRateController.reset(activity) }
     }
 }
+
+@Composable
+fun AutoFrameRateEffect(fps: Float?, enabled: Boolean) = AutoFrameRateEffect(fps, null, enabled)
 

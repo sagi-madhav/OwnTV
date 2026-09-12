@@ -28,6 +28,7 @@ fun TrackOption.displayLabel(): String {
     val fallback = when (labelKind) {
         TrackLabelKind.AUDIO -> stringResource(R.string.player_audio_track_number, displayNumber())
         TrackLabelKind.SUBTITLE -> stringResource(R.string.player_subtitle_track_number, displayNumber())
+        TrackLabelKind.VIDEO -> stringResource(R.string.player_video_track_number, displayNumber())
     }
     // External subs already carry their source in the raw label's `OS_`/`LOCAL_` prefix (see
     // SubtitleTrackLabel), so appending a source word here would state it twice on every row.

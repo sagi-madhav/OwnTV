@@ -237,10 +237,21 @@
 1	core/src/main/java/tv/own/owntv/core/sync/work/TrendingRefreshWorker.kt	Playlist
 1	core/src/main/java/tv/own/owntv/core/util/CrashRecorder.kt	${Build.MANUFACTURER} ${Build.MODEL} · Android ${Build.VERSION.RELEASE} (API ${Build.VERSION.SDK_INT})
 1	core/src/main/java/tv/own/owntv/core/util/CrashRecorder.kt	--- live diagnostics leading up to the crash ---
-4	player-core/src/main/java/tv/own/owntv/player/LivePreviewEngine.kt	\0
+3	player-core/src/main/java/tv/own/owntv/player/ExoSubtitleEngine.kt	\0
+1	player-core/src/main/java/tv/own/owntv/player/ExoSubtitleEngine.kt	${Math.round(f.frameRate)}fps
+1	player-core/src/main/java/tv/own/owntv/player/ExoSubtitleEngine.kt	${f.bitrate / 1_000_000}Mbps
+1	player-core/src/main/java/tv/own/owntv/player/ExoSubtitleEngine.kt	${f.width}x${f.height}
+1	player-core/src/main/java/tv/own/owntv/player/ExoSubtitleEngine.kt	Video ${id + 1}
+1	player-core/src/main/java/tv/own/owntv/player/ExoSubtitleEngine.kt	•
+7	player-core/src/main/java/tv/own/owntv/player/LivePreviewEngine.kt	\0
+1	player-core/src/main/java/tv/own/owntv/player/LivePreviewEngine.kt	${Math.round(f.frameRate)}fps
+1	player-core/src/main/java/tv/own/owntv/player/LivePreviewEngine.kt	${f.bitrate / 1_000_000}Mbps
+1	player-core/src/main/java/tv/own/owntv/player/LivePreviewEngine.kt	${f.width}x${f.height}
+1	player-core/src/main/java/tv/own/owntv/player/LivePreviewEngine.kt	Auto (Best)
 1	player-core/src/main/java/tv/own/owntv/player/LivePreviewEngine.kt	Content-Type
 1	player-core/src/main/java/tv/own/owntv/player/LivePreviewEngine.kt	HLS
 1	player-core/src/main/java/tv/own/owntv/player/LivePreviewEngine.kt	MPEG-TS
+1	player-core/src/main/java/tv/own/owntv/player/LivePreviewEngine.kt	Video ${vId + 1}
 1	player-core/src/main/java/tv/own/owntv/player/LivePreviewEngine.kt	body="$failureText"
 1	player-core/src/main/java/tv/own/owntv/player/LivePreviewEngine.kt	decoder failed before first frame (${error.errorCodeName}) — rebuilding the decoder and retrying once
 1	player-core/src/main/java/tv/own/owntv/player/LivePreviewEngine.kt	decoder rebuild failed: ${it.message}
@@ -253,12 +264,17 @@
 1	player-core/src/main/java/tv/own/owntv/player/LivePreviewEngine.kt	reclaim
 1	player-core/src/main/java/tv/own/owntv/player/LivePreviewEngine.kt	stream didn't open — trying the ${alt.substringBefore('?').substringAfterLast('.')} form of this channel
 1	player-core/src/main/java/tv/own/owntv/player/LivePreviewEngine.kt	trying alternate format: ${HttpClient.redactUrl(alt)}
+1	player-core/src/main/java/tv/own/owntv/player/LivePreviewEngine.kt	•
 4	player-core/src/main/java/tv/own/owntv/player/LiveStreamQuirks.kt	.m3u8
 3	player-core/src/main/java/tv/own/owntv/player/LiveStreamQuirks.kt	.ts
+2	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	\0
 1	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	#00000000
 1	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	#FFFFFFFF
+1	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	${Math.round(fps)}fps
+1	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	${w}x${h}
 1	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	HLS
 1	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	MPEG-TS
+1	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	Video ${typeIndex + 1}
 1	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	demuxer
 1	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	file-format
 2	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	force
@@ -270,6 +286,12 @@
 2	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	sub-back-color
 2	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	sub-color
 2	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	sub-pos
+1	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	track-list/$i/demux-fps
+1	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	track-list/$i/demux-h
+1	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	track-list/$i/demux-w
+1	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	vid
+3	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	video
+1	player-core/src/main/java/tv/own/owntv/player/OwnTVPlayer.kt	•
 1	player-core/src/main/java/tv/own/owntv/player/PlayerDiagnostics.kt	\0
 1	player-core/src/main/java/tv/own/owntv/player/PlayerDiagnostics.kt	429
 1	player-core/src/main/java/tv/own/owntv/player/PlayerDiagnostics.kt	458

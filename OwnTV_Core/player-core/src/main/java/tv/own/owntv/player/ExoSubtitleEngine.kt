@@ -170,8 +170,11 @@ class ExoSubtitleEngine(
     // Maps the audio-track id the HUD selects (== its ordinal in the list we publish) → the ExoPlayer
     // track group + index to override. Rebuilt whenever the track list changes.
     private var audioSelections: List<AudioSel> = emptyList()
+    private var videoSelections: List<VideoSel> = emptyList()
+    private var videoTrackList: List<TrackOption> = emptyList()
 
     private data class AudioSel(val id: Int, val group: TrackGroup, val trackIndex: Int)
+    private data class VideoSel(val id: Int, val group: TrackGroup, val trackIndex: Int)
 
     val isActive: Boolean get() = player != null
 
@@ -249,6 +252,7 @@ class ExoSubtitleEngine(
             updateVideoTrackPresence(tracks)
             rebuildAudioTracks(tracks)
             rebuildTextTracks(tracks)
+            rebuildVideoTracks(tracks)
             applyPendingSubtitle(tracks)
         }
 
@@ -515,6 +519,8 @@ class ExoSubtitleEngine(
             // (alang/slang), so an image-subtitle handoff or an ExoPlayer-preferred VOD silently ignored
             // them. An explicit subtitle pick still wins: applyPendingSubtitle sets an override.
             parameters = buildUponParameters()
+                .clearViewportSizeConstraints()
+                .clearVideoSizeConstraints()
                 .setPreferredAudioLanguage(prefAudioLang.takeIf { it.isNotBlank() })
                 .setPreferredTextLanguage(prefSubLang.takeIf { it.isNotBlank() })
                 .build()
@@ -715,6 +721,59 @@ class ExoSubtitleEngine(
             android.util.Log.i(TAG, "passthrough audio: re-priming the output after the track change")
             runCatching { p.seekTo(p.currentPosition) }
         }
+    }
+
+    fun videoTracks(): List<TrackOption> = videoTrackList
+
+    fun selectVideoTrack(id: Int) {
+        val p = player ?: return
+        if (id < 0) {
+            p.trackSelectionParameters = p.trackSelectionParameters.buildUpon()
+                .clearOverridesOfType(C.TRACK_TYPE_VIDEO)
+                .build()
+            videoTrackList = videoTrackList.map { it.copy(selected = it.mpvId == -1) }
+            return
+        }
+        val sel = videoSelections.firstOrNull { it.id == id } ?: return
+        p.trackSelectionParameters = p.trackSelectionParameters.buildUpon()
+            .setOverrideForType(TrackSelectionOverride(sel.group, listOf(sel.trackIndex)))
+            .build()
+        videoTrackList = videoTrackList.map { it.copy(selected = it.mpvId == id) }
+    }
+
+    private fun rebuildVideoTracks(tracks: Tracks) {
+        val out = ArrayList<TrackOption>()
+        val sels = ArrayList<VideoSel>()
+        var id = 0
+        for (group in tracks.groups) {
+            if (group.type != C.TRACK_TYPE_VIDEO) continue
+            for (i in 0 until group.length) {
+                val f = group.getTrackFormat(i)
+                val res = if (f.width > 0 && f.height > 0) "${f.width}x${f.height}" else ""
+                val fps = if (f.frameRate > 0) "${Math.round(f.frameRate)}fps" else ""
+                val br = if (f.bitrate > 0) "${f.bitrate / 1_000_000}Mbps" else ""
+                val label = listOfNotNull(
+                    res.takeIf { it.isNotEmpty() },
+                    fps.takeIf { it.isNotEmpty() },
+                    br.takeIf { it.isNotEmpty() },
+                    f.label?.takeIf { it.isNotBlank() },
+                ).joinToString(" • ").ifEmpty { "Video ${id + 1}" }
+                out.add(
+                    TrackOption(
+                        label = label,
+                        mpvId = id,
+                        selected = group.isTrackSelected(i),
+                        codec = f.sampleMimeType,
+                        typeIndex = id,
+                        labelKind = TrackLabelKind.VIDEO,
+                    )
+                )
+                sels.add(VideoSel(id, group.mediaTrackGroup, i))
+                id++
+            }
+        }
+        videoSelections = sels
+        videoTrackList = out
     }
 
     /** X1: audio-only media is a valid state, not a device fault — cancel the no-video watchdog for
