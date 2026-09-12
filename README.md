@@ -25,13 +25,19 @@
 The latest release APK is compiled and packaged automatically by **GitHub Actions** on every push.
 
 ### Option A: Install via Fire TV "Downloader" App (Recommended)
-1. Open the **Downloader** app on your Fire TV or Android TV device (available free in the Amazon Appstore / Google Play).
-2. Enter the direct download URL in the URL bar:
-   ```
-   https://github.com/sagi-madhav/OwnTV/releases/latest/download/OwnTV.apk
-   ```
-   *(Or enter your custom 5-digit shortcode created on [go.aftvnews.com](https://go.aftvnews.com)).*
-3. Click **Go** — the APK will download and prompt you to install immediately.
+
+You can install OwnTV directly on any Fire TV or Android TV device in seconds using the **Downloader** app by AFTVnews:
+
+| Method | Value |
+| :--- | :--- |
+| 🔢 **Downloader Code** | **`3293910`** |
+| 🔗 **Short URL** | **[`aftv.news/3293910`](https://aftv.news/3293910)** |
+| 🌐 **Direct APK URL** | `https://github.com/sagi-madhav/OwnTV/releases/latest/download/OwnTV.apk` |
+
+**Quick Steps:**
+1. Open the **Downloader** app on your Fire TV or Android TV (free in Amazon Appstore & Google Play).
+2. In the URL / Search field, enter the code **`3293910`** (or type **`aftv.news/3293910`**) and click **Go**.
+3. The latest release APK downloads automatically. Click **Install** when prompted.
 
 ### Option B: Sideload via ADB (Over Wi-Fi or USB)
 ```bash

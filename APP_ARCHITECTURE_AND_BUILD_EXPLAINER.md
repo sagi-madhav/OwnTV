@@ -224,9 +224,11 @@ To deliver the app to Fire TV devices without requiring a developer PC:
 2. **Permanent Downloader Endpoint**:
    - GitHub Releases exposes a static redirect URL:
      `https://github.com/sagi-madhav/OwnTV/releases/latest/download/OwnTV.apk`
-3. **AFTVnews Short Code**:
-   - The URL is shortened on `go.aftvnews.com` to a 5-digit number.
-   - Any user opens the **Downloader** app on their TV, enters the 5-digit code, and the APK downloads and installs automatically.
+3. **AFTVnews Short Code & Short URL**:
+   - Short URL: **[`aftv.news/3293910`](https://aftv.news/3293910)**
+   - Downloader Code: **`3293910`**
+   - Any user opens the **Downloader** app on their TV, enters **`3293910`**, and the APK downloads and installs automatically.
+
 
 ---
 

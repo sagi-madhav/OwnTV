@@ -229,8 +229,11 @@ Implemented a complete CI/CD automation pipeline in `.github/workflows/build-and
    Copies the output APK to `dist/OwnTV.apk` and publishes a GitHub Release.
    This provides a permanent direct URL:
    `https://github.com/sagi-madhav/OwnTV/releases/latest/download/OwnTV.apk`
-5. **Short Code Integration**:
-   This permanent URL can be shortened on `go.aftvnews.com` into a 5-digit remote code (e.g. `12345`), allowing anyone to type the code into their TV remote and install OwnTV in seconds.
+5. **Short Code & Short URL Integration**:
+   - Short URL: **[`aftv.news/3293910`](https://aftv.news/3293910)**
+   - Downloader Code: **`3293910`**
+   - Anyone types **`3293910`** into the Downloader app on their TV remote to install OwnTV in seconds.
+
 
 ---
 
