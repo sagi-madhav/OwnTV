@@ -1,4 +1,4 @@
-﻿# OwnTV: End-to-End System Architecture & Build Engineering Guide
+# OwnTV: End-to-End System Architecture & Build Engineering Guide
 ## How the App Was Built, Designed, and Scaled for Android TV & Amazon Fire TV
 
 This document explains the complete, end-to-end architecture of **OwnTV**—from the low-level native playback engine and database pipeline to the Jetpack Compose TV UI and the Android API 25 / Fire OS 6 refactoring. 
@@ -81,6 +81,45 @@ The most critical part of an IPTV player is handling heterogeneous, non-standard
 - 24 fps on a 60 Hz display produces noticeable stutter known as **3:2 pulldown judder**.
 - `FrameRateController` uses `WindowManager.LayoutParams.preferredDisplayModeId` (API 23+) to query the TV panel's supported display modes via `DisplayManager`.
 - It matches video stream FPS to display refresh rates (e.g. 24 fps $\rightarrow$ 24 Hz, 25 fps $\rightarrow$ 50 Hz, 30 fps $\rightarrow$ 60 Hz), eliminating judder while respecting user settings and cooldown timers to prevent excessive HDMI blanking handshakes.
+
+### True Native 4K Playback Pipeline & Display Mode Resolution Switching
+On Android TV and Fire OS devices (such as the Fire TV Stick 4K), achieving crisp, true native 4K (3840×2160) streaming requires managing three distinct layers of the operating system:
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                        Android TV 4K Media Stack                       │
+├────────────────────────────────────────────────────────────────────────┤
+│ Layer 1: Window / System UI Plane (Rendered at 1920×1080 @ 320 dpi)    │
+│  - Jetpack Compose TV UI, menus, navigation rails, and player HUD      │
+├────────────────────────────────────────────────────────────────────────┤
+│ Layer 2: SurfaceView Hardware Overlay Plane                            │
+│  - SurfaceHolder.setFixedSize(3840, 2160) allocates native 4K buffer  │
+│  - SurfaceFlinger hardware composer bypasses GPU composition           │
+│  - MediaCodec / libmpv decodes directly into native 4K physical buffer │
+├────────────────────────────────────────────────────────────────────────┤
+│ Layer 3: HDMI Physical Output Mode (DisplayManager / Display.Mode)     │
+│  - WindowManager.LayoutParams.preferredDisplayModeId = 4 (3840×2160)   │
+│  - TV panel switches physical HDMI scan-out from 1080p to true 4K      │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+1. **The SurfaceView Downscaling Trap (`SurfaceHolder.setFixedSize`)**:
+   - On Android TV, the system UI and Compose window operate at `1920x1080`.
+   - When a `SurfaceView` is rendered without an explicit buffer dimension, Android invokes `holder.setSizeFromLayout()`, capping its internal graphic buffer at `1920x1080`.
+   - As a result, even if an IPTV provider sends a 4K stream (3840×2160), the hardware video decoder (MediaCodec or libmpv) was forced to downscale the frame into a 1080p buffer before displaying it—causing blurry video compared to players like IMPlayer or TiviMate.
+   - **Fix**: In both `MpvVideoSurface.kt` and `ExoPreviewSurface.kt`, we explicitly invoke `holder.setFixedSize(videoSize.first, videoSize.second)` when source video dimensions are known (>0). This instructs `SurfaceFlinger` to allocate a dedicated 3840×2160 hardware overlay plane, preserving every pixel.
+
+2. **Uncapping ExoPlayer Viewport Constraints**:
+   - Media3's `DefaultTrackSelector(context)` defaults to using the display window size (`1920x1080`) as its viewport ceiling.
+   - On multi-variant adaptive HLS and DASH streams, ExoPlayer actively down-ranked or excluded 4K variants because their pixel count exceeded the 1080p viewport.
+   - **Fix**: In `LivePreviewEngine.kt` and `ExoSubtitleEngine.kt`, we configure `DefaultTrackSelector` with `.clearViewportSizeConstraints()` and `.clearVideoSizeConstraints()`, allowing uninhibited selection of 4K bitrates.
+
+3. **Dynamic 4K Display Mode Resolution Switching**:
+   - `FrameRateController.kt` queries `display.supportedModes`. When 4K content is playing (`width >= 3840 || height >= 2160`), it requests a 4K mode (`it.physicalWidth >= 3840 && it.physicalHeight >= 2160`) via `preferredDisplayModeId`.
+   - On the Fire TV Stick 4K, this switches the physical HDMI output from Mode 1 (`1920x1080@60Hz`) to Mode 4 / Mode 6 (`3840x2160@30Hz/25Hz`), providing razor-sharp native 4K output to the television.
+
+4. **Player HUD Video Quality Selector**:
+   - Added a dedicated "Quality" dialog (`HudDialog.VIDEO`) in `PlayerHud.kt` and `PlayerHudChrome.kt` featuring an "Auto (Best)" option and manual resolution/bitrate variant selection (`3840x2160 • 60fps`, `1920x1080 • 60fps`, etc.).
 
 ---
 
@@ -211,3 +250,12 @@ To deliver the app to Fire TV devices without requiring a developer PC:
 
 ### Q4: "What was the most challenging bug you encountered when backporting to API 25?"
 > *"The hardest bug was an ART runtime crash during channel switches. The app was crashing with a `NoSuchMethodError` inside `PixelCopy.request`. The original code had a guard `SDK_INT < 24`. While `PixelCopy` for `SurfaceView` exists on API 24, `PixelCopy.request` taking a raw `Surface` was only added in API 26. In Dalvik/ART, referencing unresolvable method signatures causes bytecode verification issues. I solved it using the Class Verification Isolation pattern by moving the invocation to a dedicated `@RequiresApi(O)` static helper that ART never attempts to verify on Android 7.1."*
+
+### Q5: "A user reported that 4K live channels played clearly in competitor apps like IMPlayer, but were blurry in your player. How did you diagnose and resolve this native 4K rendering issue?"
+> *"I diagnosed this at three distinct layers of the Android media and display pipeline:
+> 1. **SurfaceView Buffer Allocation**: On Android TV, the Window and Compose UI render at 1080p. Without setting explicit buffer dimensions on the `SurfaceHolder`, Android defaults to `setSizeFromLayout()`, creating a 1080p graphics buffer. The hardware decoder (`MediaCodec` or `libmpv`) downscaled the 4K stream to 1080p before `SurfaceFlinger` composited it. By calling `holder.setFixedSize(width, height)` when video dimensions are received, we forced `SurfaceFlinger` to allocate a true 3840×2160 hardware overlay plane.
+> 2. **TrackSelector Viewport Constraints**: Media3's `DefaultTrackSelector` defaults to bounding track selection by the current window viewport (`1920x1080`). For adaptive HLS/DASH streams, ExoPlayer filtered out or penalized 4K representations. I applied `.clearViewportSizeConstraints()` and `.clearVideoSizeConstraints()` to the track selector parameters.
+> 3. **Physical HDMI Resolution Switching**: The display controller (`FrameRateController`) previously only matched refresh rates within the current physical display resolution. I enhanced the mode-matching algorithm to detect 4K video streams (`width >= 3840`) and switch the physical display output (`preferredDisplayModeId`) to the TV's native 4K HDMI mode (e.g., Mode 4: 3840×2160 @ 30Hz / Mode 6: 3840×2160 @ 25Hz).
+> 
+> I verified this live on a physical Fire TV Stick 4K over ADB using `dumpsys display` and logcat, confirming that the physical TV switched to `app 3840 x 2160, real 3840 x 2160` with zero dropped frames."*
+
