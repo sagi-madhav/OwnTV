@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <!-- British English overrides for the canonical en-US source. Resource names remain stable. -->
+    <string name="sync_remainder_note">The rest of the catalogue is still syncing in the background — you can start watching now. Progress shows in the small pill at the bottom of the screen.</string>
+    <string name="sync_progress_preparing">Preparing catalogue</string>
+    <string name="sync_progress_syncing">Syncing catalogue</string>
+</resources>

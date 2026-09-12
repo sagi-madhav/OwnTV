@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--
+      Activity window theme. The real UI is pure Jetpack Compose (tv-material3); this framework
+      theme only governs the launch window before Compose draws, so we keep it minimal and paint the
+      window the brand background to avoid a flash. App default theme is AMOLED dark.
+    -->
+    <style name="Theme.OwnTV" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/owntv_window_bg</item>
+        <item name="android:statusBarColor">@color/owntv_window_bg</item>
+        <item name="android:navigationBarColor">@color/owntv_window_bg</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!--
+      Launch theme (audit ST3). The activity starts in this theme so the cold start shows the cyan
+      play-mark on the same window background as Theme.OwnTV — no colour flash at handoff — and
+      MainActivity switches to Theme.OwnTV via postSplashScreenTheme once a real destination is ready.
+    -->
+    <style name="Theme.OwnTV.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/owntv_window_bg</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_mark</item>
+        <item name="postSplashScreenTheme">@style/Theme.OwnTV</item>
+    </style>
+</resources>

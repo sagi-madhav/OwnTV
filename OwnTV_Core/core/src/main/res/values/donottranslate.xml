@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Brand and protocol constants that must NEVER be translated. See docs/internationalization.md 0c.
+  These keys are intentionally translatable="false" and are excluded from coverage computation and
+  from translation export. Keep them here, not in strings*.xml.
+-->
+<resources>
+    <string name="app_name" translatable="false">OwnTV</string>
+    <string name="brand_own" translatable="false">Own</string>
+    <string name="brand_tv" translatable="false">TV</string>
+    <string name="settings_player_exoplayer" translatable="false">ExoPlayer</string>
+    <string name="settings_player_mpv" translatable="false">mpv</string>
+    <string name="settings_degree_celsius" translatable="false">°C</string>
+    <string name="settings_degree_fahrenheit" translatable="false">°F</string>
+    <string name="player_engine_mpv" translatable="false">MPV</string>
+    <string name="player_engine_exo" translatable="false">EXO</string>
+    <!-- The −/+ glyphs on every stepper control: mathematical symbols, identical in every language. -->
+    <string name="common_stepper_minus" translatable="false">–</string>
+    <string name="common_stepper_plus" translatable="false">+</string>
+    <!-- Typeface names in the font picker: proper nouns, identical in every language. -->
+    <string name="settings_font_lora" translatable="false">Lora</string>
+    <string name="settings_font_playfair_display" translatable="false">Playfair Display</string>
+    <string name="settings_font_dancing_script" translatable="false">Dancing Script</string>
+    <string name="settings_font_poppins" translatable="false">Poppins</string>
+</resources>

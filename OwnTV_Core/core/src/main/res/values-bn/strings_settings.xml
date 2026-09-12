@@ -1,0 +1,1356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="settings_sort_playlist">প্লেলিস্ট</string>
+    <string name="settings_sort_alpha">A–Z</string>
+    <string name="settings_sort_rating">রেটিং</string>
+    <string name="settings_sort_date_added">যোগ করার তারিখ</string>
+    <string name="settings_mini_player">মিনি-প্লেয়ার</string>
+    <string name="settings_mini_player_description">ব্রাউজ করার সময় কোনো চ্যানেল ডক (PiP) করলে যে ছোট ভাসমান প্লেয়ারটি দেখা যায়। এগুলো এখানে পরিবর্তন করুন, অথবা মিনি-প্লেয়ারের আকার পরিবর্তন / সরানোর বোতাম দিয়ে তাৎক্ষণিকভাবে পরিবর্তন করুন।</string>
+    <string name="settings_size">আকার</string>
+    <string name="settings_mini_player_size_description">স্ক্রিনের প্রস্থের অনুপাতে মিনি-প্লেয়ারটি কত বড় হবে (<xliff:g id="min">%1$d</xliff:g>%%–<xliff:g id="max">%2$d</xliff:g>%%)।</string>
+    <string name="settings_position">অবস্থান</string>
+    <string name="settings_mini_player_position_description">মিনি-প্লেয়ারটি কোন কোণ বা প্রান্তে ডক হবে।</string>
+    <string name="settings_mini_player_size">মিনি-প্লেয়ারের আকার</string>
+    <string name="settings_mini_player_position">মিনি-প্লেয়ারের অবস্থান</string>
+    <string name="settings_home_screen">হোম স্ক্রিন</string>
+    <string name="settings_home_description">এই প্রোফাইলের জন্য হোমের সারিগুলো লুকান, পুনর্বিন্যাস ও ফিল্টার করুন।</string>
+    <string name="settings_sections">বিভাগগুলো</string>
+    <string name="settings_hidden_sections">লুকানো বিভাগগুলো তালিকায় থাকবে, যাতে সেগুলো আবার চালু করতে পারেন।</string>
+    <string name="settings_keep_watching">দেখা চালিয়ে যান</string>
+    <string name="settings_live_keep_watching">দেখা চালিয়ে যান সারিতে লাইভ চ্যানেল</string>
+    <string name="settings_live_keep_watching_description">হিরো সারিতে সম্প্রতি দেখা লাইভ চ্যানেলগুলো দেখান।</string>
+    <string name="settings_movies_keep_watching">দেখা চালিয়ে যান সারিতে সিনেমা</string>
+    <string name="settings_movies_keep_watching_description">হিরো সারিতে সিনেমা চালিয়ে যাওয়ার কার্ড দেখান।</string>
+    <string name="settings_series_keep_watching">দেখা চালিয়ে যান সারিতে সিরিজ</string>
+    <string name="settings_series_keep_watching_description">হিরো সারিতে পর্ব চালিয়ে যাওয়ার কার্ড দেখান।</string>
+    <!-- Translators: Toggle label for playing the highlighted Home item's video in the hero row. -->
+    <string name="settings_hero_preview">হিরো সারিতে ভিডিও চালান</string>
+    <!-- Translators: Description of the hero-row video preview toggle. -->
+    <string name="settings_hero_preview_description">কিছুক্ষণ পরে নির্বাচিত আইটেমের ভিডিও প্রিভিউ চলে। হোম স্ক্রিন ব্রাউজ করার সময় বিদ্যুৎ ও মেমরি বাঁচাতে বন্ধ করুন।</string>
+    <string name="settings_android_tv_home">Android TV হোম</string>
+    <string name="settings_android_tv_home_description">TV হোম স্ক্রিনে দেখা চালিয়ে যান এবং সাম্প্রতিক লাইভ চ্যানেলগুলো দেখান।</string>
+    <string name="settings_refresh_now">এখনই রিফ্রেশ করুন</string>
+    <string name="settings_refresh_description">Android TV হোমে দেখা চালিয়ে যান / সাম্প্রতিক কার্ডগুলো আবার তৈরি করুন।</string>
+    <string name="settings_rebuilding">আবার তৈরি করা হচ্ছে…</string>
+    <string name="settings_done_check">সম্পন্ন ✓</string>
+    <string name="settings_mode"><xliff:g id="mode">%1$s</xliff:g></string>
+    <string name="settings_hidden">লুকানো</string>
+    <string name="settings_sidebar_customization">সাইডবার মেনু নিজের মতো সাজানো</string>
+    <string name="settings_sidebar_description">পাশের মেনুতে কোন আইকনগুলো দেখা যাবে তা বেছে নিন, অথবা প্লেলিস্ট অনুযায়ী সেগুলোকে মানিয়ে নিতে দিন।</string>
+    <string name="settings_behavior">আচরণ</string>
+    <string name="settings_nav_dynamic_description">গতিশীল — সক্রিয় প্লেলিস্টে যা আছে, আইকনগুলো তার সঙ্গে মানিয়ে নেয়। হোম ও সেটিংস সব সময় দেখা যায়।</string>
+    <string name="settings_nav_static_description">স্থির — নিচে কোন আইকনগুলো দেখা যাবে তা নিজে বেছে নিন।</string>
+    <string name="settings_icons">আইকনগুলো</string>
+    <string name="settings_shown_in_menu">পাশের মেনুতে দেখানো হচ্ছে</string>
+    <string name="settings_hidden_from_menu">পাশের মেনু থেকে লুকানো</string>
+    <string name="settings_shown">দৃশ্যমান</string>
+    <string name="settings_nav_behavior">নেভিগেশন মেনুর আচরণ</string>
+    <string name="settings_static">স্থির</string>
+    <string name="settings_dynamic">গতিশীল</string>
+    <string name="settings_http_proxy">HTTP প্রক্সি</string>
+    <string name="settings_use_proxy">প্রক্সি ব্যবহার করুন</string>
+    <string name="settings_proxy_description">OwnTV-এর সব ট্রাফিক ও প্লেব্যাক একটি HTTP প্রক্সির মাধ্যমে পাঠান।</string>
+    <string name="settings_host">হোস্ট</string>
+    <string name="settings_proxy_host_hint">proxy.example.com</string>
+    <string name="settings_port">পোর্ট</string>
+    <string name="settings_proxy_port_hint">8080</string>
+    <string name="settings_username_optional">ব্যবহারকারীর নাম (ঐচ্ছিক)</string>
+    <string name="settings_password_optional">পাসওয়ার্ড (ঐচ্ছিক)</string>
+    <string name="settings_test_proxy">প্রক্সি পরীক্ষা করুন</string>
+    <string name="settings_testing">পরীক্ষা করা হচ্ছে…</string>
+    <string name="settings_proxy_privacy">আপনার প্রক্সি প্রদানকারী দেখতে পারেন আপনি কোন সার্ভারে সংযোগ করছেন এবং HTTPS নয় এমন ট্রাফিকের বিষয়বস্তু।</string>
+    <string name="settings_proxy_limitations">আপাতত শুধু HTTP প্রক্সি সমর্থিত — SOCKS ও প্রতি-প্লেলিস্ট প্রক্সি এখনো সমর্থিত নয়।</string>
+    <string name="settings_proxy_connected"><xliff:g id="millis">%1$d</xliff:g> মি.সে.</string>
+    <string name="settings_proxy_invalid_address">একটি বৈধ হোস্ট ও পোর্ট লিখুন (1–65535)।</string>
+    <string name="settings_proxy_host_unreachable">প্রক্সি হোস্টে পৌঁছানো যাচ্ছে না।</string>
+    <string name="settings_proxy_timed_out">প্রক্সির সংযোগের সময়সীমা উত্তীর্ণ হয়েছে।</string>
+    <string name="settings_proxy_connection_failed">প্রক্সিতে সংযোগ করা যায়নি (হোস্ট/পোর্ট পরীক্ষা করুন)।</string>
+    <string name="settings_proxy_http">প্রক্সি HTTP <xliff:g id="code">%1$d</xliff:g> ফেরত দিয়েছে</string>
+    <string name="settings_proxy_failed">প্রক্সি পরীক্ষা ব্যর্থ হয়েছে।</string>
+    <string name="settings_ch_nav_title">CH+/RW · CH−/FF বোতামে পৃষ্ঠা বদল</string>
+    <string name="settings_ch_nav_description">রিমোটের CH+/RW / CH−/FF বোতাম দিয়ে বিভাগ বা আইটেমের তালিকার পৃষ্ঠা বদলান।</string>
+    <string name="settings_ch_nav_enabled">তালিকার পৃষ্ঠা বদলাতে CH+/RW · CH−/FF বোতাম ব্যবহার করুন</string>
+    <string name="settings_ch_nav_enabled_description">চালু থাকলে, CH+/RW ও CH−/FF ফোকাসে থাকা প্যানেলের ভেতরে এগিয়ে যায় (বিভাগের রেল বা আইটেমের তালিকা এবং বিভাগ নিজের মতো সাজানোর তালিকা)। বন্ধ থাকলে, ওই স্ক্রিনগুলোতে এই বোতামগুলো কিছু করবে না।</string>
+    <string name="settings_ch_nav_up">CH+ / রিওয়াইন্ড এড়িয়ে যাওয়া (প্রথমটির দিকে)</string>
+    <string name="settings_ch_nav_up_description">CH+/RW একবার চাপলে কতটি আইটেম ওপরের দিকে যাবে। দীর্ঘক্ষণ চাপলে সব সময় প্রথম আইটেমে যাবে।</string>
+    <string name="settings_ch_nav_down">CH− / ফাস্ট-ফরোয়ার্ড এড়িয়ে যাওয়া (শেষটির দিকে)</string>
+    <string name="settings_ch_nav_down_description">CH−/FF একবার চাপলে কতটি আইটেম নিচের দিকে যাবে। দীর্ঘক্ষণ চাপলে সব সময় শেষ আইটেমে যাবে।</string>
+    <string name="settings_skip_counts">এড়িয়ে যাওয়ার সংখ্যা</string>
+    <string name="settings_how_it_works">এটি যেভাবে কাজ করে</string>
+    <string name="settings_ch_nav_help">• শেষ প্রান্তে পৌঁছালে এড়িয়ে যাওয়া থেমে যায়, তাই ছোট তালিকা একবার চাপলেই শেষ পর্যন্ত পৌঁছায়।\n• CH+/RW দীর্ঘক্ষণ চাপা = প্রথম আইটেম, CH−/FF দীর্ঘক্ষণ চাপা = শেষ আইটেম।\n• \"সব\" তালিকায় (প্রতিটি চ্যানেল / সিনেমা / সিরিজ) দীর্ঘক্ষণ চাপা নিষ্ক্রিয় — তবে সেখানে অল্প সময় চাপলে এড়িয়ে যাওয়া কাজ করে।\n• বর্তমানে যে প্যানেলে ফোকাস আছে, সেখানে প্রযোজ্য — বিভাগের রেল অথবা আইটেমের তালিকা/গ্রিড।\n• সেটিংস → বিভাগ ও আইটেম নিজের মতো সাজান-এর বিভাগ তালিকার পৃষ্ঠাও বদলায়।</string>
+    <string name="settings_remote_shortcuts">রিমোট শর্টকাট</string>
+    <string name="settings_remote_shortcuts_description">নেভিগেশন, প্লেব্যাক ও ব্রাউজিং কাজের জন্য রিমোটের অতিরিক্ত বোতাম নির্ধারণ করুন। জরুরি নেভিগেশন বোতাম সুরক্ষিত থাকবে।</string>
+    <string name="settings_remote_shortcuts_enabled">রিমোট শর্টকাট ব্যবহার করুন</string>
+    <string name="settings_remote_shortcuts_enabled_description">বোতামের নির্ধারণ না মুছে সব কাস্টম শর্টকাট বন্ধ করুন</string>
+    <string name="settings_remote_shortcuts_assignments">বোতাম নির্ধারণ</string>
+    <string name="settings_remote_shortcuts_add">শর্টকাট যোগ করুন</string>
+    <string name="settings_remote_shortcuts_add_description">একটি অতিরিক্ত বোতাম চাপুন বা ধরে রাখুন, তারপর এর কাজ বেছে নিন</string>
+    <string name="settings_remote_shortcuts_reset">ডিফল্ট শর্টকাট ফিরিয়ে আনুন</string>
+    <string name="settings_remote_shortcuts_reset_description">CH+/CH− এবং রিওয়াইন্ড/ফাস্ট-ফরোয়ার্ড পেজিং ফিরিয়ে অন্য নির্ধারণ মুছুন</string>
+    <string name="settings_remote_shortcuts_capture_title">রিমোটের একটি বোতাম চাপুন</string>
+    <string name="settings_remote_shortcuts_capture_description">দ্রুত চাপুন বা ছাড়া পর্যন্ত ধরে রাখুন। ব্যাক, ডি-প্যাড, OK, ভলিউম, হোম ও পাওয়ার নির্ধারণ করা যাবে না।</string>
+    <string name="settings_remote_shortcuts_choose_action">একটি কাজ বেছে নিন</string>
+    <string name="settings_remote_shortcuts_binding"><xliff:g id="press">%1$s</xliff:g> · <xliff:g id="action">%2$s</xliff:g></string>
+    <string name="settings_remote_shortcuts_short_press">ছোট চাপ</string>
+    <string name="settings_remote_shortcuts_long_press">দীর্ঘ চাপ</string>
+    <string name="settings_remote_shortcuts_unknown_button">রিমোট বোতাম %1$d</string>
+    <string name="settings_remote_shortcuts_help">• ডিফল্টভাবে CH+/CH− ও রিওয়াইন্ড/ফাস্ট-ফরোয়ার্ড তালিকায় পেজ করে; ধরে রাখলে প্রথম বা শেষ আইটেমে যায়।
+• ছোট ও দীর্ঘ চাপ আলাদাভাবে নির্ধারণ করা যায়।
+• খুব বড় ‘সব’ তালিকায় শেষে যাওয়া বন্ধ থাকে।
+• ব্যাক দীর্ঘ চাপ সবসময় Now Playing-এ ফোকাস করে এবং বদলানো যায় না।
+• সাধারণত লাল/সবুজ/হলুদ/নীল, নম্বর, CH+/CH− ও রিওয়াইন্ড/ফাস্ট-ফরোয়ার্ড নির্ধারণ করা যায়।
+• ব্যাক, ডি-প্যাড, OK, ভলিউম, হোম ও পাওয়ার সুরক্ষিত থাকে।
+• ব্রাউজ করার সময় নম্বর শর্টকাট কাজ করে; ফুলস্ক্রিনে চ্যানেল নম্বর দেওয়া অগ্রাধিকার পায়।</string>
+    <string name="settings_remote_button_channel_up">চ্যানেল +</string>
+    <string name="settings_remote_button_channel_down">চ্যানেল −</string>
+    <string name="settings_remote_button_rewind">রিওয়াইন্ড</string>
+    <string name="settings_remote_button_fast_forward">ফাস্ট-ফরোয়ার্ড</string>
+    <string name="settings_remote_button_previous">আগের</string>
+    <string name="settings_remote_button_next">পরের</string>
+    <string name="settings_remote_button_menu">মেনু</string>
+    <string name="settings_remote_button_red">লাল বোতাম</string>
+    <string name="settings_remote_button_green">সবুজ বোতাম</string>
+    <string name="settings_remote_button_yellow">হলুদ বোতাম</string>
+    <string name="settings_remote_button_blue">নীল বোতাম</string>
+    <string name="settings_remote_action_continue">সর্বশেষ দেখা চালিয়ে যান</string>
+    <string name="settings_remote_action_focus_now_playing">Now Playing-এ ফোকাস</string>
+    <string name="settings_remote_action_expand_now_playing">Now Playing বড় করুন</string>
+    <string name="settings_remote_action_mini_player">মিনি প্লেয়ারে নিন</string>
+    <string name="settings_remote_action_play_pause">চালান বা বিরতি দিন</string>
+    <string name="settings_remote_action_page_first">প্রথম আইটেমগুলোর দিকে পেজ</string>
+    <string name="settings_remote_action_page_last">শেষ আইটেমগুলোর দিকে পেজ</string>
+    <string name="settings_remote_action_jump_first">প্রথম আইটেমে যান</string>
+    <string name="settings_remote_action_jump_last">শেষ আইটেমে যান</string>
+    <string name="settings_large_skips_warning">বেশি সংখ্যক আইটেম এড়িয়ে গেলে ছোট তালিকার শেষ পেরিয়ে যেতে পারে এবং কম ক্ষমতার TV-তে নেভিগেশন ঝাঁকুনিপূর্ণ মনে হতে পারে।</string>
+    <string name="settings_ch_nav_picker">CH+/RW · CH−/FF বোতামে পৃষ্ঠা বদল</string>
+    <string name="settings_weather">আবহাওয়া</string>
+    <string name="settings_top_bar_weather">শীর্ষ বারে আবহাওয়া</string>
+    <string name="settings_show_weather">আবহাওয়া দেখান</string>
+    <string name="settings_show_weather_description">শীর্ষ বারে বর্তমান আবহাওয়া দেখান।</string>
+    <string name="settings_custom_location">নিজস্ব অবস্থান</string>
+    <string name="settings_custom_location_description">আবহাওয়ার জন্য ব্যবহৃত শহর বদলে দিন। স্বয়ংক্রিয়ভাবে শনাক্ত করতে ফাঁকা রাখুন, অথবা একটি শহর (যেমন London) বা \"lat,lon\" (যেমন 51.5,-0.12) লিখুন। VPN ব্যবহার করলে এটি উপযোগী, কারণ তখন স্বয়ংক্রিয় শনাক্তকরণ সার্ভারের শহর দেখায়।</string>
+    <string name="settings_use_device_location">এই ডিভাইসের অবস্থান ব্যবহার করুন</string>
+    <string name="settings_use_device_location_description">আবহাওয়া ফোনের অবস্থান অনুসরণ করে। নিজে শহর লিখতে বন্ধ করুন।</string>
+    <string name="settings_temperature_unit">তাপমাত্রার একক</string>
+    <string name="settings_temperature_description">তাপমাত্রা সেলসিয়াস বা ফারেনহাইটে দেখান।</string>
+    <string name="settings_auto">স্বয়ংক্রিয়</string>
+    <string name="settings_city_latlon">শহর বা lat,lon</string>
+    <string name="settings_location_hint">পাবলিক IP থেকে স্বয়ংক্রিয়ভাবে শনাক্ত করতে ফাঁকা রাখুন। একটি শহর (যেমন London) বা \"lat,lon\" (যেমন 51.5,-0.12) লিখুন।</string>
+    <string name="settings_metadata">মেটাডেটা (TMDB)</string>
+    <string name="settings_metadata_source">মেটাডেটার উৎস</string>
+    <string name="settings_metadata_source_description">সিনেমা ও সিরিজের বিস্তারিত তথ্য কোথা থেকে আসবে তা বেছে নিন।</string>
+    <string name="settings_metadata_provider_description">শুধু আপনার প্লেলিস্টে থাকা তথ্য ব্যবহার করুন। TMDB-তে খোঁজা হবে না।</string>
+    <string name="settings_metadata_provider_tmdb_description">আপনার প্লেলিস্টের তথ্য অগ্রাধিকার পাবে; TMDB ঘাটতি পূরণ করবে এবং অভিনয়শিল্পী, ধরন ও পটভূমির ছবি যোগ করবে।</string>
+    <string name="settings_metadata_tmdb_only_description">প্রতিটি ক্ষেত্রের জন্য TMDB-কে অগ্রাধিকার দিন; TMDB-তে কিছু না থাকলেই শুধু প্লেলিস্টের তথ্য ব্যবহার করুন।</string>
+    <string name="settings_selected">নির্বাচিত</string>
+    <string name="settings_metadata_allowance">আপনার দৈনিক ভাগ</string>
+    <string name="settings_metadata_reset_automatic">স্বয়ংক্রিয়ভাবে রিসেট হয়</string>
+    <string name="settings_metadata_library_details">লাইব্রেরির বিবরণ</string>
+    <string name="settings_metadata_test_connection">বর্তমান সংযোগ পরীক্ষা করুন</string>
+    <string name="settings_allowance_available">উপলভ্য</string>
+    <string name="settings_allowance_refills"><xliff:g id="time">%1$s</xliff:g> রিফিল হবে</string>
+    <string name="settings_allowance_minute">মিনিট</string>
+    <string name="settings_allowance_hour">ঘণ্টা</string>
+    <string name="settings_allowance_day">দিন</string>
+    <plurals name="settings_allowance_value">
+        <item quantity="one"><xliff:g id="remaining">%1$d</xliff:g> / <xliff:g id="limit">%2$d</xliff:g> বাকি</item>
+        <item quantity="other"><xliff:g id="remaining">%1$d</xliff:g> / <xliff:g id="limit">%2$d</xliff:g> বাকি</item>
+    </plurals>
+    <string name="settings_metadata_active_source">সক্রিয় সোর্স</string>
+    <string name="settings_metadata_shared_worker_description">OwnTV Worker · সেটআপ ছাড়াই</string>
+    <string name="settings_metadata_connection">সংযোগ</string>
+    <string name="settings_metadata_remote_advanced">উন্নত TMDB তথ্য নিন</string>
+    <string name="settings_metadata_remote_advanced_description">শেয়ার করা ডিফল্টের বদলে নিজের TMDB API কী বা নিজে হোস্ট করা Worker ব্যবহার করুন।</string>
+    <string name="settings_metadata_usage_label">ব্যবহার</string>
+    <string name="settings_metadata_usage_value"><xliff:g id="min_used">%1$d</xliff:g>/<xliff:g id="min_total">%2$d</xliff:g> মিনিট · <xliff:g id="hr_used">%3$d</xliff:g>/<xliff:g id="hr_total">%4$d</xliff:g> ঘণ্টা · <xliff:g id="day_used">%5$d</xliff:g>/<xliff:g id="day_total">%6$d</xliff:g> দিন</string>
+    <string name="settings_metadata_source_label">উৎস</string>
+    <string name="settings_metadata_key_label">কী</string>
+    <string name="settings_metadata_server_label">সার্ভার</string>
+    <string name="settings_metadata_refills_label">আবার ভরবে</string>
+    <string name="settings_metadata_clear_advanced_title">নিজের কী ব্যবহার বন্ধ করবেন?</string>
+    <string name="settings_metadata_clear_advanced_message">আপনার TMDB API কী এবং আপনার সার্ভারের ঠিকানা এই ডিভাইস থেকে মুছে ফেলা হবে, এবং OwnTV দৈনিক ভাগসহ অন্তর্নির্মিত শেয়ার্ড পরিষেবায় ফিরে যাবে।</string>
+    <string name="settings_metadata_fair_share">অন্তর্নির্মিত মেটাডেটা পরিষেবাটি OwnTV ব্যবহারকারী সবাই ভাগ করে নেন, তাই প্রতিটি ডিভাইস প্রতিদিন নিজের ভাগ পায়। ভাগ শেষ হয়ে গেলে পোস্টার ও বিবরণ আবার ভরা পর্যন্ত থেমে থাকে — আপনার নিজের প্লেলিস্টের তথ্য স্বাভাবিকভাবেই চলতে থাকে। নিজের TMDB API কী বা সার্ভার যোগ করলে এই সীমা উঠে যায়: এটি বিনামূল্যে, আর ব্যক্তিগত কী-তে কার্যত কোনো সীমা নেই।</string>
+    <string name="settings_metadata_limit_reached">আজকের মেটাডেটার ভাগ শেষ — এই সীমা তুলতে সেটিংস → মেটাডেটা-তে নিজের TMDB কী যোগ করুন।</string>
+    <string name="settings_metadata_language">মেটাডেটার ভাষা</string>
+    <string name="settings_metadata_language_description">TMDB থেকে আসা কাহিনি, ধরন ও শিরোনামের ভাষা। TMDB যেসব ক্ষেত্র অনুবাদ করেনি সেগুলি ইংরেজিতেই থাকবে। বিবরণ প্রতিটি ভাষার জন্য আলাদা ক্যাশ হয়, তাই ফিরে যাওয়া তাৎক্ষণিক।</string>
+    <string name="settings_advanced_options">উন্নত বিকল্প</string>
+    <string name="settings_advanced_metadata_description">শেয়ার করা ডিফল্টের বদলে নিজের TMDB API কী বা স্ব-হোস্ট করা সার্ভার ব্যবহার করুন।</string>
+    <string name="settings_metadata_server_description">বিল্ট-ইন শেয়ার করা সার্ভার ব্যবহার করতে দুটিই ফাঁকা রাখুন (সেটআপের প্রয়োজন নেই)। সরাসরি TMDB-তে কল করতে নিজের TMDB API কী লিখুন, অথবা নিজের প্রক্সি/মিরর ব্যবহার করতে স্ব-হোস্ট করা সার্ভারের URL লিখুন। কী-এর চেয়ে URL অগ্রাধিকার পাবে।</string>
+    <string name="settings_metadata_key_from_phone">অন্য ডিভাইস থেকে কী নিন</string>
+    <string name="settings_metadata_key_from_phone_desc">ফোন, ট্যাবলেট বা কম্পিউটার দিয়ে কোডটি স্ক্যান করুন, সেখানে TMDB-তে সাইন ইন করুন এবং কী পাঠান। রিমোটে কিছু টাইপ করার নেই।</string>
+    <string name="settings_metadata_key_received">TMDB কী পাওয়া গেছে</string>
+    <string name="settings_tmdb_api_key">TMDB API কী (v3)</string>
+    <string name="settings_self_host_url">স্ব-হোস্ট করা সার্ভারের URL</string>
+    <string name="settings_test">পরীক্ষা</string>
+    <string name="settings_metadata_empty_title">খোঁজার জন্য একটি শিরোনাম লিখুন।</string>
+    <string name="settings_metadata_server_unavailable">মেটাডেটা সার্ভারে পৌঁছানো যায়নি — নেটওয়ার্ক / কী / URL পরীক্ষা করুন।</string>
+    <string name="settings_metadata_no_match">\"<xliff:g id="query">%1$s</xliff:g>\"-এর জন্য TMDB-তে কোনো মিল নেই।</string>
+    <string name="settings_metadata_lookup_failed">খোঁজা ব্যর্থ হয়েছে।</string>
+    <string name="settings_metadata_match_result"><xliff:g id="title">%1$s</xliff:g><xliff:g id="year">%2$s</xliff:g> · tmdb #<xliff:g id="id">%3$d</xliff:g></string>
+    <string name="settings_metadata_year"> (<xliff:g id="year">%1$d</xliff:g>)</string>
+    <string name="settings_lookup_movie">সিনেমার শিরোনাম খুঁজুন</string>
+    <string name="settings_test_lookup">পরীক্ষামূলকভাবে খুঁজুন</string>
+    <string name="settings_looking_up">খোঁজা হচ্ছে…</string>
+    <string name="settings_tmdb_attribution">এই পণ্যটি TMDB API ব্যবহার করে, তবে এটি TMDB দ্বারা অনুমোদিত বা প্রত্যয়িত নয়।</string>
+    <string name="settings_metadata_provider_only">শুধু প্রদানকারী</string>
+    <string name="settings_metadata_provider_plus_tmdb">প্রদানকারী + TMDB</string>
+    <string name="settings_metadata_tmdb_only">শুধু TMDB</string>
+    <string name="settings_tier_default">ডিফল্ট (শেয়ার করা)</string>
+    <string name="settings_tier_key">আপনার TMDB কী</string>
+    <string name="settings_tier_self_host">স্ব-হোস্ট করা</string>
+    <string name="settings_title">সেটিংস</string>
+    <string name="settings_quick_live_preview">লাইভ প্রিভিউ</string>
+    <string name="settings_quick_preview_sound">প্রিভিউয়ের শব্দ</string>
+    <string name="settings_quick_channel_numbers">চ্যানেল নম্বর</string>
+    <string name="settings_quick_hdr">HDR</string>
+    <string name="settings_quick_autoplay">স্বয়ংক্রিয়ভাবে চালান</string>
+    <string name="settings_quick_check_update">আপডেট পরীক্ষা করুন</string>
+    <string name="settings_search_label">সেটিংস অনুসন্ধান</string>
+    <string name="settings_search_hint">সেটিংস অনুসন্ধান করুন…</string>
+    <string name="settings_language">ভাষা</string>
+    <string name="settings_language_description">অ্যাপ প্রদর্শনের ভাষা</string>
+    <string name="settings_language_system_default">সিস্টেমের ডিফল্ট</string>
+    <string name="settings_language_system_default_description">ডিভাইসের ভাষা অনুসরণ করে</string>
+    <string name="settings_language_search_hint">ভাষা অনুসন্ধান করুন…</string>
+    <string name="settings_search_keywords_language">ভাষা লোকেল অনুবাদ আন্তর্জাতিক i18n</string>
+    <string name="settings_language_coverage"><xliff:g id="percent">%1$d</xliff:g>%%</string>
+    <string name="settings_profile_group">প্রোফাইল</string>
+    <string name="settings_profiles_description">দর্শক, শিশু মোড ও PIN লক পরিচালনা করুন</string>
+    <string name="settings_playlists">প্লেলিস্টগুলো</string>
+    <string name="settings_playlists_description">M3U / Xtream প্লেলিস্ট যোগ, পুনরায় সিঙ্ক বা অপসারণ করুন</string>
+    <string name="settings_epg_sources">EPG উৎসগুলো</string>
+    <string name="settings_epg_sources_nav_description">TV অনুষ্ঠান নির্দেশিকার জন্য XMLTV গাইড ফিড যোগ করুন</string>
+    <string name="settings_customize">বিভাগ ও আইটেম নিজের মতো সাজান</string>
+    <string name="settings_customize_nav_description">আইটেম লুকান ও আবার দেখান, বিভাগের নাম বদলান ও পুনর্বিন্যাস করুন</string>
+    <string name="settings_sidebar_description_root">প্লেলিস্ট অনুযায়ী পাশের আইকনগুলো স্বয়ংক্রিয়ভাবে মানিয়ে নিন অথবা নির্দিষ্টগুলো লুকান</string>
+    <string name="settings_ch_paging">রিমোট শর্টকাট</string>
+    <string name="settings_ch_paging_description">নেভিগেশন, প্লেব্যাক ও ব্রাউজিং কাজের জন্য রিমোটের অতিরিক্ত বোতাম নির্ধারণ করুন। জরুরি নেভিগেশন বোতাম সুরক্ষিত থাকবে।</string>
+    <!-- Translators: Settings navigation label for the long-press content menus. -->
+    <string name="settings_content_menus_title">লং-প্রেস মেনু</string>
+    <!-- Translators: Description of the long-press content menus settings. -->
+    <string name="settings_content_menus_description">চ্যানেল, সিনেমা, সিরিজ ও পর্বের মেনুর অ্যাকশনগুলি সাজিয়ে নিন</string>
+    <!-- Translators: Hint shown above the list when arranging a long-press menu. -->
+    <string name="settings_content_menus_hint">কোনও অ্যাকশনে OK চেপে ধরে সেটি তুলে নিন, তারপর উপর-নিচ দিয়ে সরান। নামাতে আবার OK চাপুন।</string>
+    <string name="settings_browsing_lists">ব্রাউজিং ও তালিকা</string>
+    <string name="settings_browsing_description">লাইভ টিভি, সিনেমা ও সিরিজে সর্বশেষ বিভাগ ও সর্বশেষ আইটেম মনে রাখুন</string>
+    <string name="settings_home_root">হোম স্ক্রিন</string>
+    <string name="settings_home_root_description">হোমের সারিগুলো বেছে নিন, পুনর্বিন্যাস ও ফিল্টার করুন</string>
+    <string name="settings_metadata_root_description">সিনেমা ও সিরিজের পোস্টার, কাহিনি, অভিনয়শিল্পী ও রেটিং</string>
+    <string name="settings_download_folder">ডাউনলোড ফোল্ডার</string>
+    <string name="settings_app_storage">অ্যাপের স্টোরেজ</string>
+    <string name="settings_backup_restore">ব্যাকআপ ও পুনরুদ্ধার</string>
+    <string name="settings_backup_restore_description">প্রোফাইল ও উৎসগুলো এক্সপোর্ট বা পুনরুদ্ধার করুন</string>
+    <string name="settings_clear_history">দেখার ইতিহাস মুছুন</string>
+    <string name="settings_appearance_group">চেহারা</string>
+    <string name="settings_theme">থিম</string>
+    <string name="settings_theme_description">হালকা, গাঢ় অথবা সিস্টেম অনুসরণ করুন</string>
+    <string name="settings_accent">অ্যাকসেন্ট রং</string>
+    <string name="settings_accent_description">ইন্টারফেসে রং দিন — প্রিসেট, প্যালেট বা হেক্স কোড</string>
+    <string name="settings_focus_highlight">ফোকাস হাইলাইট</string>
+    <string name="settings_focus_highlight_description">নির্বাচিত আইটেমের চারপাশের বর্ডারের রং ও পুরুত্ব</string>
+    <string name="settings_focus_highlight_chip"><xliff:g id="color">%1$s</xliff:g> · <xliff:g id="thickness">%2$s</xliff:g></string>
+    <string name="settings_focus_thickness">পুরুত্ব</string>
+    <string name="settings_focus_width_thin">পাতলা</string>
+    <string name="settings_focus_width_normal">স্বাভাবিক</string>
+    <string name="settings_focus_width_thick">পুরু</string>
+    <string name="settings_focus_width_extra">অতিরিক্ত পুরু</string>
+    <string name="settings_focus_highlight_sample">নির্বাচিত</string>
+    <string name="settings_glass_effect">গ্লাস ইফেক্ট</string>
+    <string name="settings_glass_description">অর্ধস্বচ্ছ ফ্রস্টেড প্যানেল, পটভূমির ছবি ও স্বচ্ছতা</string>
+    <string name="settings_ui_zoom">UI জুম</string>
+    <string name="settings_ui_zoom_description">পুরো ইন্টারফেসের আকার পরিবর্তন করুন</string>
+    <string name="settings_animations">অ্যানিমেশন</string>
+    <string name="settings_animations_description">ইন্টারফেসের নড়াচড়া চালু বা বন্ধ করুন — বন্ধ রাখলে কম ক্ষমতার TV বক্সে দ্রুততর মনে হয়</string>
+    <string name="settings_weather_description_root">শীর্ষ বারের আবহাওয়া চিপ: দেখান বা লুকান, নিজস্ব অবস্থান এবং সেলসিয়াস / ফারেনহাইট।</string>
+    <string name="settings_playback_group">প্লেব্যাক</string>
+    <string name="settings_live_preview_description">কোনো চ্যানেলে ফোকাস করলে সেটি স্বয়ংক্রিয়ভাবে চালান</string>
+    <string name="settings_preview_audio">প্রিভিউয়ের অডিও</string>
+    <string name="settings_preview_audio_description">লাইভ প্রিভিউতে শব্দ চালান</string>
+    <string name="settings_mini_player_root">মিনি-প্লেয়ার</string>
+    <string name="settings_mini_player_root_description">ডক করা মিনি-প্লেয়ারের আকার ও অবস্থান</string>
+    <string name="settings_hdr_description">ভিডিও ও TV সমর্থন করলে HDR আউটপুট ব্যবহার করুন</string>
+    <string name="settings_auto_frame_rate">স্বয়ংক্রিয় ফ্রেম রেট</string>
+    <string name="settings_auto_frame_rate_description">পূর্ণ পর্দায় লাইভ টিভি ও VOD-এর জন্য ভিডিওর সঙ্গে TV-এর রিফ্রেশ রেট (24/25/50/60 fps) মিলিয়ে নিন এবং বের হলে আগের অবস্থায় ফিরিয়ে দিন। প্রতিবার চ্যানেল বদলালে আপনার TV বা রিসিভার HDMI-তে শব্দসহ আবার হ্যান্ডশেক করলে এটি বন্ধ করুন।</string>
+    <string name="settings_surround_sound">সারাউন্ড সাউন্ড</string>
+    <string name="settings_surround_description">প্রকৃত 5.1/7.1 রিসিভারের জন্য Dolby/DTS অডিও সারাউন্ডে (5.1/7.1) ডিকোড করুন। TV স্পিকার বা স্টেরিও সাউন্ডবারের জন্য বন্ধ রাখুন — কিছু TV/সাউন্ডবারে মাল্টিচ্যানেল অডিও ভিডিওর চেয়ে পিছিয়ে যেতে পারে। তাল হারালে প্লেয়ারের অডিও মেনু → A/V সিঙ্ক সামান্য সমন্বয় করুন।</string>
+    <string name="settings_autoplay_next">পরের পর্ব স্বয়ংক্রিয়ভাবে চালান</string>
+    <string name="settings_autoplay_next_description">একটি পর্ব শেষ হলে পরেরটি স্বয়ংক্রিয়ভাবে চালান — এবং পরের সিজনেও চলে যান। ক্যাচ-আপও পরের অনুষ্ঠানে চলতে থাকে।</string>
+    <string name="settings_catchup">ক্যাচ-আপ</string>
+    <plurals name="settings_catchup_supported">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g>টি চ্যানেল ক্যাচ-আপ সমর্থন করে · আর্কাইভ প্লেব্যাকের জন্য সময় অঞ্চল ও প্লেয়ার</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g>টি চ্যানেল ক্যাচ-আপ সমর্থন করে · আর্কাইভ প্লেব্যাকের জন্য সময় অঞ্চল ও প্লেয়ার</item>
+    </plurals>
+    <string name="settings_catchup_unavailable">এই প্লেলিস্টে কোনো ক্যাচ-আপ চ্যানেল নেই</string>
+    <string name="settings_device">ডিভাইস</string>
+    <string name="settings_video_player">ভিডিও প্লেয়ারের সেটিংস</string>
+    <string name="settings_video_player_description">ডিকোডার, সাবটাইটেল, সিঙ্ক</string>
+    <string name="settings_playback_error_log">ত্রুটির লগ</string>
+    <string name="settings_playback_speed">প্লেব্যাকের গতি</string>
+    <string name="settings_player_zoom">প্লেয়ার জুম</string>
+    <string name="settings_playback_error_description">ক্র্যাশ ও প্লেব্যাক ব্যর্থতা — পড়া বা জানানোর জন্য বিস্তারিত</string>
+    <string name="settings_network_group">নেটওয়ার্ক</string>
+    <string name="settings_app_group">অ্যাপ</string>
+    <string name="settings_app_startup">অ্যাপ চালুর সময়</string>
+    <string name="settings_app_startup_description">OwnTV চালু হলে কী খুলবে</string>
+    <string name="settings_check_updates">আপডেট পরীক্ষা করুন</string>
+    <string name="settings_check_updates_description">GitHub Releases থেকে সর্বশেষ সংস্করণ পান</string>
+    <string name="settings_update_startup">চালুর সময় আপডেট পরীক্ষা করুন</string>
+    <string name="settings_update_startup_description">অ্যাপ খুললে নতুন সংস্করণ খুঁজুন</string>
+    <string name="settings_about">সম্পর্কে</string>
+    <string name="settings_about_description">সংস্করণ, লাইসেন্স ও প্রকল্পের তথ্য</string>
+    <string name="settings_live_latency">লাইভ বিলম্ব</string>
+    <string name="settings_no_settings_match">“<xliff:g id="query">%1$s</xliff:g>”-এর সঙ্গে কোনো সেটিংস মেলেনি</string>
+    <string name="settings_breadcrumb"><xliff:g id="group">%1$s</xliff:g> › <xliff:g id="title">%2$s</xliff:g></string>
+    <string name="settings_startup_home">হোম</string>
+    <string name="settings_startup_last_channel">সর্বশেষ চ্যানেল</string>
+    <string name="settings_startup_favorites">লাইভ · পছন্দেরগুলো</string>
+    <string name="settings_startup_specific_channel">নির্দিষ্ট চ্যানেল</string>
+    <string name="settings_startup_channel_unavailable">স্টার্টআপ চ্যানেলটি পাওয়া যাচ্ছে না। হোম খোলা হয়েছে।</string>
+    <string name="settings_all_history">সব ইতিহাস</string>
+    <string name="settings_choose_history">এই প্রোফাইল থেকে কী সরাবেন তা বেছে নিন। প্লেলিস্ট, পছন্দেরগুলো ও ডাউনলোড প্রভাবিত হবে না।</string>
+    <string name="settings_clear_history_confirm"><xliff:g id="scope">%1$s</xliff:g> ইতিহাস মুছবেন?</string>
+    <string name="settings_cannot_undo">এটি ফিরিয়ে আনা যাবে না।</string>
+    <string name="settings_no">না</string>
+    <string name="settings_yes_clear">হ্যাঁ, মুছুন</string>
+    <string name="settings_accent_dialog">অ্যাকসেন্ট রং</string>
+    <string name="settings_presets">প্রিসেট</string>
+    <string name="settings_hex_code">হেক্স কোড</string>
+    <string name="settings_hex">হেক্স</string>
+    <string name="settings_apply">প্রয়োগ করুন</string>
+    <string name="settings_hex_error">৬টি হেক্স অঙ্ক লিখুন, যেমন 52DBC8</string>
+    <string name="settings_color_picker">রং নির্বাচনকারী</string>
+    <string name="settings_use_color">এই রং ব্যবহার করুন</string>
+    <string name="settings_about_version">সংস্করণ <xliff:g id="version">%1$s</xliff:g></string>
+    <string name="settings_about_description_full">Android TV-এর জন্য আপনার নিজস্ব IPTV প্লেয়ার — একটি বিনামূল্যের, ওপেন-সোর্স, শুধু প্লেয়ার হিসেবে ব্যবহারের অ্যাপ। এটি কোনো চ্যানেল বা কনটেন্ট দেয় না; আপনাকে নিজের আইনসম্মতভাবে ব্যবহারযোগ্য উৎস যোগ করতে হবে।</string>
+    <string name="settings_about_description_full_mobile">Android-এর জন্য আপনার নিজস্ব IPTV প্লেয়ার — একটি বিনামূল্যের, ওপেন-সোর্স, শুধু প্লেয়ার হিসেবে ব্যবহারের অ্যাপ। এটি কোনো চ্যানেল বা কনটেন্ট দেয় না; আপনাকে নিজের আইনসম্মতভাবে ব্যবহারযোগ্য উৎস যোগ করতে হবে।</string>
+    <string name="settings_about_license">© 2026 OwnTV · GPLv3 লাইসেন্স</string>
+    <string name="settings_join_telegram">Telegram-এ আমাদের সঙ্গে যোগ দিন</string>
+    <string name="settings_telegram_qr">Telegram গ্রুপের QR কোড</string>
+    <string name="settings_telegram_scan">ফোন থেকে যোগ দিতে QR কোড স্ক্যান করুন অথবা ওপরের লিংকটি খুলুন।</string>
+    <string name="settings_contributions">GitHub-এ অবদান, বাগ প্রতিবেদন ও স্টারকে স্বাগত জানাই।</string>
+    <string name="settings_playback_error_title">ত্রুটির লগ</string>
+    <string name="settings_playback_error_description_full">সর্বশেষ ক্র্যাশ এবং সাম্প্রতিক প্লেব্যাক ব্যর্থতাগুলো (সবচেয়ে নতুনটি প্রথমে)। কোনো সমস্যা জানানোর সময় এই বিস্তারিত তথ্য দিন।</string>
+    <string name="settings_loading">লোড হচ্ছে…</string>
+    <string name="settings_no_playback_errors">কোনো প্লেব্যাক ত্রুটি রেকর্ড করা হয়নি।</string>
+    <string name="settings_live">লাইভ</string>
+    <string name="settings_vod">VOD</string>
+    <string name="settings_clear_log">লগ মুছুন</string>
+    <string name="settings_browsing_title">ব্রাউজিং ও তালিকা</string>
+    <string name="settings_browsing_description_full">ফিরে এলে লাইভ টিভি, সিনেমা ও সিরিজ কোথায় ফিরে যাবে।</string>
+    <string name="settings_section_toggle"><xliff:g id="section">%1$s</xliff:g>: <xliff:g id="state">%2$s</xliff:g></string>
+    <string name="settings_glass_surfaces">গ্লাস পৃষ্ঠতল</string>
+    <string name="settings_glass_surfaces_description">অ্যাপের কোন অংশগুলো গ্লাসের মতো দেখাবে তা বেছে নিন। সব পৃষ্ঠতল বন্ধ করলে গ্লাসও বন্ধ হয়ে যাবে।</string>
+    <string name="settings_all_surfaces_on">সব পৃষ্ঠতল: চালু</string>
+    <string name="settings_all_surfaces_off">সব পৃষ্ঠতল: বন্ধ</string>
+    <string name="settings_surface_toggle"><xliff:g id="surface">%1$s</xliff:g>: <xliff:g id="state">%2$s</xliff:g></string>
+    <string name="settings_transparency_description">প্যানেলের ভেতর দিয়ে কতটা দেখা যাবে (<xliff:g id="min">%1$d</xliff:g>%%–<xliff:g id="max">%2$d</xliff:g>%%)। বেশি হলে আরও অস্বচ্ছ হবে।</string>
+    <string name="settings_catchup_description">ক্যাচ-আপের টাইমস্ট্যাম্প যেভাবে পাঠানো হবে। ডিভাইসের সময় অঞ্চল ব্যবহার করুন অথবা প্রদানকারীর সার্ভার যে অফসেট প্রত্যাশা করে তা নির্ধারণ করুন।</string>
+    <string name="settings_manual">ম্যানুয়াল</string>
+    <string name="settings_theme_dark">গাঢ়</string>
+    <string name="settings_theme_light">হালকা</string>
+    <string name="settings_theme_system">সিস্টেম</string>
+    <string name="settings_accent_teal">টিল</string>
+    <string name="settings_accent_blue">নীল</string>
+    <string name="settings_accent_violet">বেগুনি</string>
+    <string name="settings_accent_green">সবুজ</string>
+    <string name="settings_accent_amber">অ্যাম্বার</string>
+    <string name="settings_group_profile">প্রোফাইল</string>
+    <string name="settings_group_sources">উৎস ও গাইড</string>
+    <string name="settings_group_layout">লেআউট</string>
+    <string name="settings_group_content_metadata">কনটেন্ট ও মেটাডেটা</string>
+    <string name="settings_group_data">ডেটা</string>
+    <string name="settings_group_appearance">চেহারা</string>
+    <string name="settings_group_playback">প্লেব্যাক</string>
+    <string name="settings_group_network">নেটওয়ার্ক</string>
+    <string name="settings_dns">DNS</string>
+    <string name="settings_group_app">অ্যাপ</string>
+    <string name="settings_group_summary_profile">প্রোফাইল এবং কে দেখতে পারবে</string>
+    <string name="settings_group_summary_sources">প্লেলিস্ট, গাইড ডেটা এবং তাদের ঘড়ি</string>
+    <string name="settings_group_summary_appearance">থিম, অ্যাকসেন্ট, গ্লাস, অ্যানিমেশন ও লেখার আকার</string>
+    <string name="settings_group_summary_layout">সাইডবার, প্যানেল, তালিকা এবং হোম স্ক্রিন</string>
+    <string name="settings_group_summary_content_metadata">নামকরণ, ছবি এবং সাবটাইটেল পরিষেবা</string>
+    <string name="settings_group_summary_playback">ভিডিও প্লেয়ার ও তার ত্রুটির লগ</string>
+    <!-- Translators: Video player settings: name of the section holding decoder, HDR and frame-rate settings. -->
+    <string name="settings_vp_section_engine">ইঞ্জিন ও ছবি</string>
+    <!-- Translators: Video player settings: name of the section holding volume, audio language and surround settings. -->
+    <string name="settings_vp_section_sound">শব্দ</string>
+    <!-- Translators: Video player settings: name of the section holding resume, auto-play and mini-player settings. -->
+    <string name="settings_vp_section_episodes">এপিসোড ও মিনি প্লেয়ার</string>
+    <!-- Translators: Video player settings: one-line summary under the "Engine &amp; picture" section name. -->
+    <string name="settings_vp_section_engine_summary">ডিকোডার, HDR, ফ্রেম রেট</string>
+    <!-- Translators: Video player settings: one-line summary under the "Live TV" section name. -->
+    <string name="settings_vp_section_live_summary">প্রিভিউ, নম্বর, লেটেন্সি</string>
+    <!-- Translators: Video player settings: one-line summary under the "Sound" section name. -->
+    <string name="settings_vp_section_sound_summary">ভলিউম, ভাষা, সারাউন্ড</string>
+    <!-- Translators: Video player settings: one-line summary under the "Subtitles" section name. -->
+    <string name="settings_vp_section_subtitles_summary">আকার, রঙ, অবস্থান</string>
+    <!-- Translators: Video player settings: one-line summary under the "Episodes &amp; mini-player" section name. -->
+    <string name="settings_vp_section_episodes_summary">অটো-প্লে ও মিনি প্লেয়ার</string>
+    <!-- Translators: Video player settings: one-line summary under the "Diagnostics" section name. -->
+    <string name="settings_vp_section_diagnostics_summary">বিস্তারিত প্লেয়ার লগ</string>
+    <string name="settings_group_summary_network">স্ট্রিম সংযোগের জন্য প্রক্সি ও DNS</string>
+    <string name="settings_group_summary_app">ভাষা, চালু হওয়া, আপডেট ও অ্যাপের তথ্য</string>
+    <string name="settings_group_quick">দ্রুত</string>
+    <string name="settings_group_summary_quick">যে সুইচগুলো আপনি সবচেয়ে বেশি ব্যবহার করেন</string>
+    <string name="settings_search_guide_logos">নির্দেশিকার চ্যানেল লোগো</string>
+    <string name="settings_search_keywords_profiles">দর্শক শিশু মোড PIN লক অ্যাকাউন্ট</string>
+    <string name="settings_search_keywords_playlists">m3u xtream উৎস সিঙ্ক যোগ অপসারণ</string>
+    <string name="settings_search_keywords_epg">xmltv নির্দেশিকা ফিড অনুষ্ঠান</string>
+    <string name="settings_search_keywords_logos">চ্যানেল লোগো আইকন xmltv নির্দেশিকা picon প্লেলিস্ট</string>
+    <string name="settings_search_keywords_customize">লুকান দেখান নাম-বদল পুনর্বিন্যাস বিভাগ</string>
+    <string name="settings_search_keywords_sidebar">পাশের রেল আইকন গতিশীল স্থির লুকান দেখান মানিয়ে-নিন প্লেলিস্ট</string>
+    <string name="settings_search_keywords_ch">চ্যানেল ওপরে নিচে এড়িয়ে-যান পৃষ্ঠা তালিকা বিভাগ চ্যানেল</string>
+    <string name="settings_search_keywords_browsing">মনে-রাখুন অবস্থান স্ক্রল বিভাগ সর্বশেষ আইটেম লাইভ সিনেমা সিরিজ রিসেট শীর্ষ</string>
+    <string name="settings_search_keywords_home">সারি হিরো পুনর্বিন্যাস ফিল্টার</string>
+    <string name="settings_search_keywords_metadata">পোস্টার কাহিনি অভিনয়শিল্পী রেটিং</string>
+    <string name="settings_search_keywords_theme">হালকা গাঢ় সিস্টেম</string>
+    <string name="settings_search_keywords_glass">গ্লাস স্বচ্ছতা ব্লার ফ্রস্ট স্বচ্ছ পটভূমি ওয়ালপেপার</string>
+    <string name="settings_search_keywords_accent">আভা প্যালেট হেক্স প্রিসেট</string>
+    <string name="settings_search_keywords_focus">ফোকাস রিং বর্ডার নির্বাচন কার্সার আউটলাইন</string>
+    <string name="settings_search_keywords_zoom">স্কেল ইন্টারফেস আকার</string>
+    <string name="settings_search_keywords_animation">নড়াচড়া দ্রুত কর্মক্ষমতা</string>
+    <string name="settings_search_keywords_weather">শীর্ষ বার চিপ অবস্থান সেলসিয়াস ফারেনহাইট</string>
+    <string name="settings_search_keywords_live_preview">স্বয়ংক্রিয় চালান ফোকাস চ্যানেল</string>
+    <string name="settings_search_keywords_sound">শব্দ লাইভ প্রিভিউ</string>
+    <string name="settings_search_keywords_channel_numbers">চ্যানেল নম্বর সরাসরি টিউন টাইপ অঙ্ক কীপ্যাড সংখ্যাসূচক জ্যাপ lcn</string>
+    <string name="settings_search_keywords_mini">ডক-করা pip মিনি-প্লেয়ার আকার অবস্থান স্কেল শতাংশ কোণ সরান</string>
+    <string name="settings_search_keywords_hdr">উচ্চ ডায়নামিক রেঞ্জ আউটপুট</string>
+    <string name="settings_search_keywords_afr">afr রিফ্রেশ রেট hz জাডার 24fps 25fps 50hz 60hz ডিসপ্লে মোড মিল</string>
+    <string name="settings_search_keywords_surround">dolby dts 5.1 7.1 রিসিভার অডিও</string>
+    <string name="settings_search_keywords_autoplay">স্বয়ংক্রিয়-চালনা সিরিজ সিজন</string>
+    <string name="settings_search_keywords_catchup">আর্কাইভ সময়-অঞ্চল অফসেট ক্যাচ-আপ বাহ্যিক প্লেয়ার vlc mx</string>
+    <string name="settings_search_keywords_video">ডিকোডার সাবটাইটেল সিঙ্ক</string>
+    <string name="settings_search_keywords_subtitle_appearance">সাবটাইটেল আকার রং বর্ণ অবস্থান স্বচ্ছতা পটভূমি অস্বচ্ছতা</string>
+    <string name="settings_search_keywords_latency">লাইভ বাফার বিলম্ব দেরি কম-বিলম্ব সেকেন্ড লাইভ-প্রান্তের-কাছে</string>
+    <string name="settings_search_keywords_proxy">http ট্রাফিক রুট</string>
+    <string name="settings_search_keywords_dns">ডোমেইন অনুসন্ধান রিজলভার doh dns-over-https</string>
+    <string name="settings_search_keywords_startup">চালু খোলা শুরুপৃষ্ঠা</string>
+    <string name="settings_search_keywords_updates">github রিলিজ সংস্করণ</string>
+    <string name="settings_search_keywords_update_auto">স্বয়ংক্রিয় আপডেট নতুন সংস্করণ</string>
+    <string name="settings_language_default">ডিফল্ট (ইংরেজি)</string>
+    <string name="settings_language_device">ডিভাইসের ভাষা</string>
+    <string name="settings_language_arabic">আরবি</string>
+    <string name="settings_language_bulgarian">বুলগেরীয়</string>
+    <string name="settings_language_chinese">চীনা</string>
+    <string name="settings_language_croatian">ক্রোয়েশীয়</string>
+    <string name="settings_language_czech">চেক</string>
+    <string name="settings_language_danish">ড্যানিশ</string>
+    <string name="settings_language_dutch">ওলন্দাজ</string>
+    <string name="settings_language_english">ইংরেজি</string>
+    <string name="settings_language_estonian">এস্তোনীয়</string>
+    <string name="settings_language_finnish">ফিনিশ</string>
+    <string name="settings_language_french">ফরাসি</string>
+    <string name="settings_language_german">জার্মান</string>
+    <string name="settings_language_greek">গ্রিক</string>
+    <string name="settings_language_hebrew">হিব্রু</string>
+    <string name="settings_language_hindi">হিন্দি</string>
+    <string name="settings_language_hungarian">হাঙ্গেরীয়</string>
+    <string name="settings_language_indonesian">ইন্দোনেশীয়</string>
+    <string name="settings_language_italian">ইতালীয়</string>
+    <string name="settings_language_japanese">জাপানি</string>
+    <string name="settings_language_korean">কোরীয়</string>
+    <string name="settings_language_latvian">লাতভীয়</string>
+    <string name="settings_language_lithuanian">লিথুয়ানীয়</string>
+    <string name="settings_language_malay">মালয়</string>
+    <string name="settings_language_norwegian">নরওয়েজীয়</string>
+    <string name="settings_language_persian">ফারসি</string>
+    <string name="settings_language_polish">পোলিশ</string>
+    <string name="settings_language_portuguese_brazil">পর্তুগিজ (ব্রাজিল)</string>
+    <string name="settings_language_portuguese_portugal">পর্তুগিজ (পর্তুগাল)</string>
+    <string name="settings_language_romanian">রোমানীয়</string>
+    <string name="settings_language_russian">রুশ</string>
+    <string name="settings_language_serbian">সার্বীয়</string>
+    <string name="settings_language_slovak">স্লোভাক</string>
+    <string name="settings_language_slovenian">স্লোভেনীয়</string>
+    <string name="settings_language_spanish">স্প্যানিশ</string>
+    <string name="settings_language_spanish_latam">স্প্যানিশ (লাতিন আমেরিকা)</string>
+    <string name="settings_language_swedish">সুইডিশ</string>
+    <string name="settings_language_thai">থাই</string>
+    <string name="settings_language_turkish">তুর্কি</string>
+    <string name="settings_language_ukrainian">ইউক্রেনীয়</string>
+    <string name="settings_language_vietnamese">ভিয়েতনামি</string>
+    <string name="settings_video_player_title">ভিডিও প্লেয়ার</string>
+    <string name="settings_decoding">ডিকোডিং</string>
+    <string name="settings_hardware_decoding">হার্ডওয়্যার ডিকোডিং</string>
+    <string name="settings_hardware_decoding_description">TV-এর হার্ডওয়্যার ডিকোডার ব্যবহার করুন। কিছু স্ট্রিম আটকে গেলে বা বিকৃত ছবি দেখালে এটি বন্ধ করুন।</string>
+    <!-- Translators: Setting label for deinterlacing of interlaced broadcast video. -->
+    <string name="settings_deinterlace">ডিইন্টারলেসিং</string>
+    <!-- Translators: Description of the deinterlacing setting. -->
+    <string name="settings_deinterlace_description">কিছু পুরোনো SD চ্যানেলে নড়াচড়ার সময় দেখা চিরুনির মতো দাগ মসৃণ করে। mpv ইঞ্জিন নিজে ছবি আঁকার সময় এটি প্রযোজ্য, তাই কোনো পার্থক্য না হলে হার্ডওয়্যার ডিকোডিং বন্ধ করুন।</string>
+    <string name="settings_movies_series_player">সিনেমা ও সিরিজের প্লেয়ার</string>
+    <string name="settings_live_tv_player">লাইভ টিভির প্লেয়ার</string>
+    <string name="settings_engine_order"><xliff:g id="first">%1$s</xliff:g>, তারপর <xliff:g id="second">%2$s</xliff:g></string>
+    <string name="settings_engine_only">শুধু <xliff:g id="engine">%1$s</xliff:g></string>
+    <string name="settings_engine_default"><xliff:g id="option">%1$s</xliff:g> (ডিফল্ট)</string>
+    <string name="settings_reset_player_choices">সংরক্ষিত প্লেয়ার পছন্দ রিসেট করুন</string>
+    <string name="settings_external_player">বাহ্যিক প্লেয়ার</string>
+    <string name="settings_default_zoom">ডিফল্ট জুম</string>
+    <string name="settings_default_zoom_description">প্লেব্যাক শুরু হলে প্রয়োগ করা অ্যাসপেক্ট/জুম।</string>
+    <!-- Translators: Setting label for the volume level playback starts at. -->
+    <string name="settings_default_volume">ডিফল্ট ভলিউম</string>
+    <!-- Translators: Description of the default volume setting. -->
+    <string name="settings_default_volume_description">প্লেব্যাক শুরু হলে প্রয়োগ করা ভলিউম। ১০০%%-এর উপরে কম শব্দের স্ট্রিম বাড়িয়ে দেওয়া হয়।</string>
+    <!-- Translators: Settings-row title for forgetting the zoom saved for individual items. -->
+    <string name="settings_reset_saved_zoom">সংরক্ষিত জুম রিসেট করুন</string>
+    <!-- Translators: Description of the reset-saved-zoom setting row. -->
+    <string name="settings_reset_saved_zoom_description">প্লেয়ারে জুম বদলালে তা সেই চ্যানেল, সিনেমা বা পর্বের জন্য সংরক্ষিত হয়। রিসেট করলে সবকিছু আবার ডিফল্ট জুম অনুসরণ করবে।</string>
+    <!-- Translators: Confirmation dialog title before forgetting the saved per-item zoom. -->
+    <string name="settings_reset_saved_zoom_confirm">সংরক্ষিত জুম রিসেট করবেন?</string>
+    <!-- Translators: Confirmation dialog body before forgetting the saved per-item zoom. -->
+    <string name="settings_reset_saved_zoom_confirm_description">প্রতিটি চ্যানেল, সিনেমা ও পর্ব আবার ডিফল্ট জুমে ফিরে যাবে। সংরক্ষিত ভলিউমগুলি অপরিবর্তিত থাকবে। প্লেয়ার থেকে যেকোনো সময় আলাদা একটি আইটেম আবার সেট করতে পারবেন।</string>
+    <!-- Translators: Settings-row title for forgetting the volume saved for individual items. -->
+    <string name="settings_reset_saved_volume">সংরক্ষিত ভলিউম রিসেট করুন</string>
+    <!-- Translators: Description of the reset-saved-volume setting row. -->
+    <string name="settings_reset_saved_volume_description">প্লেয়ারে ভলিউম বদলালে তা সেই চ্যানেল, সিনেমা বা পর্বের জন্য সংরক্ষিত হয়। রিসেট করলে সবকিছু আবার ডিফল্ট ভলিউম অনুসরণ করবে।</string>
+    <!-- Translators: Confirmation dialog title before forgetting the saved per-item volume. -->
+    <string name="settings_reset_saved_volume_confirm">সংরক্ষিত ভলিউম রিসেট করবেন?</string>
+    <!-- Translators: Confirmation dialog body before forgetting the saved per-item volume. -->
+    <string name="settings_reset_saved_volume_confirm_description">প্রতিটি চ্যানেল, সিনেমা ও পর্ব আবার ডিফল্ট ভলিউমে ফিরে যাবে। সংরক্ষিত জুম সেটিংগুলি অপরিবর্তিত থাকবে। প্লেয়ার থেকে যেকোনো সময় আলাদা একটি আইটেম আবার সেট করতে পারবেন।</string>
+    <!-- Translators: Settings row that forgets every per-item audio-sync offset. -->
+    <string name="settings_reset_saved_audio_delay">সংরক্ষিত A/V সিঙ্ক রিসেট করুন</string>
+    <!-- Translators: Description of the reset-saved-audio-sync row. -->
+    <string name="settings_reset_saved_audio_delay_description">প্লেয়ারে ‘এই বিলম্ব মনে রাখুন’ বেছে নিলে সেই চ্যানেল, সিনেমা বা পর্বের জন্য অডিও সিঙ্ক সংরক্ষিত হয়। রিসেট করলে সবকিছু আবার উপরের সেটিং অনুসরণ করবে।</string>
+    <!-- Translators: Title of the confirmation dialog for resetting saved audio sync. -->
+    <string name="settings_reset_saved_audio_delay_confirm">সংরক্ষিত A/V সিঙ্ক রিসেট করবেন?</string>
+    <!-- Translators: Body of the confirmation dialog for resetting saved audio sync. -->
+    <string name="settings_reset_saved_audio_delay_confirm_description">প্রতিটি চ্যানেল, সিনেমা ও পর্ব উপরের অডিও সিঙ্কে ফিরে যাবে। সংরক্ষিত জুম ও ভলিউম সেটিং থাকবে। প্লেয়ার থেকে আবার আলাদা করে সেট করা যাবে।</string>
+    <!-- Translators: Setting label for how far rewind/forward jumps in a movie or episode. -->
+    <string name="settings_seek_step">সিক ধাপ</string>
+    <!-- Translators: Description of the seek step setting. -->
+    <string name="settings_seek_step_description">সিনেমা বা পর্বে রিওয়াইন্ড ও ফরওয়ার্ড কতটা লাফ দেবে।</string>
+    <!-- Translators: Setting label for how far rewind/forward jumps inside a live channel's archive. -->
+    <string name="settings_live_rewind_step">লাইভ রিওয়াইন্ড ধাপ</string>
+    <!-- Translators: Description of the live rewind step setting. -->
+    <string name="settings_live_rewind_step_description">লাইভ চ্যানেলের ক্যাচ-আপ আর্কাইভে রিওয়াইন্ড ও ফরওয়ার্ড কতটা সরবে।</string>
+    <string name="settings_resume_playback">প্লেব্যাক চালিয়ে যান</string>
+    <string name="settings_resume_playback_description">কোনো সিনেমা বা পর্বের সংরক্ষিত অবস্থান থাকলে কী করা হবে।</string>
+    <string name="settings_subtitles">সাবটাইটেল</string>
+    <string name="settings_subtitle_appearance">সাবটাইটেলের চেহারা</string>
+    <string name="settings_subtitle_appearance_description">আকার, লেখার রং, পর্দায় অবস্থান এবং পটভূমির স্বচ্ছতা। বন্ধ থাকলে সাবটাইটেলের মূল চেহারা বজায় থাকে—লাইভ টিভির সাবটাইটেলে সম্প্রচারকারীর সংযোজিত স্টাইলসহ।</string>
+    <string name="settings_subtitle_size">সাবটাইটেলের আকার</string>
+    <string name="settings_subtitle_size_description">সাবটাইটেলের লেখার আকার পরিবর্তন করুন।</string>
+    <string name="settings_preferred_subtitle_language">পছন্দের সাবটাইটেল ভাষা</string>
+    <string name="settings_preferred_language_description">উপলভ্য থাকলে এই সাবটাইটেল ট্র্যাকটি স্বয়ংক্রিয়ভাবে নির্বাচন করুন।</string>
+    <string name="settings_open_subtitles">OpenSubtitles</string>
+    <string name="settings_open_subtitles_connected">সংযুক্ত</string>
+    <string name="settings_open_subtitles_reset_in"><xliff:g id="hours">%1$d</xliff:g> ঘ <xliff:g id="minutes">%2$d</xliff:g> মি পরে</string>
+    <string name="settings_open_subtitles_description">সাবটাইটেল অনুসন্ধান ও ডাউনলোড করতে এবং ডাউনলোড করা সাবটাইটেল পরিচালনা করতে সাইন ইন করুন। প্রতিটি প্রোফাইলের জন্য আলাদা; একটি বিনামূল্যের opensubtitles.com অ্যাকাউন্ট প্রয়োজন।</string>
+    <string name="settings_open_subtitles_advanced">উন্নত বিকল্প</string>
+    <string name="settings_open_subtitles_advanced_description">নিজের অ্যাপ্লিকেশন API কী বা নিজে হোস্ট করা OpenSubtitles Worker ব্যবহার করুন।</string>
+    <string name="settings_open_subtitles_setup_title">OpenSubtitles সেট আপ করুন</string>
+    <string name="settings_open_subtitles_setup_description">আপনার OpenSubtitles অ্যাকাউন্ট দিয়ে সাইন ইন করুন।</string>
+    <string name="settings_open_subtitles_setup_remote">দূরবর্তী</string>
+    <string name="settings_open_subtitles_setup_remote_description">একই Wi-Fi-তে থাকা অন্য ডিভাইসের ব্রাউজারে আপনার তথ্য লিখুন — ফোন, ট্যাবলেট বা কম্পিউটার।</string>
+    <string name="settings_open_subtitles_setup_local">এখানে লিখুন</string>
+    <string name="settings_open_subtitles_setup_local_description">রিমোট দিয়ে এই টিভিতেই আপনার তথ্য লিখুন।</string>
+    <string name="settings_open_subtitles_api_key">OpenSubtitles অ্যাপ্লিকেশন API কী</string>
+    <string name="settings_worker_server_url">Worker / সার্ভার URL</string>
+    <string name="settings_shared">শেয়ার করা</string>
+    <string name="settings_open_subtitles_access_priority">OwnTV-এর শেয়ার করা Worker ব্যবহার করতে দুটিই ফাঁকা রাখুন। কাস্টম Worker URL সরাসরি API কী-এর চেয়ে অগ্রাধিকার পায়। অ্যাকাউন্ট সেশন প্রতিটি প্রোফাইলের জন্য আলাদা থাকে।</string>
+    <string name="settings_remove_custom_access">কাস্টম অ্যাক্সেস সরান</string>
+    <string name="settings_audio">অডিও</string>
+    <string name="settings_preferred_audio_language">পছন্দের অডিও ভাষা</string>
+    <string name="settings_audio_sync">অডিও সিঙ্ক</string>
+    <string name="settings_audio_sync_description">ভিডিওর সঙ্গে মেলাতে অডিও আগে বা পরে সরান। শুধুমাত্র mpv ইঞ্জিনে প্রযোজ্য।</string>
+    <string name="settings_live_tv">লাইভ টিভি</string>
+    <string name="settings_live_latency_description">লাইভ সম্প্রচারের কত কাছাকাছি চালানো হবে। মান কম হলে লাইভের কাছাকাছি থাকবে, তবে বাফার ছোট হবে—তাই দুর্বল স্ট্রিমে বেশি আটকে যেতে বা পুনরায় সংযোগ হতে পারে। পরবর্তী যে চ্যানেলটি খুলবেন, সেটিতে এটি প্রযোজ্য হবে।</string>
+    <string name="settings_live_latency_bitrate_note">খুব বেশি বিটরেটের চ্যানেলে — বিশেষ করে 4K-তে — বাফার আপনার চাওয়া সময়ের চেয়ে কম ধরে রাখতে পারে, কারণ একসঙ্গে মেমরিতে কতটা ভিডিও রাখা যাবে তার একটি সীমা আছে।</string>
+    <string name="settings_channel_numbers">চ্যানেল নম্বর</string>
+    <string name="settings_channel_numbers_description">লাইভ টিভির তালিকা, চ্যানেল তালিকার ওভারলে এবং প্লেয়ারে নামের পাশে আপনার প্রদানকারীর চ্যানেল নম্বর দেখান—এবং পূর্ণ পর্দায় প্লেব্যাকের সময় রিমোটে নম্বর লিখে সরাসরি সেই চ্যানেলে যান (OK চাপলে সঙ্গে সঙ্গে চ্যানেল চালু হবে, Back চাপলে বাতিল হবে)। বন্ধ করলে সব নম্বর লুকানো থাকবে এবং নম্বরের বোতাম উপেক্ষা করা হবে; কিছুই হারাবে না, আবার চালু করলে নম্বরগুলো ফিরে আসবে।</string>
+    <string name="settings_diagnostics">সমস্যা নির্ণয়</string>
+    <string name="settings_measured_stats">পরিমাপ করা স্ট্রিমের পরিসংখ্যান</string>
+    <string name="settings_measured_stats_description">স্ট্রিম-তথ্যের ওভারলেতে লাইভ fps, বিটরেট এবং বাদ পড়া ফ্রেম দেখান (যেসব স্ট্রিমে এই মানগুলো উল্লেখ করা থাকে না, সেগুলোর ক্ষেত্রে ওভারলে খোলা থাকা অবস্থায় পরিমাপ করা হয়)। কেবল নিম্নক্ষমতার টিভিতে আটকে গেলে এটি বন্ধ করুন—এটি মূল ভিডিওতে কখনো প্রভাব ফেলে না, শুধু সমস্যা নির্ণয়ের সংখ্যাগুলোতে প্রভাব ফেলে।</string>
+    <string name="settings_none_auto">কোনোটিই নয় / স্বয়ংক্রিয়</string>
+    <string name="settings_view_grid">গ্রিড</string>
+    <string name="settings_view_list">তালিকা</string>
+    <string name="settings_language_portuguese">পর্তুগিজ</string>
+    <string name="settings_subtitle_small">ছোট</string>
+    <string name="settings_subtitle_normal">স্বাভাবিক</string>
+    <string name="settings_subtitle_large">বড়</string>
+    <string name="settings_subtitle_extra_large">অতিরিক্ত বড়</string>
+    <string name="settings_live_latency_low">কম বিলম্ব</string>
+    <string name="settings_live_latency_balanced">ভারসাম্যপূর্ণ</string>
+    <string name="settings_live_latency_stable">স্থিতিশীল</string>
+    <string name="settings_live_latency_custom">নিজের মতো</string>
+    <string name="settings_low_latency_warning">⚠️ কম বিলম্ব</string>
+    <string name="settings_low_latency_warning_description">লাইভ সম্প্রচারের কাছাকাছি চালালে বাফার ছোট হয়। ধীর সংযোগ বা অস্থিতিশীল স্ট্রিমে এর ফলে বেশি বাফারিং, আটকে যাওয়া বা পুনরায় সংযোগ হতে পারে।\n\nকোনো চ্যানেল নির্ভরযোগ্যভাবে না চললে ভারসাম্যপূর্ণ বেছে নিন।</string>
+    <string name="settings_low_latency_understand">আমি বুঝেছি</string>
+    <string name="settings_custom_live_buffer">নিজের মতো লাইভ বাফার</string>
+    <string name="settings_live_buffer_seconds"><xliff:g id="seconds">%1$d</xliff:g>সে.</string>
+    <string name="settings_audio_delay"><xliff:g id="delay">%1$d</xliff:g> মি.সে.</string>
+    <string name="settings_external_player_description">কোন বিভাগগুলো বাহ্যিক অ্যাপে খুলবে তা বেছে নিন।</string>
+    <string name="settings_audio_delay_value"><xliff:g id="delay">%1$d</xliff:g> মি.সে.</string>
+    <string name="settings_movies_player_description">mpv (প্রস্তাবিত) সবচেয়ে বেশি ফরম্যাট সমর্থন করে — DTS/TrueHD অডিও, অস্বাভাবিক ফাইল — সঙ্গে A/V সিঙ্ক ঠিক করার সুবিধা। কিছু টিভিতে ExoPlayer এমন স্ট্রিম চালায় যা mpv পারে না, তবে এটি DTS/TrueHD অডিও ডিকোড করতে পারে না এবং এতে A/V সিঙ্ক সংশোধন নেই। যুগ্ম বিকল্পগুলিতে প্রথমটি ব্যর্থ হলে অন্য প্লেয়ার নিজে থেকেই চেষ্টা করা হয়; এক-প্লেয়ার বিকল্পে কখনও হয় না, ফলে দ্বিতীয় প্লেয়ার আপনার টিভিতে কাজ না করলে কয়েক সেকেন্ডের কালো পর্দা বাঁচে।</string>
+    <string name="settings_live_player_description">ExoPlayer (প্রস্তাবিত) চ্যানেল অনেক দ্রুত খোলে এবং লাইভ সাবটাইটেল কেবল এটিতেই আছে। mpv এমন চ্যানেলও চালায় যা ExoPlayer পারে না, অস্বাভাবিক অডিও থাকা কিছু চ্যানেল সহ। যুগ্ম বিকল্পগুলিতে প্রথমটি ব্যর্থ হলে অন্য প্লেয়ার নিজে থেকেই চেষ্টা করা হয়; এক-প্লেয়ার বিকল্পে কখনও হয় না, ফলে দ্বিতীয় প্লেয়ার আপনার টিভিতে কাজ না করলে কয়েক সেকেন্ডের কালো পর্দা বাঁচে। প্লেয়ারে হাতে বদলানো চ্যানেলে আপনার পছন্দ দুই ক্ষেত্রেই থাকে।</string>
+    <string name="settings_reset_player_choices_description">প্লেয়ারে কোনো একটি সিনেমা বা পর্বকে mpv ও ExoPlayer-এর মধ্যে বদলালে সেই পছন্দ পরের বারের জন্য সংরক্ষিত হয়। রিসেট করলে সবকিছু আবার উপরের সেটিং অনুসরণ করবে। লাইভ চ্যানেলের সংরক্ষিত পছন্দগুলি অপরিবর্তিত থাকে।</string>
+    <string name="settings_reset_player_choices_none">কিছুই সংরক্ষিত নেই</string>
+    <plurals name="settings_reset_player_choices_count">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g>টি সংরক্ষিত</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g>টি সংরক্ষিত</item>
+    </plurals>
+    <string name="settings_reset_player_choices_confirm">সংরক্ষিত প্লেয়ার পছন্দ রিসেট করবেন?</string>
+    <string name="settings_reset_player_choices_confirm_description">প্রতিটি সিনেমা ও পর্ব আবার “সিনেমা ও সিরিজের প্লেয়ার” সেটিং অনুসরণ করবে। প্লেয়ার থেকে যেকোনো সময় আলাদা একটি আইটেম আবার বদলাতে পারবেন।</string>
+    <string name="settings_external_player_row_description">প্রতিটি বিভাগের জন্য আলাদাভাবে বেছে নিয়ে, বিল্ট-ইন প্লেয়ারের বদলে কোনো বাহ্যিক অ্যাপে (VLC, MX Player) স্ট্রিম খুলুন। এই অ্যাপ ডিকোড করতে পারে না এমন স্ট্রিমের ক্ষেত্রে অথবা আপনি অন্য কোনো প্লেয়ার পছন্দ করলে এটি উপযোগী। বাহ্যিকভাবে চালানোর সময় প্লেব্যাক চালিয়ে যাওয়ার অবস্থান ও আগের/পরের নিয়ন্ত্রণ পাওয়া যায় না; কাস্টম User-Agent বা referer প্রয়োজন এমন স্ট্রিম নাও চলতে পারে।</string>
+    <string name="settings_resume_always">সব সময় চালিয়ে যান</string>
+    <string name="settings_resume_ask">চালিয়ে যাওয়ার আগে জিজ্ঞাসা করুন</string>
+    <string name="settings_resume_never">কখনো চালিয়ে যাবেন না</string>
+    <string name="settings_delete_subtitles">সাবটাইটেল মুছুন</string>
+    <string name="settings_delete_all">সব মুছুন</string>
+    <string name="settings_movies">সিনেমা</string>
+    <string name="settings_series">সিরিজ</string>
+    <string name="settings_no_downloaded_subtitles">ডাউনলোড করা কোনো <xliff:g id="section">%1$s</xliff:g> সাবটাইটেল নেই।</string>
+    <string name="settings_delete_subtitle">সাবটাইটেল মুছুন</string>
+    <string name="settings_delete_subtitle_message">“<xliff:g id="title">%2$s</xliff:g>”-এর <xliff:g id="name">%1$s</xliff:g> সাবটাইটেলটি মুছবেন? পরে এটি আবার ডাউনলোড করা যাবে।</string>
+    <string name="settings_delete_all_subtitles">সব সাবটাইটেল মুছুন</string>
+    <string name="settings_delete_all_movies">সব সিনেমার সাবটাইটেল মুছুন</string>
+    <string name="settings_delete_all_series">সব সিরিজের সাবটাইটেল মুছুন</string>
+    <string name="settings_section_count"><xliff:g id="section">%1$s</xliff:g> (<xliff:g id="count">%2$d</xliff:g>)</string>
+    <string name="settings_sync_guide_question">এখনই টিভি নির্দেশিকা সিঙ্ক করবেন?</string>
+    <string name="settings_sync_guide_description">“<xliff:g id="source">%1$s</xliff:g>”-এর অনুষ্ঠান নির্দেশিকা (EPG) ডাউনলোড করুন। সেটিংস → EPG থেকেও পরে এটি করতে পারবেন।</string>
+    <string name="settings_not_now">এখন নয়</string>
+    <string name="settings_sync_now">এখনই সিঙ্ক করুন</string>
+    <string name="settings_syncing_guide">টিভি নির্দেশিকা সিঙ্ক হচ্ছে…</string>
+    <string name="settings_connecting">সংযোগ করা হচ্ছে…</string>
+    <string name="settings_run_background">পটভূমিতে চালান</string>
+    <string name="settings_guide_synced">টিভি নির্দেশিকা সিঙ্ক হয়েছে</string>
+    <string name="settings_guide_sync_failed">টিভি নির্দেশিকা সিঙ্ক করা যায়নি</string>
+    <string name="settings_restore_remote_title">অন্য ডিভাইস থেকে পুনরুদ্ধার করুন</string>
+    <string name="settings_restore_remote_description">একই Wi-Fi-এ থাকা ফোন, ট্যাবলেট বা কম্পিউটারে QR স্ক্যান করুন (অথবা URL খুলুন), এই PIN লিখুন, আপনার OwnTV ব্যাকআপ ফাইল বেছে নিয়ে Send to TV-তে ট্যাপ করুন। এরপর এখানে কী পুনরুদ্ধার করবেন তা বেছে নিন।</string>
+    <string name="settings_opening_server">সার্ভার খোলা হচ্ছে…</string>
+    <string name="settings_enter_pin_browser">ব্রাউজারে এই PIN লিখুন</string>
+    <string name="settings_companion_qr">সহযোগী URL-এর QR কোড</string>
+    <string name="settings_open_url">অথবা এই URL খুলুন</string>
+    <string name="settings_try_again">আবার চেষ্টা করুন</string>
+    <string name="settings_new_pin">নতুন PIN দিয়ে আবার শুরু করুন</string>
+    <string name="settings_download_remote_title">অন্য ডিভাইসে ডাউনলোড করুন</string>
+    <string name="settings_download_remote_description">একই Wi-Fi-এ থাকা ফোন, ট্যাবলেট বা কম্পিউটারে QR স্ক্যান করুন (অথবা URL খুলুন), এই PIN লিখুন এবং নিরাপদে রাখার জন্য আপনার ব্যাকআপ ফাইল ডাউনলোড করুন।</string>
+    <string name="settings_preparing_backup">ব্যাকআপ প্রস্তুত করা হচ্ছে…</string>
+    <string name="settings_glass_effect_on">গ্লাস ইফেক্ট: চালু</string>
+    <string name="settings_glass_effect_off">গ্লাস ইফেক্ট: বন্ধ</string>
+    <string name="settings_background_on">পটভূমির ছবি: চালু</string>
+    <string name="settings_background_off">পটভূমির ছবি: বন্ধ</string>
+    <string name="settings_ui_zoom_range">পুরো ইন্টারফেসের আকার পরিবর্তন করুন (<xliff:g id="min">%1$d</xliff:g>%%–<xliff:g id="max">%2$d</xliff:g>%%)।</string>
+    <string name="settings_low_zoom_warning_title">⚠️ কম জুমের সতর্কতা</string>
+    <string name="settings_low_zoom_warning"><xliff:g id="zoom">%1$d</xliff:g>%% জুমে পর্দায় একসঙ্গে আরও অনেক আইটেম দেখা যায়। সীমিত মেমরির ডিভাইসে (যেমন ২ GB টিভি স্টিক) এর ফলে অ্যাপ অস্থিতিশীল হতে বা বন্ধ হয়ে যেতে পারে, বিশেষ করে বড় প্লেলিস্ট ও EPG ডেটার ক্ষেত্রে।\n\nচালিয়ে যেতে OK চাপুন, অথবা <xliff:g id="safe_zoom">%2$d</xliff:g>%%-এ থাকতে Back চাপুন।</string>
+    <string name="settings_low_zoom_accept">আমি ঝুঁকিটি বুঝেছি এবং মেনে নিচ্ছি</string>
+    <string name="settings_surface_transparency"><xliff:g id="percent">%1$d</xliff:g>%%</string>
+    <string name="settings_surface_count_all">পৃষ্ঠ: সব</string>
+    <plurals name="settings_surface_count">
+        <item quantity="one"><xliff:g id="total">%2$d</xliff:g>টি পৃষ্ঠের মধ্যে <xliff:g id="count">%1$d</xliff:g>টি</item>
+        <item quantity="other"><xliff:g id="total">%2$d</xliff:g>টি পৃষ্ঠের মধ্যে <xliff:g id="count">%1$d</xliff:g>টি</item>
+    </plurals>
+    <string name="settings_catchup_timezone_device">ডিভাইস</string>
+    <string name="settings_catchup_player_ask">সব সময় জিজ্ঞাসা করুন</string>
+    <string name="settings_catchup_player_internal">OwnTV প্লেয়ার</string>
+    <string name="settings_catchup_player_external">বাহ্যিক প্লেয়ার</string>
+    <string name="settings_soon">শিগগিরই</string>
+    <string name="settings_download_folder_title">ডাউনলোডের ফোল্ডার বেছে নিন</string>
+    <string name="settings_pick_background_title">পটভূমির ছবি বেছে নিন</string>
+    <string name="settings_theme_dialog">থিম</string>
+    <string name="settings_app_startup_dialog">অ্যাপ চালু হওয়ার ধরন</string>
+    <string name="settings_animations_dialog">অ্যানিমেশন</string>
+    <string name="settings_close">বন্ধ করুন</string>
+    <string name="settings_done">সম্পন্ন</string>
+    <string name="settings_reset">রিসেট করুন</string>
+    <string name="settings_device_details"><xliff:g id="model">%1$s</xliff:g> · <xliff:g id="android">%2$s</xliff:g></string>
+    <string name="settings_playback_entry"><xliff:g id="time">%1$s</xliff:g> · <xliff:g id="engine">%2$s</xliff:g> · <xliff:g id="kind">%3$s</xliff:g></string>
+    <string name="settings_history_live">লাইভ টিভি</string>
+    <string name="settings_history_movies">সিনেমা</string>
+    <string name="settings_history_series">সিরিজ</string>
+    <string name="settings_history_all">সব</string>
+    <string name="settings_decrease">–</string>
+    <string name="settings_increase">+</string>
+    <string name="settings_glass_effect_title">কাচের প্রভাব</string>
+    <string name="settings_glass_effect_description">পটভূমির ছবি বা অ্যাপের নিজস্ব পটভূমির ওপর স্বচ্ছ হিমায়িত প্যানেল।</string>
+    <string name="settings_transparency_title">স্বচ্ছতা</string>
+    <string name="settings_blur_title">ঝাপসা / হিমায়িত</string>
+    <string name="settings_blur_description_enabled">পটভূমির ছবি কতটা হিমায়িত দেখাবে (<xliff:g id="min">%1$d</xliff:g>%%–<xliff:g id="max">%2$d</xliff:g>%%)। শুধু পটভূমির ছবির ওপর প্রযোজ্য।</string>
+    <string name="settings_blur_description_disabled">পটভূমির ছবি কতটা হিমায়িত দেখাবে (<xliff:g id="min">%1$d</xliff:g>%%–<xliff:g id="max">%2$d</xliff:g>%%)। শুধু পটভূমির ছবির ওপর প্রযোজ্য। চালু করতে একটি পটভূমির ছবি সেট করুন।</string>
+    <string name="settings_glass_surface_panels">কনটেন্ট প্যানেল</string>
+    <string name="settings_glass_surface_sidebar">সাইডবার</string>
+    <string name="settings_glass_surface_preview">প্রিভিউ প্যান</string>
+    <string name="settings_glass_surface_dialogs">ডায়ালগ ও পপ-আপ</string>
+    <string name="settings_glass_surface_topbar">ওপরের বার</string>
+    <string name="settings_glass_surface_cards">কার্ড</string>
+    <string name="settings_glass_surface_miniplayer">মিনি-প্লেয়ার</string>
+    <string name="settings_glass_surface_player_controls">প্লেয়ার নিয়ন্ত্রণ</string>
+    <string name="settings_glass_surface_toasts">স্ক্রিনের বার্তা</string>
+    <string name="settings_browsing_last_category">সর্বশেষ বিভাগ মনে রাখুন</string>
+    <string name="settings_browsing_last_category_description">সব বিভাগে নয়, যে বিভাগে ছেড়েছিলেন সেখানেই আবার খুলুন।</string>
+    <string name="settings_browsing_last_item">সর্বশেষ আইটেম মনে রাখুন</string>
+    <string name="settings_browsing_last_item_description">প্রতিটি বিভাগ ওপর থেকে শুরু না করে তার নিজস্ব স্ক্রল অবস্থান ধরে রাখে। লাইভ টিভিতে সর্বশেষ ফোকাসে থাকা চ্যানেলটিও ফিরিয়ে আনা হয়।</string>
+    <string name="settings_catchup_player">ক্যাচ-আপ চালানোর প্লেয়ার</string>
+    <string name="settings_customize_title">বিভাগ ও আইটেম নিজের মতো সাজান</string>
+    <string name="settings_customize_pin_locked">এই স্ক্রিনটি PIN দিয়ে লক করা।</string>
+    <string name="settings_customize_wrong_pin">ভুল PIN—আবার চেষ্টা করুন</string>
+    <string name="settings_customize_enter_pin">PIN লিখুন</string>
+    <string name="settings_customize_set_pin">🔒 PIN সেট করুন</string>
+    <string name="settings_customize_change_pin">🔒 PIN পরিবর্তন করুন</string>
+    <string name="settings_customize_remove_lock">লক সরান</string>
+    <string name="settings_customize_description">এই প্রোফাইলের জন্য চ্যানেল, সিনেমা ও সিরিজ লুকান বা আবার দেখান এবং বিভাগগুলোর নাম পরিবর্তন বা ক্রম বদলান। পুনরায় সিঙ্ক করলেও এগুলো বজায় থাকবে।</string>
+    <string name="settings_customize_new_category_behavior">নতুন বিভাগের আচরণ</string>
+    <string name="settings_customize_hide_new">লুকিয়ে রাখুন—পুনরায় সিঙ্কে যোগ হওয়া নতুন বিভাগ ডিফল্টভাবে লুকানো থাকবে</string>
+    <string name="settings_customize_show_new">দেখান—পুনরায় সিঙ্কে যোগ হওয়া নতুন বিভাগ ডিফল্টভাবে দেখানো হবে</string>
+    <string name="settings_customize_hide">লুকান</string>
+    <string name="settings_customize_show">দেখান</string>
+    <string name="settings_customize_behavior_hide">লুকানো থাকবে</string>
+    <string name="settings_customize_behavior_show">দেখানো হবে</string>
+    <string name="settings_customize_hidden_channels">লুকানো চ্যানেল</string>
+    <string name="settings_customize_hidden_movies">লুকানো সিনেমা</string>
+    <string name="settings_customize_hidden_series">লুকানো সিরিজ</string>
+    <string name="settings_customize_unhide_description">কোনো আইটেম তালিকায় ফিরিয়ে আনতে আবার দেখান।</string>
+    <string name="settings_customize_categories">বিভাগগুলো</string>
+    <string name="settings_customize_empty">এই বিভাগে এখনো কোনো বিভাগ নেই—আগে একটি উৎস যোগ করুন।</string>
+    <string name="settings_customize_range_hide_start">পরিসর নির্বাচন শুরু হয়েছে। পরিসরটি নির্বাচন করতে শেষ আইটেমে দেখান/লুকান চাপুন।</string>
+    <string name="settings_customize_range_rename_start">নাম পরিবর্তনের পরিসর শুরু হয়েছে। পরিসরটি নির্বাচন করতে শেষ আইটেমে নাম পরিবর্তন চাপুন।</string>
+    <string name="settings_customize_range_move_start">সরানোর পরিসর শুরু হয়েছে। পুরো পরিসরটি সরাতে শেষ আইটেমে ⤒ ↑ ↓ ⤓ চাপুন।</string>
+    <string name="settings_customize_span_hide">লুকাতে বা দেখাতে পরিসর নির্বাচন করুন</string>
+    <string name="settings_customize_span_move">সরাতে পরিসর নির্বাচন করুন</string>
+    <string name="settings_customize_move_top">সবার উপরে সরান</string>
+    <string name="settings_customize_move_bottom">সবার নিচে সরান</string>
+    <string name="settings_customize_custom_category">কাস্টম</string>
+    <string name="settings_customize_span_rename">নাম পরিবর্তনের জন্য পরিসর নির্বাচন করুন</string>
+    <string name="settings_customize_range_hide_start_touch">পরিসর নির্বাচন শুরু হয়েছে। শেষ আইটেমে ট্যাপ করুন, তারপর লুকান বা দেখান বেছে নিন।</string>
+    <string name="settings_customize_range_move_start_touch">পরিসর সরানো শুরু হয়েছে। শেষ আইটেমে ট্যাপ করুন, তারপর তীর দিয়ে পুরো ব্লকটি সরান।</string>
+    <string name="settings_customize_range_rename_start_touch">পরিসরের নাম পরিবর্তন শুরু হয়েছে। মাঝের সবকিছুর নাম পরিবর্তন করতে শেষ আইটেমে ট্যাপ করুন।</string>
+    <plurals name="settings_customize_range_selected">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g>টি বিভাগ নির্বাচিত। এটি সরাতে ⤒ ↑ ↓ ⤓ চাপতে থাকুন।</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g>টি বিভাগ নির্বাচিত। এগুলো একসঙ্গে সরাতে ⤒ ↑ ↓ ⤓ চাপতে থাকুন।</item>
+    </plurals>
+    <string name="settings_customize_rename">নাম পরিবর্তন করুন</string>
+    <string name="settings_customize_rename_category">বিভাগের নাম পরিবর্তন করুন</string>
+    <string name="settings_customize_rename_or_delete_category">বিভাগের নাম পরিবর্তন বা মুছুন</string>
+    <string name="settings_customize_new_category">＋ নতুন বিভাগ</string>
+    <string name="settings_customize_sort_button">সাজানোর ক্রম: <xliff:g id="label">%1$s</xliff:g> ▾</string>
+
+    <string name="settings_customize_filter_button">ফিল্টার: <xliff:g id="label">%1$s</xliff:g> ▾</string>
+    <string name="settings_customize_filter_title">তালিকা ফিল্টার করুন</string>
+    <string name="settings_customize_filter_all">সব</string>
+    <string name="settings_customize_filter_visible">দৃশ্যমান</string>
+    <string name="settings_customize_filter_hidden">লুকানো</string>
+    <string name="settings_customize_new_categories_button">নতুন বিভাগ: <xliff:g id="label">%1$s</xliff:g> ▾</string>
+    <string name="settings_customize_rename_hint">শুধু এই প্রোফাইলের জন্য। “<xliff:g id="name">%1$s</xliff:g>” ফিরিয়ে আনতে ফাঁকা রাখুন।</string>
+    <string name="settings_customize_remove_pin_title">PIN লক সরাবেন?</string>
+    <string name="settings_customize_remove_pin_message">নিজের মতো সাজানোর স্ক্রিনটি আবার PIN না চেয়েই খুলবে।</string>
+    <string name="settings_customize_remove">সরান</string>
+    <string name="settings_customize_confirm_pin">নতুন PIN নিশ্চিত করুন</string>
+    <string name="settings_customize_pin_mismatch">PIN দুটি মিলছে না—আবার লিখুন</string>
+    <string name="settings_customize_new_pin">নতুন PIN লিখুন</string>
+    <plurals name="settings_customize_selected_categories">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g>টি বিভাগ নির্বাচিত।</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g>টি বিভাগ নির্বাচিত।</item>
+    </plurals>
+    <string name="settings_customize_hide_show_title">বিভাগ লুকান বা দেখান</string>
+    <string name="settings_customize_was">আগে ছিল “<xliff:g id="name">%1$s</xliff:g>”</string>
+    <string name="settings_customize_hidden">লুকানো</string>
+    <string name="settings_customize_unhide">আবার দেখান</string>
+    <string name="settings_customize_metadata_separator">  ·  </string>
+    <string name="settings_sources_title">উৎসগুলো</string>
+    <string name="settings_sources_description">উৎসগুলো সব প্রোফাইলে ভাগাভাগি করা হয়।</string>
+    <string name="settings_sources_empty">এখনো কোনো উৎস নেই। একটি M3U বা Xtream উৎস যোগ করুন।</string>
+    <string name="settings_sources_add">উৎস যোগ করুন</string>
+    <string name="settings_sources_import_failed">ইমপোর্ট করা যায়নি</string>
+    <string name="settings_sources_importing">ক্যাটালগ ইমপোর্ট করা হচ্ছে…</string>
+    <string name="settings_sources_preparing">ক্যাটালগ প্রস্তুত করা হচ্ছে</string>
+    <string name="settings_sources_deleting">মুছে ফেলা হচ্ছে…</string>
+    <string name="settings_sources_resync">পুনরায় সিঙ্ক করুন</string>
+    <string name="settings_sources_delete_title">“<xliff:g id="name">%1$s</xliff:g>” মুছবেন?</string>
+    <string name="settings_sources_delete_message">এতে উৎসটি এবং এর সব চ্যানেল, সিনেমা ও সিরিজ প্রতিটি প্রোফাইল থেকে সরানো হবে।</string>
+    <string name="settings_sources_type_m3u">M3U · <xliff:g id="url">%1$s</xliff:g></string>
+    <string name="settings_sources_type_xtream">Xtream · <xliff:g id="url">%1$s</xliff:g></string>
+    <string name="settings_sources_type_stalker">Stalker · <xliff:g id="url">%1$s</xliff:g></string>
+    <string name="settings_sources_expiry">মেয়াদ শেষ <xliff:g id="date">%1$s</xliff:g></string>
+    <string name="settings_sources_test_title">সোর্স পরীক্ষা</string>
+    <string name="settings_sources_test_ok">সংযোগ ঠিক আছে</string>
+    <string name="settings_sources_test_auth">প্রদানকারী এই তথ্য গ্রহণ করেনি। ইউজারনেম, পাসওয়ার্ড বা MAC ঠিকানা যাচাই করুন।</string>
+    <string name="settings_sources_test_expired">এই সাবসক্রিপশনের মেয়াদ শেষ হয়ে গেছে।</string>
+    <string name="settings_sources_test_unreachable">সার্ভারে পৌঁছানো গেল না। ঠিকানা ও ইন্টারনেট সংযোগ যাচাই করুন।</string>
+    <string name="settings_sources_test_status">অবস্থা: <xliff:g id="status">%1$s</xliff:g></string>
+    <string name="settings_sources_test_connections">সংযোগ: <xliff:g id="max">%2$d</xliff:g>-এর মধ্যে <xliff:g id="used">%1$d</xliff:g>টি ব্যবহার হচ্ছে</string>
+    <string name="settings_sources_test_connections_max">সংযোগ: একসাথে সর্বোচ্চ <xliff:g id="max">%1$d</xliff:g>টি</string>
+    <string name="settings_sources_test_trial">ট্রায়াল অ্যাকাউন্ট</string>
+    <string name="settings_sources_test_expiry_none">কোনো মেয়াদ শেষের তারিখ জানানো হয়নি</string>
+    <string name="settings_sources_auto_refresh">⟳ <xliff:g id="mode">%1$s</xliff:g></string>
+    <string name="settings_sources_default">ডিফল্ট</string>
+    <string name="settings_sources_backup">ব্যাকআপ</string>
+    <string name="settings_sources_details_separator">  •  </string>
+    <string name="settings_sources_preparing_detail">ক্যাটালগ প্রস্তুত করা হচ্ছে</string>
+    <string name="settings_sources_removing_detail">সরানো হচ্ছে…</string>
+    <string name="settings_sources_edit">সম্পাদনা করুন</string>
+    <string name="settings_sources_delete">মুছুন</string>
+    <string name="settings_sources_cancel">বাতিল করুন</string>
+    <string name="settings_sources_try_again">আবার চেষ্টা করুন</string>
+    <string name="settings_sources_import_title">ইমপোর্ট সম্পন্ন হয়েছে</string>
+    <string name="settings_sources_resync_title_full">“<xliff:g id="name">%1$s</xliff:g>” পুনরায় সিঙ্ক করুন</string>
+    <string name="settings_sources_resync_now_full">এখনই পুনরায় সিঙ্ক করুন</string>
+    <string name="settings_sources_resync_remove_full">পুনরায় সিঙ্ক করে অনুপস্থিত শিরোনাম সরান</string>
+    <string name="settings_sources_resync_description">এখনই পুনরায় সিঙ্ক করলে সর্বশেষ ক্যাটালগ আনা হবে এবং ইতিমধ্যে সংরক্ষিত সবকিছু রাখা হবে।\n\nপুনরায় সিঙ্ক করে অনুপস্থিত শিরোনাম সরালে প্রদানকারীর তালিকায় আর নেই এমন শিরোনামও সরানো যাবে। তালিকায় এখনো থাকা শিরোনামের পছন্দেরগুলো, ইতিহাস এবং চালিয়ে যাওয়ার অবস্থান রাখা হবে।</string>
+    <string name="settings_sources_refresh_off">বন্ধ</string>
+    <string name="settings_sources_refresh_startup">অ্যাপ চালু হলে রিফ্রেশ করুন</string>
+    <string name="settings_sources_refresh_6h">৬ ঘণ্টা</string>
+    <string name="settings_sources_refresh_12h">১২ ঘণ্টা</string>
+    <string name="settings_sources_refresh_manual">কাস্টম বিরতি\u2026</string>
+    <plurals name="settings_sources_refresh_days">
+        <item quantity="one">প্রতি <xliff:g id="count">%1$d</xliff:g> দিনে</item>
+        <item quantity="other">প্রতি <xliff:g id="count">%1$d</xliff:g> দিনে</item>
+    </plurals>
+    <string name="settings_sources_refresh_days_title">রিফ্রেশ বিরতি</string>
+    <string name="settings_sources_refresh_days_hint">বাঁ ও ডান দিয়ে দিনের সংখ্যা বাছুন, ১ থেকে ৯৯।</string>
+    <string name="settings_epg_sources_title">EPG উৎসগুলো</string>
+    <string name="settings_epg_sources_empty">এখনো কোনো EPG উৎস নেই। একটি XMLTV লিংক যোগ করুন।</string>
+    <string name="settings_epg_sources_add">EPG উৎস যোগ করুন</string>
+    <string name="settings_epg_sources_edit">EPG উৎস সম্পাদনা করুন</string>
+    <string name="settings_epg_sources_add_sync">যোগ করে সিঙ্ক করুন</string>
+    <string name="settings_epg_sources_save_sync">সংরক্ষণ করে সিঙ্ক করুন</string>
+    <string name="settings_epg_sources_fill_playlist">প্লেলিস্ট থেকে পূরণ করুন</string>
+    <string name="settings_epg_sources_none_playlist">আপনার কোনো প্লেলিস্টেই EPG URL নেই।</string>
+    <string name="settings_epg_sources_use_logos">এই নির্দেশিকার চ্যানেল লোগো ব্যবহার করুন</string>
+    <string name="settings_epg_sources_logos_description">আপনার প্লেলিস্টের বদলে এই XMLTV ফিডের লোগো দেখান। এই ফিডে যেসব চ্যানেলের লোগো নেই, সেগুলোতে প্লেলিস্টের লোগোই থাকবে।</string>
+    <string name="settings_epg_sources_name">নাম</string>
+    <string name="settings_epg_sources_url">XMLTV URL</string>
+    <string name="settings_epg_sources_portal_guide">পোর্টাল থেকে গাইড</string>
+    <string name="settings_epg_sources_user_agent">User-Agent (ঐচ্ছিক)</string>
+    <string name="settings_epg_sources_name_hint">যেমন: যুক্তরাজ্য নির্দেশিকা</string>
+    <string name="settings_epg_sources_url_hint">https://…/epg.xml(.gz)</string>
+    <string name="settings_epg_sources_user_agent_hint">ডিফল্টের জন্য ফাঁকা রাখুন</string>
+    <string name="settings_epg_sources_description">টিভি নির্দেশিকা পূরণকারী XMLTV নির্দেশিকা ফিড। যোগ করার পর এগুলো স্বয়ংক্রিয়ভাবে সিঙ্ক হয় এবং আপনার প্লেলিস্টের চ্যানেলের সঙ্গে একত্রিত হয়।</string>
+    <string name="settings_epg_sources_delete_title">“<xliff:g id="name">%1$s</xliff:g>” মুছবেন?</string>
+    <string name="settings_epg_sources_delete_message">এই EPG উৎস এবং এর নির্দেশিকার ডেটা সরিয়ে দেয়। আপনার চ্যানেলগুলো থেকে যাবে।</string>
+    <string name="settings_epg_sources_syncing_percent">সিঙ্ক হচ্ছে <xliff:g id="percent">%1$d</xliff:g>%%</string>
+    <plurals name="settings_epg_sources_catchup">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g>টি চ্যানেলে ক্যাচ-আপ পাওয়া যায়।</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g>টি চ্যানেলে ক্যাচ-আপ পাওয়া যায়।</item>
+    </plurals>
+    <string name="settings_epg_sources_error">⚠ <xliff:g id="error">%1$s</xliff:g></string>
+    <string name="settings_epg_sources_auto_refresh_title">স্বয়ংক্রিয় রিফ্রেশ</string>
+    <string name="settings_epg_sources_auto_refresh_description">বন্ধ, অ্যাপ চালুর সময় অথবা ডেটা পুরোনো হলে</string>
+    <string name="settings_epg_sources_on">চালু</string>
+    <string name="settings_epg_sources_off">বন্ধ</string>
+    <string name="settings_epg_sources_not_synced">এখনো সিঙ্ক করা হয়নি</string>
+    <string name="settings_epg_refresh_1h">১ ঘণ্টা</string>
+    <string name="settings_epg_refresh_3h">৩ ঘণ্টা</string>
+    <string name="settings_epg_refresh_6h">৬ ঘণ্টা</string>
+    <string name="settings_epg_refresh_12h">১২ ঘণ্টা</string>
+    <string name="settings_epg_refresh_24h">২৪ ঘণ্টা</string>
+    <string name="settings_epg_refresh_48h">৪৮ ঘণ্টা</string>
+    <string name="settings_epg_sources_deleting">মুছে ফেলা হচ্ছে…</string>
+    <string name="settings_epg_sources_syncing_label">সিঙ্ক হচ্ছে</string>
+    <string name="settings_epg_sources_connecting">সংযোগ করা হচ্ছে…</string>
+    <plurals name="settings_epg_sources_status_count_channels">
+        <item quantity="one">নির্দেশিকায় <xliff:g id="channels">%1$d</xliff:g>টি চ্যানেল রয়েছে।</item>
+        <item quantity="other">নির্দেশিকায় <xliff:g id="channels">%1$d</xliff:g>টি চ্যানেল রয়েছে।</item>
+    </plurals>
+    <plurals name="settings_epg_sources_status_count_programmes">
+        <item quantity="one">এতে <xliff:g id="programmes">%1$d</xliff:g>টি অনুষ্ঠান রয়েছে।</item>
+        <item quantity="other">এতে <xliff:g id="programmes">%1$d</xliff:g>টি অনুষ্ঠান রয়েছে।</item>
+    </plurals>
+    <string name="settings_epg_sources_status_count"><xliff:g id="channels">%1$s</xliff:g> <xliff:g id="programmes">%2$s</xliff:g></string>
+    <string name="settings_epg_sources_status_count_with_catchup"><xliff:g id="counts">%1$s</xliff:g> <xliff:g id="catchup">%2$s</xliff:g></string>
+    <string name="settings_epg_sources_status_synced">সিঙ্ক হয়েছে, কিন্তু নির্ধারিত সময়সীমায় কোনো অনুষ্ঠান পাওয়া যায়নি।</string>
+    <string name="settings_epg_sources_status_synced_with_catchup"><xliff:g id="catchup">%1$s</xliff:g></string>
+    <string name="settings_backup_title">ব্যাকআপ ও পুনরুদ্ধার</string>
+    <string name="settings_backup_working">কাজ চলছে…</string>
+    <string name="settings_backup_what_backup">কী ব্যাকআপ করবেন</string>
+    <string name="settings_backup_what_restore">কী পুনরুদ্ধার করবেন</string>
+    <string name="settings_backup_encrypt_title">এই ব্যাকআপ এনক্রিপ্ট করবেন?</string>
+    <string name="settings_backup_encrypt_message">ব্যাকআপ পাসওয়ার্ড ব্যবহার করলে পুরো ফাইলটি এনক্রিপ্ট করা হবে—প্লেলিস্ট, প্রোফাইল ও সংরক্ষিত পাসওয়ার্ডসহ—এবং ওই পাসওয়ার্ড ছাড়া এর কিছুই পড়া যাবে না। এটি নিরাপদে রাখুন: হারিয়ে ফেললে ব্যাকআপটি কোনোভাবেই খোলা যাবে না। পাসওয়ার্ড ছাড়া ফাইলটি এনক্রিপ্ট করা হবে না এবং সংরক্ষিত পাসওয়ার্ড ও পিন এতে অন্তর্ভুক্ত হবে না।</string>
+    <string name="settings_backup_export_title">একটি ব্যাকআপ এক্সপোর্ট করুন</string>
+    <string name="settings_backup_export_message">একই Wi-Fi-এ থাকা অন্য ডিভাইসে (ফোন বা ল্যাপটপ) ব্যাকআপটি পাঠান, অথবা এই ডিভাইসে ফাইল হিসেবে সংরক্ষণ করুন।</string>
+    <string name="settings_backup_restore_title">একটি ব্যাকআপ পুনরুদ্ধার করুন</string>
+    <string name="settings_backup_restore_message">একই Wi-Fi-এ থাকা অন্য ডিভাইস (ফোন বা ল্যাপটপ) থেকে ব্যাকআপটি পাঠান, অথবা এই ডিভাইসে আগে থেকেই থাকা ব্যাকআপ ফাইল বেছে নিন।</string>
+    <string name="settings_backup_password">ব্যাকআপ পাসওয়ার্ড</string>
+    <string name="settings_backup_enter_password">ব্যাকআপ পাসওয়ার্ড লিখুন</string>
+    <string name="settings_backup_wrong_password">ভুল ব্যাকআপ পাসওয়ার্ড</string>
+    <string name="settings_backup_password_mismatch">পাসওয়ার্ডটি মেলেনি। আবার চেষ্টা করুন, অথবা সংরক্ষিত পাসওয়ার্ড ছাড়া বাকি সবকিছু পুনরুদ্ধার করতে এড়িয়ে যান।</string>
+    <string name="settings_backup_password_encrypted_mismatch">পাসওয়ার্ডটি মেলেনি। এই ব্যাকআপ এনক্রিপ্ট করা—তৈরির সময় ব্যবহৃত পাসওয়ার্ড ছাড়া এটি খোলা যাবে না।</string>
+    <string name="settings_backup_encrypted_description">এই ব্যাকআপ এনক্রিপ্ট করা। এটি খুলে কী পুনরুদ্ধার করবেন তা বেছে নিতে ব্যাকআপ পাসওয়ার্ড লিখুন।</string>
+    <string name="settings_backup_saved_passwords_description">এই ব্যাকআপের পাসওয়ার্ডগুলো এনক্রিপ্ট করা। সেগুলো পুনরুদ্ধার করতে ব্যাকআপ পাসওয়ার্ড লিখুন, অথবা বাকি সবকিছু পুনরুদ্ধার করতে এড়িয়ে যান এবং পরে পাসওয়ার্ডগুলো আবার লিখুন।</string>
+    <string name="settings_backup_choose_folder">ব্যাকআপ সংরক্ষণের ফোল্ডার বেছে নিন</string>
+    <string name="settings_backup_choose_folder_action">ফোল্ডার বেছে নিন</string>
+    <string name="settings_backup_pick_file">পুনরুদ্ধারের জন্য ব্যাকআপ ফাইল বেছে নিন</string>
+    <string name="settings_backup_local_file">স্থানীয় ফাইল</string>
+    <string name="settings_backup_remote">দূরবর্তী ডিভাইস</string>
+    <string name="settings_backup_everything">সবকিছু</string>
+    <string name="settings_backup_kids_profile">শিশুদের প্রোফাইল</string>
+    <string name="settings_backup_profile_current">“<xliff:g id="name">%1$s</xliff:g>” (বর্তমান)</string>
+    <string name="settings_backup_profile_locked">“<xliff:g id="name">%1$s</xliff:g>” লক করা</string>
+    <string name="settings_backup_profile_pin">প্রোফাইল PIN</string>
+    <string name="settings_backup_pin_incorrect">PIN সঠিক নয়।</string>
+    <string name="settings_backup_pin_locked">PIN দিয়ে লক করা</string>
+    <string name="settings_backup_unlock">আনলক করুন</string>
+    <string name="settings_backup_export_button">ব্যাকআপ এক্সপোর্ট করুন</string>
+    <string name="settings_backup_restore_button">ব্যাকআপ পুনরুদ্ধার করুন</string>
+    <string name="settings_backup_continue">চালিয়ে যান</string>
+    <string name="settings_backup_encrypt_export">এনক্রিপ্ট করে এক্সপোর্ট করুন</string>
+    <string name="settings_backup_export_unencrypted">এনক্রিপশন ছাড়া এক্সপোর্ট করুন</string>
+    <string name="settings_backup_encrypt_prepare">এনক্রিপ্ট করে প্রস্তুত করুন</string>
+    <string name="settings_backup_prepare_unencrypted">এনক্রিপশন ছাড়া প্রস্তুত করুন</string>
+    <string name="settings_backup_restore_action">পুনরুদ্ধার করুন</string>
+    <string name="settings_backup_skip_passwords">এড়িয়ে যান (পাসওয়ার্ড ছাড়া)</string>
+    <string name="settings_backup_section_sources">উৎসগুলো</string>
+    <string name="settings_backup_section_sources_desc">প্লেলিস্ট, EPG ফিড ও পরিচয়পত্র</string>
+    <string name="settings_backup_section_customize">নিজের মতো সাজানো</string>
+    <string name="settings_backup_section_customize_desc">লুকানো/নাম বদলানো/ক্রম বদলানো বিভাগ ও চ্যানেল, EPG মিল এবং নিজের মতো TMDB নাম</string>
+    <string name="settings_backup_section_favorites">পছন্দেরগুলো</string>
+    <string name="settings_backup_section_favorites_desc">তারকাচিহ্ন দেওয়া চ্যানেল, সিনেমা ও সিরিজ</string>
+    <string name="settings_backup_section_history">দেখার ইতিহাস</string>
+    <string name="settings_backup_section_history_desc">সম্প্রতি দেখা তালিকা</string>
+    <string name="settings_backup_section_resume">চালিয়ে যাওয়ার অবস্থান</string>
+    <string name="settings_backup_section_resume_desc">সিনেমা ও পর্বে যেখানে দেখা বন্ধ করেছিলেন</string>
+    <string name="settings_backup_section_reorder">নিজে ক্রম পরিবর্তন</string>
+    <string name="settings_backup_section_reorder_desc">চ্যানেল, সিনেমা ও সিরিজের জন্য আপনার ওপরে/নিচে সরানো অবস্থান</string>
+    <string name="settings_backup_section_settings">অ্যাপ সেটিংস</string>
+    <string name="settings_backup_section_settings_desc">থিম, অ্যাকসেন্ট, প্লেয়ার ও বিন্যাসের পছন্দ</string>
+    <string name="settings_backup_saved_to"><xliff:g id="path">%1$s</xliff:g>-এ সংরক্ষিত হয়েছে।</string>
+    <string name="settings_backup_saved_to_without_passwords"><xliff:g id="path">%1$s</xliff:g>-এ সংরক্ষিত হয়েছে। পাসওয়ার্ড ও পিন অন্তর্ভুক্ত করা হয়নি।</string>
+    <plurals name="settings_backup_restored">
+        <item quantity="one"><xliff:g id="items">%1$d</xliff:g>টি আইটেম পুনরুদ্ধার করা হয়েছে।</item>
+        <item quantity="other"><xliff:g id="items">%1$d</xliff:g>টি আইটেম পুনরুদ্ধার করা হয়েছে।</item>
+    </plurals>
+    <string name="settings_backup_restore_resync">কনটেন্ট লোড করতে আপনার উৎসগুলো পুনরায় সিঙ্ক করুন।</string>
+    <string name="settings_backup_restore_password_note">উৎস/প্রক্সিতে সংরক্ষিত পাসওয়ার্ডগুলো এবং প্রোফাইলের পিন আবার লিখুন।</string>
+    <plurals name="settings_backup_skipped_sources">
+        <item quantity="one">প্লেলিস্টের ধরন সমর্থিত নয় বলে <xliff:g id="count">%1$d</xliff:g>টি উৎস এড়িয়ে যাওয়া হয়েছে।</item>
+        <item quantity="other">প্লেলিস্টের ধরন সমর্থিত নয় বলে <xliff:g id="count">%1$d</xliff:g>টি উৎস এড়িয়ে যাওয়া হয়েছে।</item>
+    </plurals>
+    <string name="settings_backup_export_error">এক্সপোর্ট করা যায়নি।</string>
+    <string name="settings_backup_read_error">ব্যাকআপ ফাইল পড়া যায়নি।</string>
+    <string name="settings_backup_import_error">ইমপোর্ট করা যায়নি।</string>
+    <string name="settings_backup_invalid_locale">এই ব্যাকআপে অ্যাপের একটি অসমর্থিত ভাষা ছিল। পুনরুদ্ধার সফল হয়েছে, তবে আপনার বর্তমান ভাষাই রাখা হয়েছে।</string>
+    <string name="settings_backup_which_profiles">কোন প্রোফাইলগুলো ব্যাকআপ করবেন</string>
+    <string name="settings_backup_selected_profiles">ব্যাকআপে শুধু নির্বাচিত প্রোফাইল ও সেগুলোর ডেটা থাকবে। লক করা প্রোফাইলের PIN প্রয়োজন।</string>
+    <string name="settings_backup_profile_pin_description">এটি আপনার বর্তমান প্রোফাইল নয়। ব্যাকআপে অন্তর্ভুক্ত করতে এর PIN লিখুন—PIN ছাড়া এর ডেটা ব্যাকআপ করা হবে না।</string>
+    <string name="settings_backup_save_description">আপনার প্রোফাইল, উৎস, নিজের মতো সাজানো ব্যবস্থা, পছন্দেরগুলো, ইতিহাস ও চালিয়ে যাওয়ার অবস্থান একটি ফাইলে সংরক্ষণ করুন—অথবা নতুন ডিভাইসে সেগুলো পুনরুদ্ধার করুন। প্রতিবার কী অন্তর্ভুক্ত করবেন তা আপনি বেছে নেবেন।</string>
+    <string name="settings_metadata_optional">ঐচ্ছিক</string>
+    <string name="settings_metadata_test_title">Oppenheimer</string>
+    <string name="settings_bulk_rename_title">একসঙ্গে নাম পরিবর্তন</string>
+    <plurals name="settings_bulk_rename_selected">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g>টি নাম নির্বাচিত। নিয়ম যোগ করুন অথবা নামটি স্বয়ংক্রিয়ভাবে পরিষ্কার করুন।</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g>টি নাম নির্বাচিত। নিয়ম যোগ করুন অথবা নামগুলো স্বয়ংক্রিয়ভাবে পরিষ্কার করুন।</item>
+    </plurals>
+    <string name="settings_bulk_rename_add_rule">✎ নিয়ম যোগ করুন</string>
+    <string name="settings_bulk_rename_auto_cleanup">✨ স্বয়ংক্রিয়ভাবে পরিষ্কার করুন</string>
+    <string name="settings_bulk_rename_restore_original">↺ মূল নাম ফিরিয়ে আনুন</string>
+    <string name="settings_bulk_rename_rules_title">একসঙ্গে নাম পরিবর্তনের নিয়ম</string>
+    <string name="settings_bulk_rename_rules_description">নিয়মগুলো ওপর থেকে নিচে প্রয়োগ হবে। একাধিক মান “;” দিয়ে আলাদা করুন—যোগ করুন নিয়মে ঠিক একটি মান দিতে হবে।</string>
+    <string name="settings_bulk_rename_add_single_value_error">“যোগ করুন”-এর জন্য ঠিক একটি মান প্রয়োজন—সেমিকোলন শুধু সরান নিয়মের জন্য।</string>
+    <string name="settings_bulk_rename_rule_required">অন্তত একটি নিয়ম যোগ করুন।</string>
+    <string name="settings_bulk_rename_rule_type">নিয়মের ধরন</string>
+    <string name="settings_bulk_rename_action_add">যোগ করুন</string>
+    <string name="settings_bulk_rename_action_remove">সরান</string>
+    <string name="settings_bulk_rename_where">কোথায়</string>
+    <string name="settings_bulk_rename_before">আগে (উপসর্গ)</string>
+    <string name="settings_bulk_rename_after">পরে (প্রত্যয়)</string>
+    <string name="settings_bulk_rename_rule_value">নিয়মের মান</string>
+    <string name="settings_bulk_rename_value_hint">একাধিক মান “;” দিয়ে আলাদা করুন—যোগ করুন নিয়মে ঠিক একটি মান দিতে হবে।</string>
+    <string name="settings_bulk_rename_value_example">মান;মান;মান</string>
+    <string name="settings_bulk_rename_add_another_rule">＋ আরেকটি নিয়ম যোগ করুন</string>
+    <string name="settings_bulk_rename_trim_spaces">অবশিষ্ট অতিরিক্ত ফাঁকা স্থান সরান</string>
+    <string name="settings_bulk_rename_trim_spaces_selected">✓ অবশিষ্ট অতিরিক্ত ফাঁকা স্থান সরান</string>
+    <string name="settings_bulk_rename_ignore_case">বড়/ছোট হাতের অক্ষর উপেক্ষা করুন</string>
+    <string name="settings_bulk_rename_ignore_case_selected">✓ বড়/ছোট হাতের অক্ষর উপেক্ষা করুন</string>
+    <string name="settings_bulk_rename_review">নাম পরিবর্তন পর্যালোচনা করুন</string>
+    <string name="settings_bulk_rename_review_description">কোনো সারি প্রয়োগ না করা পর্যন্ত কিছুই লেখা হবে না—সম্পন্ন চাপলে প্রয়োগ করা সবকিছু এক ধাপে লেখা হবে।</string>
+    <string name="settings_bulk_rename_blank_rejected">ফাঁকা নাম প্রত্যাখ্যান করা হয়েছে—মূল নাম রাখা হয়েছে</string>
+    <string name="settings_bulk_rename_unchanged">অপরিবর্তিত—কোনো নিয়ম মেলেনি</string>
+    <string name="settings_bulk_rename_result">→ <xliff:g id="name">%1$s</xliff:g></string>
+    <string name="settings_bulk_rename_duplicate">একই নাম—অন্য একটি আইটেমে নামটি ইতিমধ্যে ব্যবহৃত হচ্ছে</string>
+    <string name="settings_bulk_rename_apply">প্রয়োগ করুন</string>
+    <string name="settings_bulk_rename_decline">প্রত্যাখ্যান করুন</string>
+    <plurals name="settings_bulk_rename_will_change">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g>টি নাম বদলাবে</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g>টি নাম বদলাবে</item>
+    </plurals>
+    <plurals name="settings_bulk_rename_unchanged_count">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g>টি নাম অপরিবর্তিত থাকবে</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g>টি নাম অপরিবর্তিত থাকবে</item>
+    </plurals>
+    <plurals name="settings_bulk_rename_duplicates_count">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g>টি নাম ডুপ্লিকেট হয়েছে</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g>টি নাম ডুপ্লিকেট হয়েছে</item>
+    </plurals>
+    <string name="settings_bulk_rename_apply_all">সব প্রয়োগ করুন</string>
+    <string name="settings_bulk_rename_decline_all">সব প্রত্যাখ্যান করুন</string>
+    <string name="settings_bulk_rename_edit_rules">✎ নিয়ম সম্পাদনা করুন</string>
+    <string name="settings_bulk_rename_restore_title">মূল নামগুলো পুনরুদ্ধার করবেন?</string>
+    <string name="settings_bulk_rename_restore_description">নির্বাচিত প্রতিটি নাম প্রদানকারীর দেওয়া মূল নামে ফিরে যাবে। শুধু এই নির্বাচনটিই প্রভাবিত হবে।</string>
+    <string name="settings_bulk_rename_restore">পুনরুদ্ধার করুন</string>
+    <string name="settings_bulk_rename_too_many_title">আইটেমের সংখ্যা খুব বেশি</string>
+    <string name="settings_bulk_rename_too_many_description">এই বিভাগে একবারে একসঙ্গে নাম পরিবর্তন করার মতো আইটেমের সংখ্যা খুব বেশি — ছোট ছোট পরিসরে ভাগ করে নাম পরিবর্তন করুন।</string>
+    <string name="settings_bulk_rename_auto_country_provider">স্বয়ংক্রিয়: দেশ/প্রদানকারী ট্যাগ</string>
+    <string name="settings_bulk_rename_auto_quality_codec">স্বয়ংক্রিয়: যেকোনো স্থানের মান/কোডেক ট্যাগ</string>
+    <string name="settings_bulk_rename_auto_emoji_symbols">স্বয়ংক্রিয়: ইমোজি ও প্রতীক</string>
+    <string name="settings_customize_new_category_title">নতুন বিভাগ</string>
+    <string name="settings_customize_new_category_description">এই প্রোফাইলের জন্য একটি সম্মিলিত বিভাগ — এতে চ্যানেল, সিনেমা বা সিরিজ সরান।</string>
+    <string name="settings_customize_this_category">এই বিভাগ</string>
+    <string name="settings_customize_sort_categories">বিভাগগুলো সাজান</string>
+    <string name="settings_customize_delete_category">“<xliff:g id="name">%1$s</xliff:g>” মুছবেন?</string>
+    <string name="settings_customize_delete_category_description">সম্মিলিত বিভাগটি সরিয়ে ফেলা হবে। এর আইটেমগুলো তাদের মূল বিভাগেই থাকবে।</string>
+    <string name="settings_customize_channels_description">এই বিভাগের চ্যানেলগুলো — নাম পরিবর্তন করুন, ক্রম বদলান, লুকান বা আবার দেখান।</string>
+    <string name="settings_customize_movies_description">এই বিভাগের সিনেমাগুলো — ক্রম বদলান, লুকান বা আবার দেখান।</string>
+    <string name="settings_customize_series_description">এই বিভাগের সিরিজগুলো — ক্রম বদলান, লুকান বা আবার দেখান।</string>
+    <string name="settings_customize_hide_show_items">আইটেম লুকান বা দেখান</string>
+    <plurals name="settings_customize_selected_items">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g>টি আইটেম বেছে নেওয়া হয়েছে।</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g>টি আইটেম বেছে নেওয়া হয়েছে।</item>
+    </plurals>
+    <plurals name="settings_customize_move_items_selected">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g>টি আইটেম বেছে নেওয়া হয়েছে। এটি সরাতে ⤒ ↑ ↓ ⤓ চাপতে থাকুন।</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g>টি আইটেম বেছে নেওয়া হয়েছে। এগুলো একসঙ্গে সরাতে ⤒ ↑ ↓ ⤓ চাপতে থাকুন।</item>
+    </plurals>
+    <string name="settings_customize_rename_item_hint">শুধু এই প্রোফাইলের জন্য। “<xliff:g id="name">%1$s</xliff:g>” পুনরুদ্ধার করতে ফাঁকা রাখুন।</string>
+    <string name="settings_customize_item_was">আগের নাম ছিল “<xliff:g id="name">%1$s</xliff:g>”</string>
+    <string name="settings_customize_rename_items">✎ আইটেমের নাম বদলান</string>
+    <string name="settings_customize_move_to">এখানে সরান…</string>
+    <string name="settings_customize_back">← ফিরে যান</string>
+    <string name="settings_move_category_title">বিভাগে সরান</string>
+    <string name="settings_move_category_description">আইটেমটি “<xliff:g id="name">%1$s</xliff:g>” থেকে সরে যাবে, যদি না সেটি সেখানেও রাখেন।</string>
+    <string name="settings_move_category_new">＋ নতুন বিভাগ…</string>
+    <string name="settings_move_category_keep">“<xliff:g id="name">%1$s</xliff:g>”-এও রাখুন</string>
+    <string name="settings_move_category_action">সরান</string>
+    <string name="settings_dns_description">ডোমেইন লুকআপের জন্য একটি কাস্টম DNS সার্ভার ব্যবহার করুন</string>
+    <string name="settings_dns_custom">কাস্টম DNS</string>
+    <string name="settings_dns_toggle_description">OwnTV-এর সব ডোমেইন লুকআপ একটি কাস্টম DNS সার্ভারের মাধ্যমে রিজলভ করুন।</string>
+    <string name="settings_dns_use_custom">কাস্টম DNS ব্যবহার করুন</string>
+    <string name="settings_dns_server_missing">কাস্টম DNS চালু আছে, কিন্তু কোনো সার্ভার কনফিগার করা নেই। একটি সার্ভারের ঠিকানা লিখে সংরক্ষণ করুন নির্বাচন করুন, অথবা এটি বন্ধ করুন।</string>
+    <string name="settings_dns_server">DNS সার্ভার</string>
+    <string name="settings_dns_server_hint">8.8.8.8 বা https://dns.google/dns-query</string>
+    <string name="settings_dns_test">DNS পরীক্ষা করুন</string>
+    <string name="settings_dns_explanation">কাস্টম DNS ISP-স্তরের ডোমেইন ব্লকিং এড়াতে বা SmartDNS পরিষেবার মাধ্যমে ভৌগোলিক বাধা কাটাতে সাহায্য করতে পারে। DNS-over-HTTPS (DoH) ব্যবহারের পরামর্শ দেওয়া হয়—এটি আপনার লুকআপগুলো এনক্রিপ্ট করে।</string>
+    <string name="settings_dns_limitations">এই সেটিংসটি শুধু OkHttp-ভিত্তিক ট্রাফিকে প্রভাব ফেলে (প্লেলিস্ট সিঙ্ক, EPG, API কল, ছবি, ExoPlayer স্ট্রিম)। mpv সিস্টেম রিজলভার ব্যবহার করে এবং এতে প্রভাবিত হয় না।</string>
+    <string name="settings_dns_resolved">রিজলভ হয়েছে ✓ (<xliff:g id="millis">%1$d</xliff:g> ms)</string>
+    <string name="settings_dns_enter_server">একটি DNS সার্ভার হোস্ট বা DoH URL লিখুন।</string>
+    <string name="settings_dns_not_reachable">DNS সার্ভারে পৌঁছানো যাচ্ছে না।</string>
+    <string name="settings_dns_timed_out">DNS অনুরোধের সময়সীমা উত্তীর্ণ হয়েছে।</string>
+    <string name="settings_dns_network_unreachable">নেটওয়ার্কে পৌঁছানো যাচ্ছে না—সার্ভারের ঠিকানা পরীক্ষা করুন।</string>
+    <string name="settings_dns_connection_refused">সংযোগ প্রত্যাখ্যান করা হয়েছে — সার্ভারের ঠিকানা ও পোর্ট পরীক্ষা করুন।</string>
+    <string name="settings_dns_test_failed">DNS পরীক্ষা ব্যর্থ হয়েছে—সার্ভারের ঠিকানা পরীক্ষা করুন।</string>
+    <string name="settings_dns_no_addresses"><xliff:g id="host">%1$s</xliff:g>-এর জন্য DNS কোনো ঠিকানা ফেরত দেয়নি।</string>
+    <string name="settings_subtitle_customize">সাবটাইটেল নিজের মতো সাজান</string>
+    <string name="settings_subtitle_customize_off">বন্ধ রাখলে স্ট্রিম ও প্লেয়ার সাবটাইটেল যেভাবে দেখায়, তা ঠিক সেভাবেই থাকে।</string>
+    <string name="settings_subtitle_preview_stock">প্রিভিউ—অপরিবর্তিত রূপ</string>
+    <string name="settings_subtitle_stock_description">লাইভ টিভির সাবটাইটেলে সম্প্রচারকারীদের যুক্ত করে দেওয়া রং ও অবস্থানসহ মূল চেহারা।</string>
+    <string name="settings_subtitle_reset_all">সব রিসেট করুন</string>
+    <string name="settings_subtitle_color">সাবটাইটেলের রং</string>
+    <string name="settings_subtitle_color_default_description">ডিফল্ট রাখলে রংটি স্ট্রিম ও প্লেয়ার নির্ধারণ করে।</string>
+    <string name="settings_subtitle_color_hex_hint">৬টি হেক্স সংখ্যা লিখুন, যেমন FFEB3B</string>
+    <string name="settings_subtitle_use_default">ডিফল্ট ব্যবহার করুন</string>
+    <string name="settings_subtitle_position">সাবটাইটেলের অবস্থান</string>
+    <string name="settings_subtitle_background_transparency">পটভূমির স্বচ্ছতা</string>
+    <string name="settings_subtitle_preview_sample">আজ আকাশ খুব সুন্দর</string>
+    <string name="settings_subtitle_customize_description">এটি চালু করুন, তারপর শুধু আপনার পছন্দের বিষয়গুলো পরিবর্তন করুন — ডিফল্টে রাখা সবকিছু মূল চেহারা বজায় রাখবে, যার মধ্যে লাইভ টিভির সাবটাইটেলে সম্প্রচারকারীদের যুক্ত করে দেওয়া রং ও অবস্থানও রয়েছে।</string>
+    <string name="settings_subtitle_default">ডিফল্ট</string>
+    <string name="settings_subtitle_color_short">রং</string>
+    <string name="settings_subtitle_color_description">লেখার রং — কোনো প্রিসেট, রং নির্বাচনকারী অথবা হেক্স কোড।</string>
+    <string name="settings_subtitle_position_short">অবস্থান</string>
+    <string name="settings_subtitle_position_description">স্ক্রিনে সাবটাইটেল কোথায় থাকবে।</string>
+    <string name="settings_subtitle_background_description">লেখার পেছনের বাক্সটি কতটা অস্বচ্ছ হবে।</string>
+    <string name="settings_subtitle_hex">হেক্স</string>
+    <string name="settings_subtitle_position_default_description">ডিফল্ট রাখলে অবস্থান স্ট্রিম নির্ধারণ করবে—এর মধ্যে সম্প্রচারকারী সরাসরি ক্যাপশন কোথায় রাখে, সেটিও অন্তর্ভুক্ত। অন্য যেকোনো বিকল্প সবসময় অগ্রাধিকার পাবে।</string>
+    <string name="settings_subtitle_background_none">নেই</string>
+    <string name="settings_subtitle_background_solid">সম্পূর্ণ অস্বচ্ছ</string>
+    <string name="settings_subtitle_color_white">সাদা</string>
+    <string name="settings_subtitle_color_yellow">হলুদ</string>
+    <string name="settings_subtitle_color_cyan">সায়ান</string>
+    <string name="settings_subtitle_color_green">সবুজ</string>
+    <string name="settings_subtitle_color_grey">ধূসর</string>
+    <string name="settings_live_preroll">লাইভ স্ট্রিম প্রি-বাফার করুন</string>
+    <string name="settings_live_preroll_description">একটি লাইভ চ্যানেল বাজানো শুরু করার আগে এতটুকু ভিডিও সংগ্রহ করা হয়, এবং প্লেব্যাক থেমে গেলে আবারও ততটুকু সংগ্রহ করা হয়। এটি ভিডিওর পরিমাণ, কোনো কাউন্টডাউন নয়। বন্ধ থাকলে সবচেয়ে দ্রুত সম্ভব শুরু হয়।</string>
+    <string name="settings_live_tune_timeout">চ্যানেল ছেড়ে দেওয়ার সময়</string>
+    <string name="settings_live_tune_timeout_description">এই সময়ের মধ্যে কোনও লাইভ চ্যানেলে ছবি না এলে OwnTV চেষ্টা থামিয়ে আপনাকে জানাবে, তার সব প্লেয়ার একে একে চেষ্টা করতে করতে কালো পর্দা দেখিয়ে যাওয়ার বদলে। “কখনও নয়” বেছে নিলে চেষ্টা চলতেই থাকে, আর আপনার প্রদানকারী সরিয়ে ফেলা চ্যানেলে সেটি এক মিনিটেরও বেশি সময় নিতে পারে। প্রদানকারী নিজে যে অপেক্ষা চায়, তা এই সময়ে ধরা হয় না।</string>
+    <string name="settings_live_preroll_per_playlist">প্রতি প্লেলিস্টে প্রি-বাফার</string>
+    <string name="settings_live_preroll_per_playlist_description">একটি প্লেলিস্টের জন্য উপরের সেটিংটি ওভাররাইড করুন, আর অন্য প্লেলিস্টগুলো দ্রুতই থাকবে।</string>
+    <!-- Translators: Title of the per-playlist Live TV engine override row. -->
+    <string name="settings_live_engine_per_playlist">প্রতি প্লেলিস্টে লাইভ টিভির প্লেয়ার</string>
+    <!-- Translators: Description of the per-playlist Live TV engine override row. -->
+    <string name="settings_live_engine_per_playlist_description">একটি প্লেলিস্টের জন্য উপরের সেটিংটি ওভাররাইড করুন — যে সরবরাহকারীর চ্যানেল কেবল একটি প্লেয়ারেই ভালো চলে তার জন্য।</string>
+    <!-- Translators: Title of the per-playlist Live latency override row. -->
+    <string name="settings_live_latency_per_playlist">প্রতি প্লেলিস্টে লাইভ বিলম্ব</string>
+    <!-- Translators: Description of the per-playlist Live latency override row. -->
+    <string name="settings_live_latency_per_playlist_description">একটি প্লেলিস্টের জন্য উপরের সেটিংটি ওভাররাইড করুন — যে সরবরাহকারীর অন্যদের চেয়ে বড় বা ছোট বাফার দরকার তার জন্য।</string>
+    <plurals name="settings_live_preroll_overrides">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g> সেট</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g> সেট</item>
+    </plurals>
+    <string name="settings_surround_stereo">শুধুমাত্র স্টেরিও</string>
+    <string name="settings_surround_auto_description">অটো — Dolby/DTS সারাউন্ড ব্যবহার করার চেষ্টা করে, আর টিভি বা সাউন্ডবার তা চালাতে না পারলে স্বয়ংক্রিয়ভাবে স্টেরিওতে ফিরে যায়। প্রস্তাবিত।</string>
+    <string name="settings_surround_stereo_description">শুধুমাত্র স্টেরিও — সবসময় অ্যাপের ভেতরেই ডিকোড করে সাধারণ 2.0 সাউন্ড পাঠায়। টিভির স্পিকার বা স্টেরিও সাউন্ডবারে এটি ব্যবহার করুন, অথবা অডিও ছবির পেছনে পড়ে গেলে।</string>
+    <string name="settings_surround_forced_description">সারাউন্ড — Dolby/DTS একটি সত্যিকারের 5.1/7.1 রিসিভারে পাঠায়। যদি শব্দ নিঃশব্দ হয়ে যায় বা ঝিমিয়ে পড়ে, OwnTV তবুও স্টেরিওতে ফিরে আসে এবং আপনাকে জানায়।</string>
+    <string name="settings_panel_width">প্যানেল প্রস্থ সামঞ্জস্য</string>
+    <string name="settings_panel_width_description">লাইভ টিভি, সিনেমা ও সিরিজে ক্যাটাগরি, তালিকা এবং প্রিভিউ প্যানেলের আকার বদলান।</string>
+    <string name="settings_search_keywords_epg_offset">ইপিজি অনুষ্ঠান সূচি সময় অফসেট শিফট টাইমজোন পূর্ব পশ্চিম ঘণ্টা</string>
+    <string name="settings_search_keywords_panel_width">প্যানেল প্রস্থ আকার রিসাইজ ক্যাটাগরি তালিকা প্রিভিউ পোস্টার কলাম লেআউট লাইভ সিনেমা সিরিজ</string>
+    <string name="settings_search_keywords_live_preroll">প্রি-বাফার প্রি-রোল প্রি-রোল বাফারিং বাফার বাজানোর আগে রি-বাফার স্টাটার ফ্রিজ প্রতি প্লেলিস্ট</string>
+    <string name="settings_detailed_playback_logging">বিস্তারিত প্লেব্যাক লগিং</string>
+    <string name="settings_search_keywords_detailed_logging">ডায়াগনস্টিকস ভার্বোজ ট্রেস logcat ডিবাগ রিপোর্ট বাগ লাইভ ইঞ্জিন</string>
+    <string name="settings_playback_kind_error">ত্রুটি</string>
+    <string name="settings_playback_kind_event">ইভেন্ট</string>
+    <string name="settings_playback_kind_report">রিপোর্ট</string>
+    <string name="settings_playback_entry_with_kind"><xliff:g id="date">%1$s</xliff:g>  ·  <xliff:g id="kind">%2$s</xliff:g>  ·  <xliff:g id="engine">%3$s</xliff:g>  ·  <xliff:g id="stream_type">%4$s</xliff:g></string>
+    <string name="settings_export">এক্সপোর্ট</string>
+    <string name="settings_detailed_playback_logging_description">লাইভ ইঞ্জিন যা কিছু করে — প্রতিটি টিউন, ফলব্যাক ও পুনঃসংযোগ — তার সম্পূর্ণ ট্রেস Logcat এবং এক্সপোর্ট করা রিপোর্টে রাখে। কোনো সমস্যা খোঁজার চেষ্টা না করা পর্যন্ত এটি বন্ধ রাখুন; এটি প্লেব্যাক কখনো পরিবর্তন করে না, শুধু কতটুকু লেখা হয় তা-ই নির্ধারণ করে।</string>
+    <string name="settings_live_preroll_playlist_picker">কোন প্লেলিস্ট?</string>
+    <string name="settings_live_preroll_follow">সেটিং অনুসরণ করুন</string>
+    <string name="settings_video_seconds"><xliff:g id="seconds">%1$d</xliff:g> সেকেন্ডের ভিডিও</string>
+    <string name="settings_epg_offset_root_description">কোনো ফিডের সময় বাস্তবে যা চলছে তার সাথে মেলে না, তখন পুরো অনুষ্ঠান সূচিটি সরান। একটি একক চ্যানেলকে তার লং-প্রেস মেনু থেকে আলাদাভাবে সরানো যায় (লাইভ টিভি বা অনুষ্ঠান সূচি) — একটি সূচি ভাগ করে এমন ইস্ট/ওয়েস্ট সংস্করণগুলোর জন্য সেটিই সঠিক।</string>
+    <string name="settings_epg_offset_dialog_description">অনুষ্ঠান সূচির প্রতিটি অনুষ্ঠানের সময় সরিয়ে দেয়। পুরো ফিডটাই ভুল সময় দেখালে এটি ব্যবহার করুন; একটি নির্দিষ্ট চ্যানেলের জন্য (একটি সূচি ভাগ করে এমন ইস্ট/ওয়েস্ট সংস্করণ), লাইভ টিভি বা অনুষ্ঠান সূচিতে চ্যানেলটি লং-প্রেস করে সেখানেই তার নিজস্ব অফসেট সেট করুন।</string>
+    <string name="settings_panel_width_screen_description">প্রতিটি প্যানেল স্ক্রিনের কতটুকু জায়গা নেবে তা নির্ধারণ করুন — ক্যাটাগরি, আইটেমের তালিকা এবং প্রিভিউ।</string>
+    <string name="settings_panel_width_summary">ক্যাটাগরি <xliff:g id="category">%1$d</xliff:g>%% · তালিকা <xliff:g id="list">%2$d</xliff:g>%% · <xliff:g id="preview_label">%3$s</xliff:g> <xliff:g id="preview">%4$d</xliff:g>%%</string>
+    <string name="settings_panel_width_help">• তিনটি প্যানেল একটি সারি ভাগ করে, তাই তাদের শতাংশ মিলে ১০০%% হতে হবে।\n• একটি প্যানেল চওড়া করলে সেভ করার আগে অন্য একটি প্যানেল থেকে একই পরিমাণ কমাতে হবে।\n• রিসেট একটি সেকশনকে এই স্ক্রিনে শুরুতে থাকা মানসম্মত প্রস্থগুলোতে ফিরিয়ে নেয়।\n• কোনো সেকশন বন্ধ করলে তার মানসম্মত লেআউট ফিরে আসে, কিন্তু আপনার মানগুলো হারায় না।\n• সিনেমা ও সিরিজের পোস্টার স্বয়ংক্রিয়ভাবে পুনর্বিন্যস্ত হয়, তাই সরু তালিকায় প্রতি সারিতে কম পোস্টার দেখা যায়।</string>
+    <string name="settings_panel_width_preview">প্রিভিউ</string>
+    <string name="settings_panel_width_poster">পোস্টার</string>
+    <string name="settings_panel_width_dialog_title"><xliff:g id="section">%1$s</xliff:g> প্যানেলের প্রস্থ</string>
+    <string name="settings_panel_width_customize">প্যানেল কাস্টমাইজ করুন</string>
+    <string name="settings_panel_width_category">ক্যাটাগরি প্যানেল</string>
+    <string name="settings_panel_width_list">তালিকা প্যানেল</string>
+    <string name="settings_panel_width_preview_panel"><xliff:g id="label">%1$s</xliff:g> প্যানেল</string>
+    <string name="settings_panel_width_total">মোট আকার</string>
+    <string name="settings_panel_width_invalid_total">মোট আকার <xliff:g id="total">%1$d</xliff:g>%%। এটি অবশ্যই ১০০%% হতে হবে — অনুগ্রহ করে ঠিক করুন।</string>
+    <string name="settings_language_help_translate">OwnTV-কে আপনার ভাষায় অনুবাদ করতে সাহায্য করুন</string>
+    <string name="settings_language_contribution_description">QR কোড স্ক্যান করুন বা লিঙ্কটি খুলে যেকোনো উপলব্ধ ভাষা বেছে নিন এবং OwnTV-এর সব ছয়টি অনুবাদ কম্পোনেন্ট জুড়ে অবদান রাখুন।</string>
+    <string name="settings_language_contribution_qr_description">OwnTV অনুবাদ প্রকল্পের ওভারভিউর QR কোড</string>
+    <string name="settings_language_contribution_qr_failed">QR কোড তৈরি করা যায়নি। পরিবর্তে নিচে দেখানো লিঙ্কটি ব্যবহার করুন।</string>
+    <string name="settings_language_contribution_copy">লিঙ্ক কপি করুন</string>
+    <string name="settings_language_contribution_copied">লিঙ্ক কপি হয়েছে</string>
+    <string name="settings_language_contribution_open_failed">লিঙ্কটি খোলা যায়নি। পরিবর্তে এটি কপি করুন।</string>
+    <string name="settings_language_contribution_copy_failed">লিঙ্কটি কপি করা যায়নি। উপরে দেখানো URL পড়ুন বা টাইপ করুন।</string>
+    <string name="settings_auto_frame_rate_warning_suffix">এই টিভিতে সুপারিশ করা হয় না: Android 12-এর নিচে ফ্রেম রেট মসৃণভাবে পরিবর্তন করা যায় না।</string>
+    <string name="settings_auto_frame_rate_warning_title">এই টিভিতে সুপারিশ করা হয় না</string>
+    <string name="settings_auto_frame_rate_warning_description">এই ডিভাইসে Android <xliff:g id="android_version">%1$s</xliff:g> চলছে। Android 12-এর নিচে টিভি OwnTV-কে জানাতে পারে না কোন রিফ্রেশ রেটগুলোতে এটি মসৃণভাবে সুইচ করতে পারে, তাই রেট পরিবর্তন করলে স্ক্রিন এক বা দুই সেকেন্ডের জন্য কালো হয়ে যেতে পারে — কখনও কখনও একটি অনুষ্ঠানের সময় একাধিকবারও।\n\nআমরা এখানে অটো ফ্রেম রেট বন্ধ রাখার পরামর্শ দিই। আপনার টিভি যদি নির্বিঘ্নে সুইচ করে, তবে এটি চালু করে দেখুন: আপনি যেকোনো সময় আবার বন্ধ করে দিতে পারবেন।</string>
+    <string name="settings_auto_frame_rate_keep_off">বন্ধ রাখুন</string>
+    <string name="settings_auto_frame_rate_turn_on_anyway">তা সত্ত্বেও চালু করুন</string>
+    <string name="settings_language_request_workflow">তালিকায় নেই এমন একটি ভাষা যোগ করতে চান? প্রথমে একটি ভাষার অনুরোধ খুলুন। একজন মেন্টেইনার এটি নিবন্ধন করবেন এবং বেস অনুবাদ ফাইলগুলো প্রস্তুত করবেন; এটি Hosted Weblate-এ দেখা গেলে, আপনি অবদান রাখা শুরু করতে পারেন।</string>
+    <string name="settings_language_request_new">নতুন ভাষা অনুরোধ করুন</string>
+    <string name="settings_panel_width_disable_preview_title">লাইভ প্রিভিউ ভিডিও বন্ধ করবেন?</string>
+    <string name="settings_panel_width_disable_preview_description">লাইভ প্রিভিউ ভিডিও বর্তমানে চালু আছে। প্রিভিউ প্যানেল লুকিয়ে রাখলে ভিডিওটি বন্ধ হয়ে যাবে এবং প্যানেলের প্রস্থ সমন্বয়ে প্রিভিউ প্যানেলের জন্য একটি প্রস্থ নির্ধারণ না করা পর্যন্ত এটি আবার চালু করা যাবে না।</string>
+    <string name="settings_live_preview_panel_hidden_title">লাইভ প্রিভিউ ভিডিও উপলভ্য নয়</string>
+    <string name="settings_live_preview_panel_hidden_description">লাইভ টিভির প্রিভিউ প্যানেলটি লুকানো আছে। প্রিভিউ ভিডিও চালু করার আগে প্যানেলের প্রস্থ সমন্বয়ে এটির প্রস্থ 0%%-এর বেশি নির্ধারণ করুন।</string>
+    <string name="settings_font_customization">ফন্ট কাস্টমাইজেশন</string>
+    <string name="settings_font_customization_description">মূল ইন্টারফেস ও পপআপের লেখার আকার এবং ফন্ট</string>
+    <string name="settings_font_size">ফন্টের আকার</string>
+    <string name="settings_main_interface_font">মূল ইন্টারফেসের ফন্ট</string>
+    <string name="settings_popup_font">পপআপের ফন্ট</string>
+    <string name="settings_choose_font">ফন্ট বেছে নিন</string>
+    <string name="settings_font_size_range">পপ-আপ নয়, মূল অ্যাপের লেখা <xliff:g id="min">%1$d</xliff:g>%% থেকে <xliff:g id="max">%2$d</xliff:g>%% পর্যন্ত সমন্বয় করুন। সাবটাইটেলের নিজস্ব আকার থাকবে।</string>
+    <string name="settings_popup_font_size">পপ-আপ ফন্টের আকার</string>
+    <string name="settings_popup_font_size_description">শুধু ডায়ালগ ও মেনুর লেখা পরিবর্তন করে</string>
+    <string name="settings_popup_size">পপ-আপের আকার</string>
+    <string name="settings_popup_size_description">লেখার আকার না বদলে ডায়ালগ ও মেনু বক্সের আকার পরিবর্তন করুন</string>
+    <string name="settings_popup_size_range">ডায়ালগ ও মেনু বক্সের আকার পরিবর্তন করুন (<xliff:g id="min">%1$d</xliff:g>%%–<xliff:g id="max">%2$d</xliff:g>%%)।</string>
+    <string name="settings_font_preview">বিনোদন এখন আরও সহজ।</string>
+    <string name="settings_search_keywords_fonts">ফন্ট লেখা আকার টাইপফেস পপআপ পড়া অ্যাক্সেসিবিলিটি</string>
+    <string name="settings_font_system_sans">সিস্টেম স্যান্স</string>
+    <string name="settings_font_monospace">মনোস্পেস</string>
+    <string name="settings_subtitle_font">সাবটাইটেল ফন্ট</string>
+    <string name="settings_glass_preset_title">রূপের প্রিসেট</string>
+    <string name="settings_glass_preset_clear">স্বচ্ছ</string>
+    <string name="settings_glass_preset_balanced">ভারসাম্যপূর্ণ</string>
+    <string name="settings_glass_preset_tinted">রঙিন</string>
+    <string name="settings_glass_preset_custom">কাস্টম</string>
+    <string name="settings_glass_preset_clear_description">মাঝারি ফ্রস্টসহ ওয়ালপেপারের আরও বেশি রং।</string>
+    <string name="settings_glass_preset_balanced_description">প্রস্তাবিত স্বচ্ছতা, গভীরতা ও পাঠযোগ্যতা।</string>
+    <string name="settings_glass_preset_tinted_description">ব্যস্ত বা উজ্জ্বল পটভূমির জন্য আরও গাঢ় সারফেস রং।</string>
+    <string name="settings_glass_preset_custom_description">আপনার সংরক্ষিত স্বচ্ছতা ও ব্লার / ফ্রস্ট মান ব্যবহার করুন।</string>
+    <string name="settings_ambient_glow">পরিবেষ্টিত আভা</string>
+    <string name="settings_ambient_glow_description">সলিড ইন্টারফেসে সেটআপ-ধাঁচের দীপ্তি যোগ করে</string>
+    <string name="settings_ambient_glow_dialog_description">নন-গ্লাস ইন্টারফেসে একটি মৃদু অ্যাকসেন্ট আভা যোগ করে। অ্যানিমেশন চালু থাকলে ধীর স্পন্দনটি আলতোভাবে ওঠানামা করে।</string>
+    <string name="settings_ambient_glow_effect">আভা</string>
+    <string name="settings_ambient_glow_pulse">ধীর স্পন্দন</string>
+    <string name="settings_glass_preset_ultra_clear">অতি স্বচ্ছ</string>
+    <string name="settings_glass_preset_opaque">অস্বচ্ছ</string>
+    <string name="settings_glass_preset_ultra_clear_description">হালকা ফ্রস্টে ওয়ালপেপারের সর্বাধিক বিস্তারিত।</string>
+    <string name="settings_glass_preset_opaque_description">সবচেয়ে শক্তিশালী ফ্রস্টে সর্বাধিক প্যানেল ঘনত্ব।</string>
+    <string name="settings_glass_preset_aurora">অরোরা</string>
+    <string name="settings_glass_preset_aurora_description">সবচেয়ে ঘন তুষারাবরণসহ পাতলা কাচ — ফোনের জন্য তৈরি।</string>
+    <string name="settings_glass_highlight_title">হাইলাইটের শক্তি</string>
+    <string name="settings_glass_highlight_description">ফোকাস করা কাচের আলো ও প্রান্ত সামঞ্জস্য করুন।</string>
+    <string name="settings_glass_live_preview">লাইভ প্রিভিউ</string>
+    <string name="settings_glass_screen_description">অর্ধস্বচ্ছ ফ্রস্টেড প্যানেল, পটভূমির ছবি ও স্বচ্ছতা</string>
+    <string name="settings_glass_master_description">পটভূমির ছবি বা অ্যাপের নিজস্ব পটভূমির ওপর স্বচ্ছ হিমায়িত প্যানেল।</string>
+    <string name="settings_glass_background_image">পটভূমির ছবি বেছে নিন</string>
+    <string name="settings_glass_surface_transparency_title">স্বচ্ছতা</string>
+    <string name="settings_glass_background_blur_title">ঝাপসা / হিমায়িত</string>
+    <string name="settings_glass_section_appearance">চেহারা</string>
+    <string name="settings_glass_section_fine_tuning">উন্নত বিকল্প</string>
+    <string name="settings_glass_section_behavior">আচরণ</string>
+    <string name="settings_glass_apply_to">গ্লাস পৃষ্ঠতল</string>
+    <string name="settings_glass_surface_all">সব</string>
+    <string name="settings_glass_background_action_description">পটভূমির ছবি বেছে নিন</string>
+    <string name="settings_glass_transparency_short_description">20–100 · 5</string>
+    <string name="settings_glass_blur_short_description">0–100 · 10</string>
+    <string name="settings_glass_highlight_short_description">ফোকাস করা কাচের আলো ও প্রান্ত সামঞ্জস্য করুন।</string>
+    <string name="settings_glass_full_transparency_short">সম্পূর্ণ স্বচ্ছতার অনুমতি দিন</string>
+    <string name="settings_glass_full_transparency_short_description">সবচেয়ে স্বচ্ছ কাচের জন্য স্বয়ংক্রিয় পাঠযোগ্যতার সীমা বন্ধ করে।</string>
+    <string name="settings_glass_depth_effects_short">গভীরতা ও ছায়া</string>
+    <string name="settings_glass_depth_effects_short_description">ফোকাস-ভ্রমণ আলো, সূক্ষ্ম প্যারালাক্স ও গভীরতার গতি চালু করে।</string>
+    <string name="settings_glass_shine_short">আলোর ঝলক</string>
+    <string name="settings_glass_shine_short_description">প্যানেল দেখা দেওয়ার সময় তার উপর দিয়ে একটি আলোর রেখা চলে যায়।</string>
+    <string name="settings_glass_reset_balanced">রিসেট করুন: ভারসাম্যপূর্ণ</string>
+    <string name="settings_glass_full_transparency_title">সম্পূর্ণ স্বচ্ছতার অনুমতি দিন</string>
+    <string name="settings_glass_full_transparency_description">সবচেয়ে স্বচ্ছ কাচের জন্য স্বয়ংক্রিয় পাঠযোগ্যতার সীমা বন্ধ করে।</string>
+    <string name="settings_glass_depth_title">গভীরতা ও ছায়া</string>
+    <string name="settings_glass_depth_description">ফোকাস-ভ্রমণ আলো, সূক্ষ্ম প্যারালাক্স ও গভীরতার গতি চালু করে।</string>
+    <string name="settings_header_hint">বাঁয়ে: গ্রুপ · ডানে: সেগুলোর সেটিংস · দ্রুততে পিন করতে সারিতে OK চেপে ধরুন</string>
+    <string name="settings_spine_eyebrow">সব গ্রুপ</string>
+    <string name="settings_spine_title">সেটিংস ব্রাউজ করুন</string>
+    <string name="settings_spine_hint">দ্রুত সবসময় উপরে থাকে; চিহ্নটি আপনার বর্তমান গ্রুপ অনুসরণ করে।</string>
+    <string name="settings_spine_foot">অ্যাকসেন্ট আপনার ফোকাস অনুসরণ করে</string>
+    <string name="settings_row_menu_pin">দ্রুততে পিন করুন</string>
+    <string name="settings_row_menu_unpin">দ্রুত থেকে সরান</string>
+    <string name="settings_row_menu_move_up">উপরে সরান</string>
+    <string name="settings_row_menu_move_down">নিচে সরান</string>
+    <string name="settings_quick_empty_title">এখনও কিছু পিন করা হয়নি</string>
+    <string name="settings_quick_empty_hint">যেকোনো সেটিংসের উপর OK চেপে ধরে “দ্রুততে পিন করুন” বেছে নিন।</string>
+    <string name="settings_quick_empty_hint_touch">যেকোনো সেটিংস দীর্ঘক্ষণ চেপে ধরে “দ্রুততে পিন করুন” বেছে নিন।</string>
+    <string name="settings_results_title">ফলাফল</string>
+    <string name="settings_results_summary">যেখানেই থাকুক প্রতিটি মিল — পথসহ</string>
+    <plurals name="settings_setting_count">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g> সেটিং</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g>টি সেটিং</item>
+    </plurals>
+    <plurals name="settings_pinned_count">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g>টি পিন করা</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g>টি পিন করা</item>
+    </plurals>
+    <plurals name="settings_match_count">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g>টি মিল</item>
+        <item quantity="other"><xliff:g id="count">%1$d</xliff:g>টি মিল</item>
+    </plurals>
+    <string name="settings_guide_width">গাইড কলামের প্রস্থ</string>
+    <string name="settings_guide_width_description">টিভি গাইডে চ্যানেল তালিকা ও EPG টাইমলাইনের প্রস্থ বদলান।</string>
+    <string name="settings_search_keywords_guide_width">গাইড epg চ্যানেল তালিকা টাইমলাইন কলাম প্যানেল প্রস্থ আকার বিন্যাস</string>
+    <string name="settings_guide_width_summary">চ্যানেল তালিকা %1$d%% · EPG টাইমলাইন %2$d%%</string>
+    <string name="settings_guide_width_help">• চ্যানেল তালিকা ও EPG টাইমলাইন একই সারি ভাগ করে, তাই মোট অবশ্যই 100%% হতে হবে।\n• চ্যানেল তালিকা চওড়া করলে একবারে টাইমলাইনের কম অংশ দেখা যাবে; অনুষ্ঠানের দৈর্ঘ্য ও সময়ের স্কেল বদলাবে না।\n• উভয় কলাম কমপক্ষে 10%% থাকবে।\n• রিসেট করলে চ্যানেল তালিকা 10%% এবং EPG টাইমলাইন 90%% হবে।\n• কাস্টমাইজেশন বন্ধ করলে আপনার মান না হারিয়ে সাধারণ গাইড বিন্যাস ফিরে আসবে।</string>
+    <string name="settings_guide_width_channels">চ্যানেল তালিকা</string>
+    <string name="settings_guide_width_epg">EPG টাইমলাইন</string>
+    <string name="settings_selection_highlight">নির্বাচনের হাইলাইট</string>
+    <string name="settings_selection_highlight_description">নির্বাচিত আইটেমের চারপাশের সীমানার রং ও পুরুত্ব</string>
+    <string name="settings_nav_bar_customization">নেভিগেশন বার নিজের মতো সাজান</string>
+    <string name="settings_nav_bar_description">ট্যাবগুলো আপনার প্লেলিস্ট অনুযায়ী সাজান, বা যেগুলো লাগে না সেগুলো লুকান</string>
+    <string name="settings_playback_mobile">মোবাইল</string>
+    <string name="settings_playback_tv_only_note">লাইভ প্রিভিউ ও রিমোটের শর্টকাট টেলিভিশনের বৈশিষ্ট্য — ফোনে এগুলি পাওয়া যায় না।</string>
+    <string name="settings_background_playback">ব্যাকগ্রাউন্ডে চালানো</string>
+    <string name="settings_background_playback_description">অ্যাপ থেকে বেরিয়ে গেলেও শব্দ চলতে থাকবে</string>
+    <string name="settings_pip">পিকচার-ইন-পিকচার</string>
+    <string name="settings_pip_description">অ্যাপ থেকে বেরোলে ভিডিওকে ছোট ভাসমান জানালায় নামিয়ে আনুন</string>
+    <string name="settings_data_saver">ডেটা সাশ্রয়</string>
+    <string name="settings_data_saver_description">মোবাইল ডেটায় স্ট্রিম করবেন না</string>
+    <string name="settings_gesture_sensitivity">অঙ্গভঙ্গির সংবেদনশীলতা</string>
+    <string name="settings_gesture_sensitivity_description">শব্দ, উজ্জ্বলতা বা অবস্থান বদলাতে কতটা সোয়াইপ করতে হবে</string>
+    <string name="settings_downloads_wifi_only">শুধু Wi-Fi-তে ডাউনলোড</string>
+    <string name="settings_downloads_wifi_only_description">মোবাইল ডেটার বদলে Wi-Fi-র জন্য অপেক্ষা করুন</string>
+    <string name="settings_search_keywords_background_playback">ব্যাকগ্রাউন্ড শব্দ অডিও অ্যাপ চলতে সেবা</string>
+    <string name="settings_search_keywords_pip">পিকচার ইন পিকচার ভাসমান জানালা ছোট উইন্ডো</string>
+    <string name="settings_search_keywords_data_saver">ডেটা সাশ্রয় মোবাইল ডেটা রোমিং খরচ</string>
+    <string name="settings_search_keywords_gestures">অঙ্গভঙ্গি সোয়াইপ সংবেদনশীলতা স্পর্শ টানা</string>
+    <string name="settings_mini_player_style">মিনি-প্লেয়ারের ধরন</string>
+    <string name="settings_mini_player_style_description">ব্রাউজ করার সময় প্লেব্যাক কীভাবে আপনার সঙ্গে থাকবে</string>
+    <string name="settings_mini_player_style_floating">ভাসমান উইন্ডো</string>
+    <string name="settings_mini_player_style_docked">আটকানো বার</string>
+    <string name="settings_pip_on_back">ব্যাক চাপলে পিকচার-ইন-পিকচার</string>
+    <string name="settings_pip_on_back_description">ব্যাক চাপলেও ভাসমান উইন্ডোতে ছোট হয়ে যাবে</string>
+    <string name="settings_pip_size">উইন্ডোর আকার</string>
+    <string name="settings_pip_size_description">ভাসমান উইন্ডো কত বড় হয়ে শুরু হবে। আকার বদলাতে পিঞ্চ করুন।</string>
+    <string name="settings_pip_size_small">ছোট</string>
+    <string name="settings_pip_size_medium">মাঝারি</string>
+    <string name="settings_pip_size_large">বড়</string>
+    <string name="settings_pip_snap">প্রান্তে আটকে যাক</string>
+    <string name="settings_pip_snap_description">উইন্ডো ছেড়ে দিলে সেটি সবচেয়ে কাছের প্রান্তে বসে যাবে</string>
+    <string name="settings_audio_on_screen_off">স্ক্রিন বন্ধ হলে শুধু শব্দ</string>
+    <string name="settings_audio_on_screen_off_description">কেউ দেখছে না এমন ভিডিও ডিকোড করা বন্ধ করে ব্যাটারি বাঁচায়</string>
+    <string name="settings_audio_on_mobile_data">মোবাইল ডেটায় শুধু শব্দ</string>
+    <string name="settings_audio_on_mobile_data_description">Wi-Fi না থাকলে ছবি ছাড়াই শুরু হবে</string>
+    <string name="settings_audio_per_channel">চ্যানেল অনুযায়ী শুধু শব্দ মনে রাখুন</string>
+    <string name="settings_audio_per_channel_description">ছবি ছাড়া দেখা চ্যানেল পরের বারও সেভাবেই খুলবে</string>
+    <string name="local_sync_title">লোকাল সিঙ্ক</string>
+    <string name="local_sync_description">ওয়াই-ফাইয়ের মাধ্যমে আপনার অন্য ডিভাইসের সঙ্গে ডেটা শেয়ার করুন</string>
+    <string name="local_sync_host_hint">আপনার অন্য ডিভাইসেও সিঙ্ক মোড চালু করুন, তারপর সংযোগ করুন-এ ট্যাপ করে এটি বেছে নিন।</string>
+    <string name="local_sync_qr_description">এই ডিভাইসের ঠিকানাসহ QR কোড</string>
+    <string name="local_sync_pin_is">পিন: <xliff:g id="pin">%1$s</xliff:g></string>
+    <string name="local_sync_add_device">ডিভাইস খুঁজুন</string>
+    <string name="local_sync_add_device_description">নেটওয়ার্কে খুঁজুন, কোড স্ক্যান করুন বা ঠিকানা লিখুন</string>
+    <string name="local_sync_paired_devices">পেয়ার করা ডিভাইস</string>
+    <string name="local_sync_device_address"><xliff:g id="address">%1$s</xliff:g>-এ</string>
+    <string name="local_sync_working">চলছে…</string>
+    <string name="local_sync_find_hint">দুটি ডিভাইসই একই ওয়াই-ফাইতে থাকতে হবে, এবং অন্যটিতে সিঙ্ক মোড চালু থাকতে হবে।</string>
+    <string name="local_sync_searching">নেটওয়ার্ক খোঁজা হচ্ছে…</string>
+    <string name="local_sync_found">আপনার নেটওয়ার্কে পাওয়া গেছে</string>
+    <string name="local_sync_scan_qr">কোড স্ক্যান করুন</string>
+    <string name="local_sync_scan_qr_description">আপনার অন্য ডিভাইসের কোডের দিকে ক্যামেরা তাক করুন</string>
+    <string name="local_sync_camera_denied">ক্যামেরা ছাড়াও আপনি তালিকা থেকে ডিভাইস বেছে নিতে বা তার ঠিকানা লিখতে পারেন।</string>
+    <string name="local_sync_manual_address">অথবা ঠিকানা লিখুন</string>
+    <string name="local_sync_manual_address_label">ঠিকানা</string>
+    <string name="local_sync_enter_pin">পিন লিখুন</string>
+    <string name="local_sync_enter_pin_description">আপনার অন্য ডিভাইসে দেখানো ছয়টি সংখ্যা লিখুন। এটি একবারই করতে হয়।</string>
+    <string name="local_sync_pin_label">পিন</string>
+    <string name="local_sync_pair">পেয়ার করুন</string>
+    <string name="local_sync_send_to"><xliff:g id="device">%1$s</xliff:g>-এ পাঠান</string>
+    <string name="local_sync_send_description">আপনার ডেটা সেখানে যায়। এখানে কিছুই বদলায় না।</string>
+    <string name="local_sync_receive_from"><xliff:g id="device">%1$s</xliff:g> থেকে নিন</string>
+    <string name="local_sync_receive_description">তার ডেটা এখানে আসে। সেখানে কিছুই বদলায় না।</string>
+    <string name="local_sync_merge_with"><xliff:g id="device">%1$s</xliff:g>-এর সঙ্গে মার্জ করুন</string>
+    <string name="local_sync_merge_description">দুটি ডিভাইসেই সবকিছু থাকবে</string>
+    <string name="local_sync_unpair">এই ডিভাইস ভুলে যান</string>
+    <string name="local_sync_unpair_description">পরের বার আবার পিন লাগবে</string>
+    <string name="local_sync_what_to_send">কী পাঠাবেন</string>
+    <string name="local_sync_what_to_receive">কী নেবেন</string>
+    <string name="local_sync_what_to_merge">কী মার্জ করবেন</string>
+    <string name="local_sync_sections_hint">ব্যাকআপে যা থাকে ঠিক সেগুলোই। যা বাদ দিতে চান তার টিক তুলে দিন।</string>
+    <string name="local_sync_everything">সবকিছু</string>
+    <string name="local_sync_confirm_title">কী বদলাবে</string>
+    <string name="local_sync_confirm_hint">এখনো কিছু বদলায়নি। প্রয়োগ করলে এই ডিভাইসে যা হবে তা এখানে।</string>
+    <string name="local_sync_nothing_to_change">দুটি ডিভাইসে ইতিমধ্যেই একই জিনিস আছে। প্রয়োগ করার কিছু নেই।</string>
+    <string name="local_sync_merge_note">এরপর আপনার নিজের ডেটা ফেরত পাঠানো হয়, ফলে দুটি ডিভাইসই এক হয়ে যায়।</string>
+    <string name="local_sync_change_profiles">নতুন প্রোফাইল: <xliff:g id="count">%1$d</xliff:g></string>
+    <string name="local_sync_change_sources">নতুন প্লেলিস্ট: <xliff:g id="count">%1$d</xliff:g></string>
+    <string name="local_sync_change_favorites">নতুন প্রিয়: <xliff:g id="count">%1$d</xliff:g></string>
+    <string name="local_sync_change_history">নতুন হিস্টরি এন্ট্রি: <xliff:g id="count">%1$d</xliff:g></string>
+    <string name="local_sync_change_resume">নতুন রিজিউম অবস্থান: <xliff:g id="count">%1$d</xliff:g></string>
+    <string name="local_sync_change_reorder">ক্রম পরিবর্তন: <xliff:g id="count">%1$d</xliff:g></string>
+    <string name="local_sync_change_settings">আলাদা সেটিং: <xliff:g id="count">%1$d</xliff:g></string>
+    <string name="local_sync_change_deletions">সরানো হবে এমন আইটেম: <xliff:g id="count">%1$d</xliff:g></string>
+    <string name="local_sync_change_customize">আপনার কাস্টমাইজেশনগুলোও সঙ্গে আসে</string>
+    <string name="local_sync_apply">প্রয়োগ করুন</string>
+    <string name="local_sync_done">সিঙ্ক সম্পন্ন</string>
+    <string name="local_sync_received_items">পাওয়া আইটেম: <xliff:g id="count">%1$d</xliff:g></string>
+    <string name="local_sync_sent">আপনার ডেটা পাঠানো হয়েছে</string>
+    <string name="local_sync_failed">সিঙ্ক ব্যর্থ</string>
+    <string name="local_sync_error_unreachable">এই ডিভাইসে পৌঁছানো যায়নি। সেটিতে OwnTV → সেটিংস → ডেটা → লোকাল সিঙ্ক খুলে সিঙ্ক মোড চালু করুন। দুটি ডিভাইসই একই ওয়াই-ফাইতে থাকতে হবে।</string>
+    <string name="local_sync_error_unauthorized">অন্য ডিভাইসটি প্রত্যাখ্যান করেছে। পিন ভুল হতে পারে, বা সেটি এই ডিভাইসটি ভুলে গেছে।</string>
+    <string name="local_sync_error_bad_payload">যা এসেছে তা পড়া যায়নি। পাসওয়ার্ড ব্যবহার করে থাকলে দেখুন সেটি দুটি ডিভাইসেই এক কিনা।</string>
+    <string name="local_sync_error_unknown">কিছু ভুল হয়েছে। আবার চেষ্টা করুন।</string>
+    <string name="local_sync_mode">সিঙ্ক মোড</string>
+    <string name="local_sync_mode_description">আপনার অন্য ডিভাইসগুলো যেন এটি খুঁজে পায়। এই স্ক্রিন খোলা থাকা পর্যন্ত চালু থাকে।</string>
+    <string name="local_sync_mode_pill">সিঙ্ক মোড চালু</string>
+    <string name="local_sync_connect">সংযোগ করুন</string>
+    <string name="local_sync_connect_description">সিঙ্ক মোড চালু আছে এমন অন্য ডিভাইস খুঁজুন</string>
+    <string name="local_sync_last_synced">শেষ সিঙ্ক: <xliff:g id="when">%1$s</xliff:g></string>
+    <string name="local_sync_already_paired">ইতিমধ্যে যুক্ত</string>
+    <string name="local_sync_device_with_code"><xliff:g id="name">%1$s</xliff:g> (<xliff:g id="code">%2$s</xliff:g>)</string>
+    <string name="more_spine_header_summary">যা চ্যানেলও নয়, সেটিংও নয়</string>
+    <string name="more_spine_settings_summary">প্লেলিস্ট, প্লেব্যাক, নেটওয়ার্ক</string>
+    <string name="more_spine_favorites_summary">চ্যানেল, সিনেমা, সিরিজ</string>
+    <string name="more_spine_history_summary">আবার শুরুর পয়েন্টসহ</string>
+    <string name="more_spine_backup_summary">এক্সপোর্ট বা রিস্টোর</string>
+    <string name="more_spine_local_sync_summary">আপনার ফোনের সঙ্গে বদল করুন</string>
+    <string name="more_spine_error_log_summary">ক্র্যাশ ও ব্যর্থতা</string>
+    <string name="more_spine_about_summary">সংস্করণ ও লাইসেন্স</string>
+    <string name="more_pane_groups">গোষ্ঠী</string>
+    <string name="more_pane_backup_contents">ব্যাকআপে যা থাকে</string>
+    <string name="more_pane_last_backup">সর্বশেষ ব্যাকআপ</string>
+    <string name="more_pane_favorites_summary">আপনি যা পছন্দে রেখেছেন, সব এক জায়গায়</string>
+    <string name="more_pane_history_summary">আপনি যা দেখেছেন, নতুন আগে</string>
+    <string name="more_pane_hint_open"><xliff:g id="destination">%1$s</xliff:g> খুলুন</string>
+    <string name="more_pane_sync_listening">সিঙ্ক মোড — এই ডিভাইস শুনছে</string>
+    <string name="more_pane_sync_not_listening">সিঙ্ক মোড — এই ডিভাইস শুনছে না</string>
+    <string name="more_pane_about_languages">ভাষা</string>
+    <string name="more_pane_encrypted">এনক্রিপ্ট করা</string>
+    <string name="settings_backup_location">অবস্থান</string>
+    <string name="settings_multiview">মাল্টিভিউ</string>
+    <string name="settings_multiview_description">একসঙ্গে চারটি পর্যন্ত লাইভ চ্যানেল দেখুন। প্রতিটি টাইল আপনার প্রোভাইডারের একটি সংযোগ ব্যবহার করে।</string>
+    <string name="settings_multiview_tiles">টাইল</string>
+    <string name="settings_multiview_warning_title">দুইয়ের বেশি টাইল</string>
+    <string name="settings_multiview_warning_description">তিন বা চারটি টাইলের জন্য প্রোভাইডারের তিন বা চারটি সংযোগ লাগে, আর টিভি যন্ত্রও একসঙ্গে সীমিত সংখ্যক চ্যানেল ডিকোড করতে পারে। কোনো টাইল চালু না হলে সে কারণ জানায়, বাকিগুলো চলতে থাকে।</string>
+    <string name="settings_multiview_keep_two">2 রাখুন</string>
+    <string name="settings_multiview_use_anyway">তবুও ব্যবহার করুন</string>
+</resources>

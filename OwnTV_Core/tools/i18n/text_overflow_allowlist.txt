@@ -1,0 +1,4 @@
+# path<TAB>normalized-call-identity<TAB>occurrence<TAB>justification
+#
+# Empty in the core repo. This checker scans Compose UI call sites for text that can overflow, and
+# neither :core nor :player-core renders anything — the app repos keep their own allowlists.

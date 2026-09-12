@@ -1,0 +1,138 @@
+# Version catalog for the OwnTV core library.
+#
+# This is a pruned copy of the TV app's catalog, kept to what :core and :player-core actually
+# resolve. The two catalogs are deliberately allowed to drift: core needs Room/OkHttp/Media3, the
+# apps need Compose UI, TV Material and AGP's application plugin. Publishing a shared catalog as its
+# own artifact would be over-engineering for two consumers.
+#
+# When bumping a version that BOTH repos use — Room and Media3 above all — bump it in both, or the
+# app ends up with two Room versions on one classpath.
+
+[versions]
+# --- Build toolchain ---
+# AGP 9.3.x brings its own Kotlin (2.2.10), but the Compose compiler plugin below pulls the
+# Kotlin Gradle plugin up to the version pinned here — so `kotlin` is what actually compiles the
+# library. Keep the Compose compiler plugin on this exact version. Verified 2026-08-27.
+agp = "9.3.2"
+kotlin = "2.4.10"
+
+# --- AndroidX / Jetpack ---
+coreKtx = "1.19.0"
+composeBom = "2026.08.00"
+tvProvider = "1.1.0"
+datastore = "1.2.1"
+work = "2.11.2"
+desugarJdkLibs = "2.1.4"
+
+# --- Build tooling ---
+# KSP2 (decoupled versioning). Used by Room. Verified 2026-08-27.
+# 2.3.10 fixed R-class resolution when AGP 9's built-in Kotlin is active (KSP #2857).
+# There is no 2.4.x line yet; 2.3.11 compiles fine against the Kotlin pinned above — KSP2's
+# versioning is decoupled from the compiler's, so the mismatch in the number is expected.
+ksp = "2.3.11"
+
+# --- Database / paging ---
+room = "2.8.4"
+paging = "3.5.1"
+
+# --- Media playback ---
+# Bumped to 1.11.0: AudioTrack init + HLS live timestamp/refresh fixes, TTML timing, MPEG-TS DTS-HD.
+# Two defaults changed here: playback now uses dynamic scheduling instead of a fixed interval, and
+# the default PCM buffer is a fixed 500ms — both are felt by the forced-stereo DefaultAudioSink path.
+media3 = "1.11.0"
+# libmpv (FFmpeg-based) — full codec/track support for IPTV, caching, speed, etc.
+libmpv = "1.0.0"
+
+# --- Kotlin libs ---
+coroutines = "1.11.0"
+
+# --- Third party ---
+koin = "4.2.2"
+# OkHttp 5 is a KMP module: Android consumers resolve to `okhttp-android`, which carries the
+# Android platform support (TLS socket adapter, cert chain cleaner) and consumer R8 rules.
+# Brings Happy Eyeballs (fastFallback) on by default — parallel IPv4/IPv6 connect.
+okhttp = "5.5.0"
+# QR generation for the Remote (companion) add-source flow — pure-Java, offline, no Android deps.
+zxing = "3.5.4"
+# Charset detection for local subtitle files (subtitle plan §7.2 / review R6) — tiny, pure-Java
+# Mozilla universalchardet port; local .srt files are frequently Windows-125x, not UTF-8.
+juniversalchardet = "2.5.0"
+
+# --- Test ---
+junit = "4.13.2"
+# Test-only: the real org.json, so JVM unit tests can exercise code built on JSONObject/JSONArray
+# (the android.jar stub returns defaults for every method under isReturnDefaultValues).
+orgJson = "20260814"
+junitExt = "1.3.0"
+# The instrumentation runner itself. `androidx.test.ext:junit` does NOT pull it in, so without this
+# every instrumentation test crashed before its first line with ClassNotFoundException on
+# AndroidJUnitRunner — the suite has never actually run.
+androidxTestRunner = "1.7.0"
+
+[libraries]
+# Core
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+desugar-jdk-libs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugarJdkLibs" }
+
+# Compose (versions managed by the BOM)
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+# Runtime only (state, remember, effects) — no ui/foundation. This is the one Compose artifact this
+# repo is allowed to depend on; it carries no screen-shape assumptions, so both modules stay usable
+# from the mobile app as well as the TV one. Adding compose-ui, compose-foundation, androidx.tv.* or
+# navigation here breaks the invariant that core is UI-framework-neutral.
+androidx-compose-runtime = { group = "androidx.compose.runtime", name = "runtime" }
+
+# Android TV launcher integration (Watch Next / preview channels)
+androidx-tvprovider = { group = "androidx.tvprovider", name = "tvprovider", version.ref = "tvProvider" }
+
+# DataStore (theme / prefs persistence)
+androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
+
+# WorkManager (durable background sync)
+androidx-work-runtime = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "work" }
+
+# Room (database) + Paging. No paging-compose — that is UI.
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+androidx-room-paging = { group = "androidx.room", name = "room-paging", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+androidx-paging-runtime = { group = "androidx.paging", name = "paging-runtime", version.ref = "paging" }
+
+# Coroutines
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+
+# QR code generation (Remote companion add-source) — encodes the LAN URL into a scannable bitmap.
+zxing-core = { group = "com.google.zxing", name = "core", version.ref = "zxing" }
+
+# Charset detection for local subtitle files (subtitle plan §7.2 / review R6).
+juniversalchardet = { group = "com.github.albfernandez", name = "juniversalchardet", version.ref = "juniversalchardet" }
+
+# Networking (M3U/Xtream fetch)
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+
+# Media3 / ExoPlayer
+androidx-media3-exoplayer = { group = "androidx.media3", name = "media3-exoplayer", version.ref = "media3" }
+androidx-media3-exoplayer-hls = { group = "androidx.media3", name = "media3-exoplayer-hls", version.ref = "media3" }
+androidx-media3-exoplayer-dash = { group = "androidx.media3", name = "media3-exoplayer-dash", version.ref = "media3" }
+androidx-media3-ui = { group = "androidx.media3", name = "media3-ui", version.ref = "media3" }
+androidx-media3-datasource-okhttp = { group = "androidx.media3", name = "media3-datasource-okhttp", version.ref = "media3" }
+
+# libmpv player engine
+libmpv = { group = "dev.jdtech.mpv", name = "libmpv", version.ref = "libmpv" }
+
+# Dependency injection
+koin-bom = { group = "io.insert-koin", name = "koin-bom", version.ref = "koin" }
+koin-android = { group = "io.insert-koin", name = "koin-android" }
+
+# Test
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+org-json = { group = "org.json", name = "json", version.ref = "orgJson" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitExt" }
+androidx-test-runner = { group = "androidx.test", name = "runner", version.ref = "androidxTestRunner" }
+
+[plugins]
+# :core and :player-core are Android libraries, not applications.
+android-library = { id = "com.android.library", version.ref = "agp" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+# KSP 2.3.6+ supports AGP 9's built-in Kotlin.
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
