@@ -1,0 +1,128 @@
+﻿name: Build & Release Fire TV APK
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ "v*" ]
+  workflow_dispatch:
+    inputs:
+      create_release:
+        description: 'Publish as a GitHub Release (for Fire TV Downloader app)'
+        type: boolean
+        required: false
+        default: true
+      release_tag:
+        description: 'Release tag name'
+        type: string
+        required: false
+        default: 'v1.0.0-firetv'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build Fire TV APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: false
+
+      - name: Build Fire TV (Standard ARM) APK
+        working-directory: OwnTV-main
+        run: |
+          chmod +x ./gradlew
+          ./gradlew :app:assembleStandardDebug --stacktrace
+
+      - name: Prepare distribution artifacts
+        run: |
+          mkdir -p dist
+          SRC="OwnTV-main/app/build/outputs/apk/standard/debug/app-standard-debug.apk"
+          if [ ! -f "$SRC" ]; then
+            echo "Error: APK not found at $SRC"
+            exit 1
+          fi
+          # Fixed name for Downloader app direct link:
+          # https://github.com/${{ github.repository }}/releases/latest/download/OwnTV.apk
+          cp "$SRC" dist/OwnTV.apk
+          cp "$SRC" dist/OwnTV-FireTV-API25.apk
+          echo "Generated APKs:"
+          ls -lh dist/
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: OwnTV-FireTV-API25-APK
+          path: dist/*
+          if-no-files-found: error
+
+      - name: Determine Release Tag
+        id: tag
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            TAG="${{ github.event.inputs.release_tag }}"
+          elif [[ "${{ github.ref }}" =~ ^refs/tags/v ]]; then
+            TAG="${{ github.ref_name }}"
+          else
+            TAG="v1.0.0-firetv"
+          fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "Using release tag: $TAG"
+
+      - name: Publish / Update GitHub Release
+        if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.event.inputs.create_release != 'false')
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          name: OwnTV Fire TV Edition (${{ steps.tag.outputs.tag }})
+          draft: false
+          prerelease: false
+          files: |
+            dist/OwnTV.apk
+            dist/OwnTV-FireTV-API25.apk
+          body: |
+            ## OwnTV for Amazon Fire TV & Android TV (API 25+ / Fire OS 6+)
+
+            Refactored build of OwnTV supporting **Android 7.1.1+ (API 25)**, specifically optimized for the **Amazon Fire TV Stick 4K (1st Gen, 2018)** and all modern Fire TV / Android TV devices.
+
+            ---
+
+            ### 🚀 Direct Download for Fire TV "Downloader" App:
+            Enter this URL in the Downloader app URL field:
+            ```text
+            https://github.com/${{ github.repository }}/releases/latest/download/OwnTV.apk
+            ```
+
+            Or enter the direct release link:
+            ```text
+            https://github.com/${{ github.repository }}/releases/download/${{ steps.tag.outputs.tag }}/OwnTV.apk
+            ```
+
+            ---
+
+            ### 📋 Compatibility & Features:
+            - **Target Platform**: Fire OS 6.7.x / Android 7.1.2 (API 25) up to Android 14 (API 34).
+            - **Architecture**: `arm64-v8a` and `armeabi-v7a` (MediaTek MT8695 and compatible SoCs).
+            - **Java 8+ Desugaring**: Full backporting via `desugar_jdk_libs:2.1.4`.
+            - **Crash Protection**: Resolved API 26+ missing symbol crashes (`PixelCopy.request`, `Surface.setFrameRate/clearFrameRate`).
+            - **Fire TV Remote Control**: Full D-Pad, Enter, and Back key interception with robust Compose TV focus restoration.
+            - **Low RAM Optimization**: `largeHeap` enabled and streaming I/O for 1.5 GB RAM devices.
